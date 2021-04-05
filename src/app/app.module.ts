@@ -14,7 +14,7 @@ import { RegisterEmpresaComponent } from './registerEmpresa/registerEmpresa.comp
 
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
       TopbarComponent,
       FooterComponent,

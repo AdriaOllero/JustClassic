@@ -1,3 +1,5 @@
+import { RegisterCompleteComponent } from './registerComplete/registerComplete.component';
+import { RegisterEmpresaComponent } from './registerEmpresa/registerEmpresa.component';
 import { AboutComponent } from './about/about.component';
 import { RegisteruserComponent } from './registerUser/registeruser.component';
 import { LoginComponent } from './login/login.component';
@@ -6,12 +8,15 @@ import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+
 const routes: Routes = [
   {path:"", component:HomeComponent,pathMatch:"full"},
   {path:"about", component:AboutComponent},
   {path:"catalogo", component:CatalogoComponent},
   {path:"login", component:LoginComponent},
   {path:"registerUser", component:RegisteruserComponent},
+  {path:"registerComplete", component:RegisterCompleteComponent},
+  {path:"registerEmpresa", component:RegisterEmpresaComponent},
   {path:"*", redirectTo:"/404"},
 ];
 

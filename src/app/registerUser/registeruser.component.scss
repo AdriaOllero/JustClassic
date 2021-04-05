@@ -18,15 +18,6 @@
     margin-bottom: 10px;
 }
 
-.title {
-    font-weight: bolder;
-    font-size: 75px;
-    color: #37447E;
-    align-items: center;
-    text-align: center;
-    margin: auto;
-}
-
 .btn-primary {
     background-color: #37447E;
     border-radius: 10px;
@@ -38,17 +29,27 @@
     margin-bottom: 20px;
 }
 
-.secondTitle {
+.title {
     font-weight: bolder;
-    font-size: 75px;
+    font-size: 60px;
     color: #37447E;
     align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+.secondTitle {
+    font-weight: bolder;
+    font-size: 60px;
+    color: #37447E;
+    align-items: center;
+    margin-top: -20px;
     text-align: center;
 }
 
 .thirdTitle {
     font-weight: bolder;
-    font-size: 25px;
+    font-size: 20px;
     color: #37447E;
     margin-top: -10px;
     align-items: center;
@@ -56,7 +57,7 @@
 }
 
 .login {
-    border-radius: 20px;
+    border-radius: 50px;
     background-color: rgba(255, 255, 255, 0.897);
     margin: auto;
     width: 20%;

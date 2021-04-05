@@ -10,6 +10,7 @@ import { CatalogoComponent } from './catalogo/catalogo.component';
 import { LoginComponent } from './login/login.component';
 import { RegisteruserComponent } from './registerUser/registeruser.component';
 import { RegisterEmpresaComponent } from './registerEmpresa/registerEmpresa.component';
+import { RegisterCompleteComponent } from './registerComplete/registerComplete.component';
 
 
 
@@ -23,7 +24,8 @@ import { RegisterEmpresaComponent } from './registerEmpresa/registerEmpresa.comp
       CatalogoComponent,
       LoginComponent,
       RegisteruserComponent,
-      RegisterEmpresaComponent
+      RegisterEmpresaComponent,
+      RegisterCompleteComponent
    ],
   imports: [
     BrowserModule,

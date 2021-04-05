@@ -24,17 +24,17 @@
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Repeat Password">
             </div>
             <div>
-                <button type="submit" class="btn btn-primary">REGISTER</button>
+                <button type="submit" class="btn btn-primary" routerLink="/registerComplete" routerLinkActive="active">REGISTER</button>
 
             </div>
 
-            <div class="line">
-
-            </div>
+            <div class="line"></div>
             <div class="change">
-                <button type="submit" class="btn btn-primary i">¿ERES EMPRESA?</button>
+                <button class="btn btn-primary i" routerLink="/registerEmpresa" routerLinkActive="active">¿ERES EMPRESA?</button>
 
             </div>
         </form>
     </div>
 </div>
+
+<router-outlet></router-outlet>

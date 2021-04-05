@@ -4,7 +4,10 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-registeruser',
   templateUrl: './registeruser.component.html',
   styleUrls: ['./registeruser.component.scss']
+
+
 })
+
 export class RegisteruserComponent implements OnInit {
 
   constructor() { }
@@ -13,3 +16,5 @@ export class RegisteruserComponent implements OnInit {
   }
 
 }
+
+

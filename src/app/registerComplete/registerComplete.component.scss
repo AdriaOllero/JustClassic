@@ -1,0 +1,47 @@
+.padd {
+    margin-top: 100px;
+}
+
+.background {
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+}
+
+.title {
+    font-weight: bolder;
+    font-size: 50px;
+    color: #37447E;
+    align-items: center;
+}
+
+.secondTitle {
+    font-weight: bolder;
+    font-size: 30px;
+    color: #37447E;
+    align-items: center;
+    text-align: center;
+}
+
+.icon {
+    width: 500px;
+    height: 500px;
+    margin: -100px;
+}
+
+.btn-primary {
+    background-color: #37447E;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #37447E;
+    padding: 30px 50px 30px 50px;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}

@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisteruserComponent } from './registerUser/registeruser.component';
 import { RegisterEmpresaComponent } from './registerEmpresa/registerEmpresa.component';
 import { RegisterCompleteComponent } from './registerComplete/registerComplete.component';
+import { CatalogoEleccionComponent } from './catalogoEleccion/catalogoEleccion.component';
 
 
 
@@ -25,7 +26,8 @@ import { RegisterCompleteComponent } from './registerComplete/registerComplete.c
       LoginComponent,
       RegisteruserComponent,
       RegisterEmpresaComponent,
-      RegisterCompleteComponent
+      RegisterCompleteComponent,
+      CatalogoEleccionComponent
    ],
   imports: [
     BrowserModule,

@@ -3,16 +3,16 @@ import { RegisterEmpresaComponent } from './registerEmpresa/registerEmpresa.comp
 import { AboutComponent } from './about/about.component';
 import { RegisteruserComponent } from './registerUser/registeruser.component';
 import { LoginComponent } from './login/login.component';
-import { CatalogoComponent } from './catalogo/catalogo.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CatalogoEleccionComponent } from './catalogoEleccion/catalogoEleccion.component';
 
 
 const routes: Routes = [
   {path:"", component:HomeComponent,pathMatch:"full"},
   {path:"about", component:AboutComponent},
-  {path:"catalogo", component:CatalogoComponent},
+  {path:"catalogoEleccion", component:CatalogoEleccionComponent},
   {path:"login", component:LoginComponent},
   {path:"registerUser", component:RegisteruserComponent},
   {path:"registerComplete", component:RegisterCompleteComponent},

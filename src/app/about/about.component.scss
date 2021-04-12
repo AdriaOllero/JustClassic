@@ -1,0 +1,51 @@
+.background {
+    background-image: url(../../assets/mercedes2.jpg);
+    background-repeat: no-repeat;
+    width: 40%;
+    border-radius: 10px;
+    background-size: cover;
+}
+
+.screen {
+    height: 100vh - 10vh;
+}
+
+.description {
+    margin-left: 720px;
+    height: 100vh;
+    width: 120vh;
+    padding: 100px;
+    line-height: 1.8;
+}
+
+.about {
+    font-weight: bolder;
+    font-size: 40px;
+    color: #37447E;
+}
+
+.icon {
+    height: 40px;
+    width: 40px;
+    margin-bottom: 25px;
+}
+
+h6 {
+    font-weight: bold;
+    color: #37447E;
+}
+
+.minText {
+    font-size: 12px;
+}
+
+.object {
+    padding-top: 40px;
+}
+
+.actions {
+    width: 40%;
+    display: inline-block;
+    padding-top: 50px;
+    margin-left: 10%;
+}

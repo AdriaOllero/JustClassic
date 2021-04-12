@@ -1,0 +1,40 @@
+<div class="background">
+    <div class="register">
+        <div class="padd">
+            <h1 class="title">Just</h1>
+            <h1 class="secondTitle">Classic</h1>
+            <h5 class="thirdTitle">Usuario</h5>
+        </div>
+        <form class="padd">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Usuario</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Usuario">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Repetir Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Repetir Contraseña">
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary" routerLink="/registerComplete" routerLinkActive="active">REGISTRO</button>
+
+            </div>
+
+            <div class="line"></div>
+            <div class="change">
+                <button class="btn btn-primary i" routerLink="/registerEmpresa" routerLinkActive="active">¿ERES EMPRESA?</button>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

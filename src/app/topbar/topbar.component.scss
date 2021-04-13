@@ -1,18 +1,19 @@
 .title {
-    font-weight: bolder;
-    font-size: 50px;
+    font-weight: bold;
+    font-size: 45px;
     color: #37447E;
     align-items: center;
     text-align: center;
+    width: 50%;
+}
+
+h1 {
+    font-size: 10vw
 }
 
 .header {
     z-index: 99999;
     background-color: adjust-hue($color: #cccccc77, $degrees: 0);
-}
-
-.navbar {
-    padding: 15px;
 }
 
 .navbar-dark .navbar-brand:hover {
@@ -25,6 +26,7 @@
     font-weight: bolder;
     color: #4d5faf;
     font-size: larger;
+    display: block;
 }
 
 .navbar-brand.abs {
@@ -42,6 +44,10 @@
 .navbar .nav-item a:focus {
     color: #2e3a6d;
     font-size: 20px;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #2e3a6d;
 }
 
 .nav-link {

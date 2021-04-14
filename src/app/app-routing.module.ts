@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CatalogoEleccionComponent } from './catalogoEleccion/catalogoEleccion.component';
+import { PerfilParticularComponent } from './perfilParticular/perfilParticular.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path:"registerUser", component:RegisteruserComponent},
   {path:"registerComplete", component:RegisterCompleteComponent},
   {path:"registerEmpresa", component:RegisterEmpresaComponent},
+  {path:"perfilParticular", component: PerfilParticularComponent},
   {path:"*", redirectTo:"/404"},
 ];
 

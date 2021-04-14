@@ -12,11 +12,12 @@ import { RegisteruserComponent } from './registerUser/registeruser.component';
 import { RegisterEmpresaComponent } from './registerEmpresa/registerEmpresa.component';
 import { RegisterCompleteComponent } from './registerComplete/registerComplete.component';
 import { CatalogoEleccionComponent } from './catalogoEleccion/catalogoEleccion.component';
+import { PerfilParticularComponent } from './perfilParticular/perfilParticular.component';
 
 
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
       TopbarComponent,
       FooterComponent,
@@ -27,7 +28,8 @@ import { CatalogoEleccionComponent } from './catalogoEleccion/catalogoEleccion.c
       RegisteruserComponent,
       RegisterEmpresaComponent,
       RegisterCompleteComponent,
-      CatalogoEleccionComponent
+      CatalogoEleccionComponent,
+      PerfilParticularComponent
    ],
   imports: [
     BrowserModule,

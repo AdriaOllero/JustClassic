@@ -110,6 +110,7 @@ h1 {
 
 .contact {
     float: right;
+    margin-left: 1000px;
 }
 
 .algo {
@@ -118,5 +119,11 @@ h1 {
     color: white;
     font-size: larger;
     font-weight: bolder;
-    box-shadow: black;
+    text-shadow: 1px 1px #0000005b;
+}
+
+.copy{
+  margin-top: 225px;
+  position: absolute;
+  margin-left: 19%;
 }

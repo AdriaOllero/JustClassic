@@ -13,6 +13,7 @@ import { RegisterEmpresaComponent } from './registerEmpresa/registerEmpresa.comp
 import { RegisterCompleteComponent } from './registerComplete/registerComplete.component';
 import { CatalogoEleccionComponent } from './catalogoEleccion/catalogoEleccion.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PerfilParticularComponent } from './perfilParticular/perfilParticular.component';
 
 
 
@@ -28,7 +29,8 @@ import { ReactiveFormsModule } from '@angular/forms';
       RegisteruserComponent,
       RegisterEmpresaComponent,
       RegisterCompleteComponent,
-      CatalogoEleccionComponent
+      CatalogoEleccionComponent,
+      PerfilParticularComponent
    ],
   imports: [
     BrowserModule,

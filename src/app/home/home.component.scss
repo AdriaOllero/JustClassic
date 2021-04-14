@@ -1,17 +1,18 @@
-.image {
-    max-width: 100%;
-    background-repeat: no-repeat;
-    height: auto;
-    width: 100%;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
 .main-box {
+    display: flow-root;
+    .main-image {
+        width: 60%;
+        margin: 85px 375px;
+        height: calc(250vh - 120vh);
+        max-height: 700px;
+        background: url('../../assets/fondoJustClassic.jpg') center center no-repeat;
+        background-size: cover;
+        border-radius: 100px;
+        box-shadow: 15px 15px 20px #000000d0;
+    }
     .box-input {
-        transform: translate(500px, -925px);
-        position: absolute;
         width: 50%;
+        transform: translate(470px, -500px);
         box-shadow: 0px 2px 15px rgba(103, 99, 139, 0.120674);
         border-radius: 19px;
         background: rgba(255, 255, 255, 0.877);

@@ -12,6 +12,7 @@ import { RegisteruserComponent } from './registerUser/registeruser.component';
 import { RegisterEmpresaComponent } from './registerEmpresa/registerEmpresa.component';
 import { RegisterCompleteComponent } from './registerComplete/registerComplete.component';
 import { CatalogoEleccionComponent } from './catalogoEleccion/catalogoEleccion.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -31,6 +32,7 @@ import { CatalogoEleccionComponent } from './catalogoEleccion/catalogoEleccion.c
    ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],

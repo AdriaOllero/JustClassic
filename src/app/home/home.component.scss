@@ -1,14 +1,16 @@
 .main-box {
     display: flow-root;
     .main-image {
-        width: 60%;
-        margin: 85px 375px;
+        max-width: 53%;
+        // margin: 85px 375px;
         height: calc(250vh - 120vh);
-        max-height: 700px;
+        max-height: 674px;
         background: url('../../assets/fondoJustClassic.jpg') center center no-repeat;
-        background-size: cover;
+        background-size:contain;
         border-radius: 100px;
         box-shadow: 15px 15px 20px #000000d0;
+        margin-top: 50px;
+        // display: block;
     }
     .box-input {
         width: 50%;

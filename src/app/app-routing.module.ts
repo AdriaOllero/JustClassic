@@ -8,6 +8,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CatalogoEleccionComponent } from './catalogoEleccion/catalogoEleccion.component';
 import { PerfilParticularComponent } from './perfilParticular/perfilParticular.component';
+import { UploadItemComponent } from './uploadItem/uploadItem.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:"registerUser", component:RegisteruserComponent},
   {path:"registerComplete", component:RegisterCompleteComponent},
   {path:"registerEmpresa", component:RegisterEmpresaComponent},
+  {path:"uploadItem", component:UploadItemComponent},
   {path:"perfilParticular", component: PerfilParticularComponent},
   {path:"*", redirectTo:"/404"},
 ];

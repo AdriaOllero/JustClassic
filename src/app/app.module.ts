@@ -14,11 +14,12 @@ import { RegisterCompleteComponent } from './registerComplete/registerComplete.c
 import { CatalogoEleccionComponent } from './catalogoEleccion/catalogoEleccion.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PerfilParticularComponent } from './perfilParticular/perfilParticular.component';
+import { UploadItemComponent } from './uploadItem/uploadItem.component';
 
 
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
       TopbarComponent,
       FooterComponent,
@@ -30,7 +31,8 @@ import { PerfilParticularComponent } from './perfilParticular/perfilParticular.c
       RegisterEmpresaComponent,
       RegisterCompleteComponent,
       CatalogoEleccionComponent,
-      PerfilParticularComponent
+      PerfilParticularComponent,
+      UploadItemComponent
    ],
   imports: [
     BrowserModule,

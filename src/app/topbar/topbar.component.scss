@@ -5,6 +5,7 @@
     align-items: center;
     text-align: center;
     width: 60%;
+    padding: auto;
 }
 
 h1 {
@@ -22,24 +23,17 @@ h1 {
 
 .nav-item a {
     padding: 20px;
-    align-items: center;
     font-weight: bolder;
     color: #4d5faf;
     font-size: larger;
-    display: block;
 }
 
-.navbar-brand.abs {
-    position: absolute;
-    width: 50%;
-    margin-left: 450px;
-    text-align: center;
-}
-
-.navbar-nav {
-    margin-left: 120px;
-}
-
+// .navbar-brand.abs {
+//     position: absolute;
+//     width: 50%;
+//     margin-left: 450px;
+//     text-align: center;
+// }
 .navbar .nav-item a:hover {
     color: #2e3a6d;
     font-size: 20px;
@@ -57,18 +51,21 @@ h1 {
 .nav-link {
     font-weight: bolder;
     color: #37447E;
-    align-items: center;
-    margin-right: 50px;
-    margin-left: 50px;
-    display: inline;
+    // align-items: center;
+    // margin-right: 50px;
+    // margin-left: 50px;
+    // display: inline;
 }
 
-.nav-link::marker {
-    font-weight: bolder;
-    color: #37447E;
-    align-items: center;
-    margin-right: 50px;
-    margin-left: 50px;
+// .nav-link::marker {
+//     font-weight: bolder;
+//     color: #37447E;
+//     align-items: center;
+//     margin-right: 50px;
+//     margin-left: 50px;
+// }
+.navbar-toggler {
+    margin: -10px;
 }
 
 .btn-primary {
@@ -77,7 +74,6 @@ h1 {
     box-shadow: 0 0 5px #37447E;
     padding: 10px 40px 10px 40px;
     font-weight: bolder;
-    margin-top: 10px;
 }
 
 .content {

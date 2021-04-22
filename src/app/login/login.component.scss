@@ -1,72 +1,46 @@
 .background {
+    display: flex;
+    flex-direction: column;
     background-image: url(../../assets/brianna-santellan-TrvLsDu4sHk-unsplash.jpg);
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
     background-size: cover;
-}
-
-.title {
-    font-weight: bolder;
-    font-size: 75px;
-    color: #37447E;
-    align-items: center;
-    text-align: center;
-    margin: auto;
-}
-
-.btn-primary {
-    background-color: #37447E;
-    border-radius: 10px;
-    box-shadow: 0 0 5px #37447E;
-    padding: 10px 40px 10px 40px;
-    font-weight: bolder;
-    margin-top: 10px;
-    margin-left: 85px;
-    margin-bottom: 20px;
-}
-
-.secondTitle {
-    font-weight: bolder;
-    font-size: 75px;
-    color: #37447E;
-    align-items: center;
-    text-align: center;
-}
-
-.form-signin input[type="email"] {
-    margin-bottom: -1px;
-}
-
-.form-signin input[type="password"] {
-    margin-bottom: 10px;
-}
-
-.login {
-    border-radius: 50px;
-    background-color: rgba(255, 255, 255, 0.897);
-    margin: auto;
-    width: 20%;
-    transform: translateY(125px);
-    padding: 10px;
-}
-
-.padd {
-    padding-left: 30px;
-    padding-top: 20px;
-    padding-top: 20px;
-    padding-right: 30px;
-}
-
-.form-control {
-    border-radius: 15px;
-    padding: 15px;
-}
-
-.forgot {
-    display: block;
-    float: right;
-    font-size: small;
-    margin-bottom: 30px;
-    margin-top: 20px;
+    .login {
+        border-radius: 50px;
+        background-color: rgba(255, 255, 255, 0.897);
+        width: 20%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        h1 {
+            font-weight: bolder;
+            font-size: 75px;
+            color: #37447E;
+            align-items: center;
+            text-align: center;
+        }
+        form {
+            padding: 20px;
+            .form-control {
+                border-radius: 15px;
+                padding: 15px;
+            }
+        }
+        .btn-primary {
+            background-color: #37447E;
+            border-radius: 10px;
+            box-shadow: 0 0 5px #37447E;
+            padding: 10px 40px 10px 40px;
+            font-weight: bolder;
+        }
+        .forgot {
+            display: flex;
+            float: right;
+            font-size: small;
+            margin-bottom: 30px;
+            margin-top: 20px;
+        }
+    }
 }

@@ -1,80 +1,83 @@
 <router-outlet></router-outlet>
+<div class="d-flex  flex-column ">
+    <div class="background">
+        <div class="register flex-column mx-auto position-absolute top-50 start-50 translate-middle">
+            <div class="form-signin">
+                <form [formGroup]="mForm" (ngSubmit)="onSubmit()">
+                    <h1 class="title">Just</h1>
+                    <h1 class="secondTitle">Classic</h1>
+                    <h5 class="thirdTitle">Empresa</h5>
 
-<div class="background">
-    <div class="register">
-        <div class="padd">
-            <h1 class="title">Just</h1>
-            <h1 class="secondTitle">Classic</h1>
-            <h5 class="thirdTitle">Empresa</h5>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="name" [ngClass]="{'is-invalid': isSent && f.name.errors}">
+                        <label for="floatingInput">Usuario</label>
+                        <div class="form-floating">
+                            <div class="alert alert-danger" role="alert" *ngIf="isSent && f.name.errors">
+                                El nombre no es válido
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="user" [ngClass]="{'is-invalid': isSent && f.user.errors}">
+                        <label for="floatingInput">Nombre Empresa</label>
+                        <div class="form-floating">
+                            <div class="alert alert-danger" role="alert" *ngIf="isSent && f.user.errors">
+                                El nombre de empresa no es válido
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="phone" [ngClass]="{'is-invalid': isSent && f.phone.errors}">
+                        <label for="floatingInput">Nº Telefono</label>
+                        <div class="form-floating">
+                            <div class="alert alert-danger" role="alert" *ngIf="isSent && f.phone.errors">
+                                El numero de tlf no es válido
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="email" [ngClass]="{'is-invalid': isSent && f.email.errors}">
+                        <label for="floatingInput">Correo Electronico</label>
+                        <div class="form-floating">
+                            <div class="alert alert-danger" role="alert" *ngIf="isSent && f.email.errors">
+                                El email no es válido
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="password" [ngClass]="{'is-invalid': isSent && f.password.errors}">
+                        <label for="floatingPassword">Contraseña</label>
+                        <div class="form-floating">
+                            <div class="alert alert-danger" role="alert" *ngIf="isSent && f.password.errors">
+                                La contraseña no es válida
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="repeat_password" [ngClass]="{'is-invalid': isSent && f.repeat_password.errors}">
+                        <label for="floatingPassword">Repetir Contraseña</label>
+                    </div>
+                    <div class="form-floating">
+                        <div class="alert alert-danger" role="alert" *ngIf="isSent && f.repeat_password.errors">
+                            Las contraseñas deben coincidir
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <div class="mx-auto">
+                            <button type="submit" class="botone btn btn-primary">Registrarse</button>
+                        </div>
+                        <div class="line"></div>
+                        <div class="mx-auto">
+                            <button type="submit" class="btn btn-primary" routerLink="/registerUser" routerLinkActive="active">¿ERES USUARIO?</button>
+
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
         </div>
-
-        <div class="form-signin">
-            <form class="padd" [formGroup]="mForm" (ngSubmit)="onSubmit()">
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="name" [ngClass]="{'is-invalid': isSent && f.name.errors}">
-                    <label for="floatingInput">Usuario</label>
-                    <div class="form-floating">
-                        <div class="alert alert-danger" role="alert" *ngIf="isSent && f.name.errors">
-                            El nombre no es válido
-                        </div>
-                    </div>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="user" [ngClass]="{'is-invalid': isSent && f.user.errors}">
-                    <label for="floatingInput">Nombre Empresa</label>
-                    <div class="form-floating">
-                        <div class="alert alert-danger" role="alert" *ngIf="isSent && f.user.errors">
-                            El nombre de empresa no es válido
-                        </div>
-                    </div>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="phone" [ngClass]="{'is-invalid': isSent && f.phone.errors}">
-                    <label for="floatingInput">Nº Telefono</label>
-                    <div class="form-floating">
-                        <div class="alert alert-danger" role="alert" *ngIf="isSent && f.phone.errors">
-                            El numero de tlf no es válido
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="email" [ngClass]="{'is-invalid': isSent && f.email.errors}">
-                    <label for="floatingInput">Correo Electronico</label>
-                    <div class="form-floating">
-                        <div class="alert alert-danger" role="alert" *ngIf="isSent && f.email.errors">
-                            El email no es válido
-                        </div>
-                    </div>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="password" [ngClass]="{'is-invalid': isSent && f.password.errors}">
-                    <label for="floatingPassword">Contraseña</label>
-                    <div class="form-floating">
-                        <div class="alert alert-danger" role="alert" *ngIf="isSent && f.password.errors">
-                            La contraseña no es válida
-                        </div>
-                    </div>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="repeat_password" [ngClass]="{'is-invalid': isSent && f.repeat_password.errors}">
-                    <label for="floatingPassword">Repetir Contraseña</label>
-                </div>
-                <div class="form-floating">
-                    <div class="alert alert-danger" role="alert" *ngIf="isSent && f.repeat_password.errors">
-                        Las contraseñas deben coincidir
-                    </div>
-                </div>
-                <div>
-                    <button type="submit" class="botone btn btn-primary">Registrarse</button>
-                </div>
-                <div class="line"></div>
-                <div class="change">
-                    <button type="submit" class="btn btn-primary" routerLink="/registerUser" routerLinkActive="active">¿ERES USUARIO?</button>
-
-                </div>
-            </form>
-        </div>
-
     </div>
+
 </div>

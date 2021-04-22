@@ -1,14 +1,16 @@
-<div>
-    <div class="main-box">
-        <div class="main-image mx-auto d-block"></div>
-
+<div class="flex-container">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner">
+            <div class="carousel-item active " *ngFor="let item of cosas;let index = index;let isFirst = first" [ngClass]="{active:isFirst}">
+                <img src="{{item}}" class="d-block image mx-auto" alt="Imagen 1">
+            </div>
+        </div>
         <div class="box-input">
-            <input #name type="text" placeholder="Encuentra el coche de tus sueños">
+            <input #name type="text" placeholder="Encuentra el vehiculo de tus sueños">
             <button type="button" class="btn btn-primary"><img class="svg" src="../../assets/ic_search.svg" alt="buscar"></button>
         </div>
-
     </div>
-
 </div>
+
 
 <app-about></app-about>

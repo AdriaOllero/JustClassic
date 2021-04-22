@@ -11,7 +11,14 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
+
+  cosas = [
+    "../../assets/JustClassicFondo.png",
+    "../../assets/fondoJustClassic.jpg",
+    "../../assets/jakub-sisulak-a3fOMcZ3mYQ-unsplash.jpg"
+  ]
 
 
 }

@@ -12,4 +12,7 @@ export class PerfilParticularComponent implements OnInit {
   ngOnInit() {
   }
 
+
+
+
 }

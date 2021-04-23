@@ -15,11 +15,16 @@ import { CatalogoEleccionComponent } from './catalogoEleccion/catalogoEleccion.c
 import { ReactiveFormsModule } from '@angular/forms';
 import { PerfilParticularComponent } from './perfilParticular/perfilParticular.component';
 import { UploadItemComponent } from './uploadItem/uploadItem.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ModalComponent as ModalComponent } from './modal/modal.component';
 
 
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
       TopbarComponent,
       FooterComponent,
@@ -32,14 +37,19 @@ import { UploadItemComponent } from './uploadItem/uploadItem.component';
       RegisterCompleteComponent,
       CatalogoEleccionComponent,
       PerfilParticularComponent,
-      UploadItemComponent
+      UploadItemComponent,
+      ModalComponent
    ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ModalComponent]
 })
 export class AppModule { }

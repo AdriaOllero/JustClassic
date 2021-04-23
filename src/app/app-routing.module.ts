@@ -9,11 +9,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { CatalogoEleccionComponent } from './catalogoEleccion/catalogoEleccion.component';
 import { PerfilParticularComponent } from './perfilParticular/perfilParticular.component';
 import { UploadItemComponent } from './uploadItem/uploadItem.component';
+import { CatalogoComponent } from './catalogo/catalogo.component';
+import { ModalComponent } from './modal/modal.component';
 
 
 const routes: Routes = [
   {path:"", component:HomeComponent,pathMatch:"full"},
   {path:"about", component:AboutComponent},
+  {path:"modal", component:ModalComponent},
+  {path:"catalogo", component:CatalogoComponent},
   {path:"catalogoEleccion", component:CatalogoEleccionComponent},
   {path:"login", component:LoginComponent},
   {path:"registerUser", component:RegisteruserComponent},

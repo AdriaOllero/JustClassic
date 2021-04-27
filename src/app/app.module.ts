@@ -2,24 +2,26 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TopbarComponent } from './topbar/topbar.component';
-import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { CatalogoComponent } from './catalogo/catalogo.component';
-import { LoginComponent } from './login/login.component';
-import { RegisteruserComponent } from './registerUser/registeruser.component';
-import { RegisterEmpresaComponent } from './registerEmpresa/registerEmpresa.component';
-import { RegisterCompleteComponent } from './registerComplete/registerComplete.component';
-import { CatalogoEleccionComponent } from './catalogoEleccion/catalogoEleccion.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { PerfilParticularComponent } from './perfilParticular/perfilParticular.component';
+import { PerfilParticularComponent } from './components/perfil/perfilParticular/perfilParticular.component';
 import { UploadItemComponent } from './uploadItem/uploadItem.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
-import { ModalComponent as ModalComponent } from './modal/modal.component';
+import { CatalogoEleccionComponent } from './components/catalogo/catalogoEleccion/catalogoEleccion.component';
+import { RegisterCompleteComponent } from './components/register/registerComplete/registerComplete.component';
+import { RegisterEmpresaComponent } from './components/register/registerEmpresa/registerEmpresa.component';
+import { RegisteruserComponent } from './components/register/registerUser/registeruser.component';
+import { LoginComponent } from './components/login/login/login.component';
+import { CatalogoComponent } from './components/catalogo/catalogo/catalogo.component';
+import { AboutComponent } from './components/main/about/about.component';
+import { HomeComponent } from './components/main/home/home.component';
+import { FooterComponent } from './components/main/footer/footer.component';
+import { TopbarComponent } from './components/main/topbar/topbar.component';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
+import { CatalogoTopBarComponent } from './components/catalogo/catalogoTopBar/catalogoTopBar.component';
+import { CatalogoHomeComponent } from './components/catalogo/catalogoHome/catalogoHome.component';
 
 
 
@@ -38,7 +40,9 @@ import { ModalComponent as ModalComponent } from './modal/modal.component';
       CatalogoEleccionComponent,
       PerfilParticularComponent,
       UploadItemComponent,
-      ModalComponent
+      CatalogoTopBarComponent,
+      CatalogoHomeComponent
+
    ],
   imports: [
     BrowserModule,
@@ -46,10 +50,10 @@ import { ModalComponent as ModalComponent } from './modal/modal.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    IvyCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [ModalComponent]
 })
 export class AppModule { }

@@ -1,0 +1,119 @@
+@media (max-width: 800px) {
+  .flex-container {
+      flex-direction: column;
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .d-flex {
+      padding: 50px;
+  }
+  .btn-primary {
+      background-color: #37447E;
+      border-radius: 10px;
+      box-shadow: 0 0 5px #37447E;
+      padding: 10px 40px 10px 40px;
+      font-weight: bolder;
+  }
+  .flex-container-search {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+  }
+  .form-control {
+      width: 40%;
+      text-align: center;
+      border-radius: 19px;
+      box-shadow: 2px 2px 5px;
+      background: rgba(255, 255, 255, 0.897);
+      input {
+          border: 0px;
+          background: rgba(255, 255, 255, 0);
+          padding: 20px 20px;
+          font-size: 18px;
+          border-radius: 20px;
+          outline: none;
+          width: 80%;
+      }
+  }
+}
+
+.carousel{
+  width: 80%;
+  .img-fluid{
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+h1 {
+  font-weight: bolder;
+  font-size: 3vw;
+  color: #37447E;
+  align-items: center;
+  text-align: center;
+  padding: 60px;
+}
+
+
+
+.line {
+  background-color: #37447E;
+  width: 90%;
+  height: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.row {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x)/ -2);
+  margin-left: calc(var(--bs-gutter-x)/ -2);
+  .card {
+      width: 275px;
+      height: auto;
+      margin: 20px;
+      border-radius: 20px;
+      h5 {
+          font-weight: bolder;
+          margin-top: 20px;
+          margin-bottom: 15px;
+          color: #37447E;
+      }
+      .card-img-top {
+          width: 100%;
+          height: 300px;
+          border-radius: 20px;
+      }
+  }
+}
+
+.btn-primary {
+  background-color: #37447E;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #37447E;
+  padding: 10px 40px 10px 40px;
+  font-weight: bolder;
+}
+
+
+.imgCatalogoHome{
+  width: 75%;
+  height: 300px;
+  border-radius: 20px;
+  margin: 90px;
+  box-shadow: 5px 10px 10px  #000;
+  transition: all 300ms ease-in-out;
+  transform: translate(-10px) scale(1);
+  &:hover {
+      transform: translate(-10px) scale(1.10);
+  }
+}

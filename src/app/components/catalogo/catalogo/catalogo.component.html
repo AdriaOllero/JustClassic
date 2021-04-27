@@ -1,0 +1,22 @@
+
+<div class="flex-container">
+  <div class="imgCategory flex-column mx-auto" style="padding: 100px;">
+    <div class="background flex-column mx-auto">
+      <h1>Coches</h1>
+      <h3>Americanos</h3>
+
+    </div>
+
+  </div>
+  <div class="line"></div>
+  <div class="row">
+    <div class="card box-card" *ngFor="let item of allCars">
+      <img src="{{item.photo}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{item.name}}</h5>
+        <p class="card-text">{{item.bio}}</p>
+        <a href="#" class="btn btn-primary">Ver Detalle</a>
+      </div>
+    </div>
+  </div>
+</div>

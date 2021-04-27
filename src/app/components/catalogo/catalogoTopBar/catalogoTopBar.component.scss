@@ -1,0 +1,130 @@
+@media (max-width: 800px) {
+  .flex-container {
+      flex-direction: column;
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .d-flex {
+      padding: 50px;
+  }
+  .btn-primary {
+      background-color: #37447E;
+      border-radius: 10px;
+      box-shadow: 0 0 5px #37447E;
+      padding: 10px 40px 10px 40px;
+      font-weight: bolder;
+  }
+  .flex-container-search {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+  }
+  .form-control {
+      width: 40%;
+      text-align: center;
+      border-radius: 19px;
+      box-shadow: 2px 2px 5px;
+      background: rgba(255, 255, 255, 0.897);
+      input {
+          border: 0px;
+          background: rgba(255, 255, 255, 0);
+          padding: 20px 20px;
+          font-size: 18px;
+          border-radius: 20px;
+          outline: none;
+          width: 80%;
+      }
+  }
+}
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #ecececb4; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  border-radius: 20px;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #37447E; /* Green background */
+  border-radius: 50%;
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #37447E; /* Green background */
+  border-radius: 50%;
+  cursor: pointer; /* Cursor on hover */
+}
+
+h5 {
+  font-weight: bolder;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  color: #37447E;
+}
+
+
+.row {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x)/ -2);
+  margin-left: calc(var(--bs-gutter-x)/ -2);
+  .card {
+      width: 275px;
+      height: auto;
+      margin: 20px;
+      border-radius: 20px;
+      h5 {
+          font-weight: bolder;
+          margin-top: 20px;
+          margin-bottom: 15px;
+          color: #37447E;
+      }
+      .card-img-top {
+          width: 100%;
+          height: 300px;
+          border-radius: 20px;
+      }
+  }
+}
+
+.btn-primary {
+  background-color: #37447E;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #37447E;
+  padding: 10px 40px 10px 40px;
+  font-weight: bolder;
+}
+
+
+

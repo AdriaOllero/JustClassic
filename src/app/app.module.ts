@@ -22,6 +22,7 @@ import { TopbarComponent } from './components/main/topbar/topbar.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { CatalogoTopBarComponent } from './components/catalogo/catalogoTopBar/catalogoTopBar.component';
 import { CatalogoHomeComponent } from './components/catalogo/catalogoHome/catalogoHome.component';
+import { ItemDetailComponent } from './components/catalogo/itemDetail/itemDetail.component';
 
 
 
@@ -41,7 +42,8 @@ import { CatalogoHomeComponent } from './components/catalogo/catalogoHome/catalo
       PerfilParticularComponent,
       UploadItemComponent,
       CatalogoTopBarComponent,
-      CatalogoHomeComponent
+      CatalogoHomeComponent,
+      ItemDetailComponent,
 
    ],
   imports: [

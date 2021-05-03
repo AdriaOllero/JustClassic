@@ -21,6 +21,11 @@ export class CatalogoHomeComponent implements OnInit {
   loadData() {
     this.allCategories=[
       {
+        "name": "Todos",
+        "photo": "../../../../assets/images/robin-vet-q6LFMQ6wVZ0-unsplash.jpg",
+        "description":"Todos los coches de la colección",
+      },
+      {
         "name": "Americanos",
         "photo": "../../../../assets/images/robin-vet-q6LFMQ6wVZ0-unsplash.jpg",
         "description":"  Aqui podras encontrar coches de los años 20",

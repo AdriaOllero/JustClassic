@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  .recuadro-blanco {
+    width: 40%;
+    background-color: rgba(180, 180, 180, 0.096);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 50px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.651);
+    h1 {
+      font-weight: bolder;
+      font-size: 2vw;
+      padding: 20px;
+      color: #37447e;
+    }
+  }
+  .btn-primary {
+    background-color: #37447e;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #37447e;
+    padding: 20px 40px 20px 40px;
+    font-weight: bolder;
+    margin: 50px;
+  }
+  .img{
+    width: 40%;
+    margin: 20px;
+  }
+}

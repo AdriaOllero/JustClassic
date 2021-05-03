@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PerfilParticularComponent } from './components/perfil/perfilParticular/perfilParticular.component';
-import { UploadItemComponent } from './uploadItem/uploadItem.component';
+import { UploadItemComponent } from './components/catalogo/item/uploadItem/uploadItem.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatButtonModule } from '@angular/material/button';
@@ -22,7 +22,7 @@ import { TopbarComponent } from './components/main/topbar/topbar.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { CatalogoTopBarComponent } from './components/catalogo/catalogoTopBar/catalogoTopBar.component';
 import { CatalogoHomeComponent } from './components/catalogo/catalogoHome/catalogoHome.component';
-import { ItemDetailComponent } from './components/catalogo/itemDetail/itemDetail.component';
+import { ItemDetailComponent } from './components/catalogo/item/itemDetail/itemDetail.component';
 
 
 

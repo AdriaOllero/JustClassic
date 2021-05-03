@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Car } from '../../../models/car.model';
+import { Car } from '../../../../models/car.model';
 
 @Component({
   selector: 'app-itemDetail',

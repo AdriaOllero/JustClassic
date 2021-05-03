@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PerfilParticularComponent } from './components/perfil/perfilParticular/perfilParticular.component';
-import { UploadItemComponent } from './uploadItem/uploadItem.component';
+import { UploadItemComponent } from './components/catalogo/item/uploadItem/uploadItem.component';
 import { RegisterEmpresaComponent } from './components/register/registerEmpresa/registerEmpresa.component';
 import { RegisterCompleteComponent } from './components/register/registerComplete/registerComplete.component';
 import { RegisteruserComponent } from './components/register/registerUser/registeruser.component';
@@ -12,7 +12,7 @@ import { AboutComponent } from './components/main/about/about.component';
 import { HomeComponent } from './components/main/home/home.component';
 import { CatalogoHomeComponent } from './components/catalogo/catalogoHome/catalogoHome.component';
 import { CatalogoTopBarComponent } from './components/catalogo/catalogoTopBar/catalogoTopBar.component';
-import { ItemDetailComponent } from './components/catalogo/itemDetail/itemDetail.component';
+import { ItemDetailComponent } from './components/catalogo/item/itemDetail/itemDetail.component';
 
 const routes: Routes = [
   {path:"", component:HomeComponent,pathMatch:"full"},

@@ -1,5 +1,7 @@
 export class Categoria {
   photo?:      string;
   name?:       string;
-  description?: string;
+  contact?: string;
+  location?: string;
+
 }

@@ -6,4 +6,5 @@ export class Car {
   km?: string;
   model?:       string;
   brand?:        string;
+  fuel?: string;
 }

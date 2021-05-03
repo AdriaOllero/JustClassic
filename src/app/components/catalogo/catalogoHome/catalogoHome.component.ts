@@ -22,51 +22,63 @@ export class CatalogoHomeComponent implements OnInit {
     this.allCategories=[
       {
         "name": "Americanos",
-        "photo": "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "photo": "../../../../assets/images/robin-vet-q6LFMQ6wVZ0-unsplash.jpg",
+        "description":"  Aqui podras encontrar coches de los años 20",
       },
       {
         "name": "Japoneses",
-        "photo": "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "photo": "../../../../assets/images/oli-woodman-kA8icki31uo-unsplash.jpg",
+        "description":"  Aqui podras encontrar coches de los años 20",
       },
       {
         "name": "Alemanes",
-        "photo": "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "photo": "../../../../assets/images/oli-woodman-kA8icki31uo-unsplash.jpg",
+        "description":"  Aqui podras encontrar coches de los años 20",
       },
       {
         "name": "Ingleses",
-          "photo": "https://images.unsplash.com/photo-1604426633861-11b2faead63c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+        "photo": "../../../../assets/images/oli-woodman-kA8icki31uo-unsplash.jpg",
+        "description":"  Aqui podras encontrar coches de los años 20",
       },
       {
         "name": "1970´s",
-        "photo": "https://images.unsplash.com/photo-1604426633861-11b2faead63c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+        "photo": "../../../../assets/images/oli-woodman-kA8icki31uo-unsplash.jpg",
+        "description":"  Aqui podras encontrar coches de los años 20",
       },
       {
         "name": "1970´s",
-        "photo": "https://images.unsplash.com/photo-1604426633861-11b2faead63c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+        "photo": "../../../../assets/images/wahyu-setiawan-qWjfWJLlnQc-unsplash.jpg",
+        "description":"  Aqui podras encontrar coches de los años 20",
       },
       {
         "name": "1970´s",
-        "photo": "https://images.unsplash.com/photo-1604426633861-11b2faead63c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+        "photo": "../../../../assets/images/wahyu-setiawan-qWjfWJLlnQc-unsplash.jpg",
+        "description":"  Aqui podras encontrar coches de los años 20",
       },
       {
         "name": "1970´s",
-        "photo": "https://images.unsplash.com/photo-1604426633861-11b2faead63c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+        "photo": "../../../../assets/images/wahyu-setiawan-qWjfWJLlnQc-unsplash.jpg",
+        "description":"  Aqui podras encontrar coches de los años 20",
       },
       {
         "name": "1970´s",
-        "photo": "https://images.unsplash.com/photo-1604426633861-11b2faead63c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+        "photo": "../../../../assets/images/wahyu-setiawan-qWjfWJLlnQc-unsplash.jpg",
+        "description":"  Aqui podras encontrar coches de los años 20",
       },
       {
         "name": "1970´s",
-        "photo": "https://images.unsplash.com/photo-1604426633861-11b2faead63c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+        "photo": "../../../../assets/images/wahyu-setiawan-qWjfWJLlnQc-unsplash.jpg",
+        "description":"  Aqui podras encontrar coches de los años 20",
       },
       {
         "name": "1970´s",
-        "photo": "https://images.unsplash.com/photo-1604426633861-11b2faead63c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+        "photo": "../../../../assets/images/wahyu-setiawan-qWjfWJLlnQc-unsplash.jpg",
+        "description":"  Aqui podras encontrar coches de los años 20",
       },
       {
         "name": "1970´s",
-        "photo": "https://images.unsplash.com/photo-1604426633861-11b2faead63c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+        "photo": "../../../../assets/images/wahyu-setiawan-qWjfWJLlnQc-unsplash.jpg",
+        "description":"  Aqui podras encontrar coches de los años 20",
       },
     ]}
 }

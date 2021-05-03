@@ -1,0 +1,364 @@
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .d-flex {
+    padding: 50px;
+  }
+  .btn-primary {
+    background-color: #37447e;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #37447e;
+    padding: 10px 40px 10px 40px;
+    font-weight: bolder;
+  }
+  .flex-container-search {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .form-control {
+    width: 40%;
+    text-align: center;
+    border-radius: 19px;
+    box-shadow: 2px 2px 5px;
+    background: rgba(255, 255, 255, 0.897);
+    input {
+      border: 0px;
+      background: rgba(255, 255, 255, 0);
+      padding: 20px 20px;
+      font-size: 18px;
+      border-radius: 20px;
+      outline: none;
+      width: 80%;
+    }
+  }
+}
+
+.items{
+  width: 70%;
+}
+
+.carousel {
+  width: 60%;
+  height: 200px;
+  .img-fluid {
+    border-radius: 20px;
+  }
+}
+
+.imgCategory {
+  background-image: url(../../../../assets/images/jakub-sisulak-a3fOMcZ3mYQ-unsplash.jpg);
+  width: 60%;
+  margin: 50px;
+  border-radius: 50px;
+  background-size: cover;
+  .background {
+    width: 70%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.603);
+    border-radius: 50px;
+  }
+}
+
+.line {
+  background-color: #37447e;
+  width: 100%;
+  height: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+h1 {
+  font-weight: bolder;
+  font-size: 3vw;
+  color: #37447e;
+  align-items: center;
+  text-align: center;
+}
+h3 {
+  font-weight: bolder;
+  font-size: 1vw;
+  color: #37447e;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  :active {
+    text-decoration: none;
+  }
+}
+.maps {
+  width: 100%;
+  height: 300px;
+  padding: 30px;
+}
+.row {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) / -2);
+  margin-left: calc(var(--bs-gutter-x) / -2);
+
+  .img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 100px;
+  }
+
+  .contact {
+    margin-top: 75px;
+    p {
+      font-weight: bolder;
+      font-size: 1vw;
+      color: #37447e;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .card {
+    width: 20rem;
+    height: auto;
+    margin: 30px;
+    border-radius: 20px;
+    button {
+      position: absolute;
+      margin: 40px;
+      bottom: 0;
+    }
+    h5 {
+      font-weight: bolder;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #37447e;
+    }
+    .card-img-top {
+      width: 100%;
+      height: 300px;
+      border-radius: 20px;
+    }
+  }
+}
+
+.btn-primary {
+  background-color: #37447e;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #37447e;
+  padding: 10px 40px 10px 40px;
+  font-weight: bolder;
+}
+
+////////////// ITEM CAR
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+  background: #f8f8f8;
+}
+
+.card {
+  $delay: 0.15s;
+  $duration: 0.4s;
+  $timing: cubic-bezier(0.51, 0.92, 0.24, 1);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  color: currentColor;
+  text-decoration: none;
+  overflow: hidden;
+  transition-property: color;
+  transition-delay: $delay;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: fit-content ;
+  border-radius: 20px;
+  button {
+    position: absolute;
+    margin: 40px;
+    bottom: 0;
+  }
+  &.hover {
+    color: white;
+    transition-delay: 0;
+  }
+
+  &,
+  &__image,
+  &__image::after,
+  &__author,
+  &__body,
+  &__foot,
+  &__border {
+    transition-duration: $duration;
+    transition-timing-function: $timing;
+  }
+
+  &__head {
+    position: relative;
+    padding-top: 70%;
+  }
+
+  &__author {
+    position: absolute;
+    padding: 2em;
+    left: 0;
+    bottom: 0;
+    color: white;
+    transition-property: transform;
+    transition-delay: $delay;
+  }
+
+  &.hover &__author {
+    transition-delay: 0;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    transform-origin: top center;
+    transition-property: transform;
+    transition-delay: $delay;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.5;
+      background: linear-gradient(
+        30deg,
+        rgba(#1a2a63, 0.85),
+        rgba(#1a2a63, 0.5)
+      );
+      transition-property: opacity;
+      transition-delay: $delay;
+    }
+  }
+
+  &.hover &__image {
+    transition-delay: 0;
+
+    &::after {
+      opacity: 1;
+      transition-delay: 0;
+    }
+  }
+
+  &__body {
+    position: relative;
+    padding: 2em;
+    transition-property: transform;
+    transition-delay: $delay;
+  }
+
+  &.hover &__body {
+    transition-delay: 0;
+  }
+
+  &__headline {
+    font-weight: 400;
+    margin: 0 0 0.8em;
+    color: #37447e;
+    font-weight: bolder;
+  }
+
+  &__text {
+    line-height: 1.5;
+    margin: 0;
+    opacity: 0.8;
+  }
+
+  &__foot {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 2em 2em;
+    opacity: 0;
+    transition-property: opacity;
+  }
+
+  &.hover &__foot {
+    opacity: 1;
+    transition-delay: $delay;
+  }
+
+  &__link {
+    color: currentColor;
+    text-decoration: none;
+    border-bottom: 2px solid #b5272d;
+  }
+
+  &__border {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6px;
+    background: #b5272d;
+    transform: scaleY(0);
+    transition-property: transform;
+  }
+
+  &.hover &__border {
+    transform: none;
+    transition-delay: $delay;
+  }
+}
+
+.author {
+  display: flex;
+  align-items: center;
+
+  &__image {
+    $size: 56px;
+
+    flex-shrink: 0;
+    margin-right: 1em;
+    width: $size;
+    height: $size;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+
+  &__content {
+    display: grid;
+    grid-gap: 0.4em;
+    font-size: 0.9em;
+  }
+
+  &__header {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  &__subheader {
+    margin: 0;
+    opacity: 0.8;
+  }
+}

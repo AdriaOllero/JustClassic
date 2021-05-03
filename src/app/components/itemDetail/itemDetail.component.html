@@ -1,0 +1,44 @@
+
+<div class="background mx-auto">
+
+  <div class="container" style="margin-top: 50px ; width: 100%; height: 350px;">
+    <input type="radio" name="slider" id="item-1" checked>
+    <input type="radio" name="slider" id="item-2">
+    <input type="radio" name="slider" id="item-3">
+    <div class="cards" >
+      <label class="card" for="item-1" id="song-1">
+        <img src="{{Car.photo[0]}}" alt="song">
+      </label>
+      <label class="card" for="item-2" id="song-2">
+        <img src="{{Car.photo[1]}}" alt="song">
+      </label>
+      <label class="card" for="item-3" id="song-3">
+        <img src="{{Car.photo[2]}}" alt="song">
+      </label>
+    </div>
+  </div>
+
+  <div class="col-12" style="margin-top: 25px ;">
+    <h1>{{Car.name}}</h1>
+    <h3>{{Car.year}}</h3>
+  </div>
+
+  <div class="container" style="margin-top: -125px;">
+    <div class="row mx-auto" >
+      <div class="col-sm">
+        <h4> <img class="icon" src="../../../assets/images/speedometer.png" alt="">{{Car.km}} km</h4>
+      </div>
+      <div class="col-sm">
+        <h4><img class="icon" src="../../../assets/images/gasoline-pump.png" alt="">{{Car.fuel}}</h4>
+      </div>
+      <div class="col-sm">
+        <h4><img class="icon" src="../../../assets/images/money.png" alt="">{{Car.price}} €</h4>
+      </div>
+
+    </div>
+    <p >{{Car.bio}}</p>
+
+  </div>
+</div>
+
+<script src="itemDetail.js"></script>

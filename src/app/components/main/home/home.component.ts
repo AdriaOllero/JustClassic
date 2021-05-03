@@ -17,9 +17,9 @@ export class HomeComponent implements OnInit {
 
   search(searchValue: string){
     if(searchValue == "") {
-      this.router.navigate(["/catalogo"])
+      this.router.navigate(["/catalogoHome"])
     } else {
-      this.router.navigate(["/catalogo"], { queryParams: { name: searchValue}})
+      this.router.navigate(["/catalogoHome"], { queryParams: { name: searchValue}})
     }
   }
 

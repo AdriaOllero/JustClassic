@@ -7,7 +7,7 @@
                     <h1 class="title">Just</h1>
                     <h1 class="secondTitle">Classic</h1>
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="Correo electrónico" formControlName="email" [ngClass]="{'is-invalid': isSent && f.email.errors}">
+                        <input name="email" type="email" class="form-control" id="floatingInput" placeholder="Correo electrónico" formControlName="email" [ngClass]="{'is-invalid': isSent && f.email.errors}">
                         <label for="floatingInput">Correo Electronico</label>
                         <div class="form-floating">
                             <div class="alert alert-danger" role="alert" *ngIf="isSent && f.email.errors">
@@ -16,11 +16,10 @@
                         </div>
                     </div>
                     <div class="form-floating">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="password" [ngClass]="{'is-invalid': isSent && f.password.errors}">
+                        <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="password" [ngClass]="{'is-invalid': isSent && f.password.errors}">
                         <label for="floatingPassword">Contraseña</label>
                     </div>
                     <div class="form-floating">
-
                         <div class="alert alert-danger" role="alert" *ngIf="isSent && f.password.errors">
                             La constraseña no es válida
                         </div>

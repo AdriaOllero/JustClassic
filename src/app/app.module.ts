@@ -23,7 +23,9 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { CatalogoTopBarComponent } from './components/catalogo/catalogoTopBar/catalogoTopBar.component';
 import { CatalogoHomeComponent } from './components/catalogo/catalogoHome/catalogoHome.component';
 import { ItemDetailComponent } from './components/catalogo/item/itemDetail/itemDetail.component';
-
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptorService } from './services/interceptors/auth-interceptor.service';
+import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
 
 
 @NgModule({
@@ -55,7 +57,13 @@ import { ItemDetailComponent } from './components/catalogo/item/itemDetail/itemD
     MatDialogModule,
     IvyCarouselModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptorService,
+    multi: true
+    },
+    { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
+    JwtHelperService,],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

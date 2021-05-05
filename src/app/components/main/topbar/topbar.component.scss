@@ -26,6 +26,7 @@ h1 {
     font-weight: bolder;
     color: #4d5faf;
     font-size: larger;
+
 }
 
 // .navbar-brand.abs {
@@ -69,11 +70,16 @@ h1 {
 }
 
 .btn-primary {
-    background-color: #37447E;
-    border-radius: 10px;
-    box-shadow: 0 0 5px #37447E;
-    padding: 10px 40px 10px 40px;
-    font-weight: bolder;
+  background-color: #37447e;
+  border-radius: 10px;
+  border-style: hidden;
+  padding: 10px 40px 10px 40px;
+  font-weight: bolder;
+  margin: 10px;
+  &:hover {
+    background-color: #4a5cac;
+    border-style: solid;
+  }
 }
 
 .content {

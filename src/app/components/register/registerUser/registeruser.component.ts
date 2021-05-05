@@ -21,13 +21,13 @@ export class RegisteruserComponent implements OnInit {
       email: ['', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
       password: ['', [Validators.required, Validators.pattern(/^(?=\D*\d)(?=[^a-z]*[a-z])(?=[^A-Z]*[A-Z]).{4,30}$/)]],
       repeat_password: ['', [Validators.required, Validators.pattern(/^(?=\D*\d)(?=[^a-z]*[a-z])(?=[^A-Z]*[A-Z]).{4,30}$/)]]
-
-
     })
-  }
+
+   }
 
   ngOnInit() {
   }
+
   login() {
     this.router.navigate(["/login"])
   }
@@ -50,7 +50,7 @@ export class RegisteruserComponent implements OnInit {
     // Atacar a localhost:3001/api/register
 
     // api dice 200??
-    this.router.navigate(["/dashbaord"])
+    this.router.navigate(["/dashboard"])
 
   }
 }

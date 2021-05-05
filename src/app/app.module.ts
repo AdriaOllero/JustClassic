@@ -6,7 +6,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PerfilParticularComponent } from './components/perfil/perfilParticular/perfilParticular.component';
 import { UploadItemComponent } from './components/catalogo/item/uploadItem/uploadItem.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { CatalogoEleccionComponent } from './components/catalogo/catalogoEleccion/catalogoEleccion.component';
@@ -55,7 +54,8 @@ import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
     BrowserAnimationsModule,
     MatButtonModule,
     MatDialogModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+    HttpClientModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

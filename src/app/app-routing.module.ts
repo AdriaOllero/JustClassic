@@ -21,11 +21,7 @@ const routes: Routes = [
   { path: 'catalogo', component: CatalogoComponent },
   { path: 'itemDetail', component: ItemDetailComponent },
   { path: 'catalogoEleccion', component: CatalogoEleccionComponent },
-  // { path: 'login', component: LoginComponent},
-  {
-    path: 'login',
-    component: LoginComponent,canActivate: [AuthGuardService]
-  },
+  { path: 'login', component: LoginComponent},
   { path: 'catalogoTopBar', component: CatalogoTopBarComponent },
   { path: 'catalogoHome', component: CatalogoHomeComponent },
   { path: 'registerUser', component: RegisteruserComponent },

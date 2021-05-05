@@ -1,50 +1,89 @@
-.background {
-    background-image: url(../../../../assets/images/mercedes2.jpg);
-    background-repeat: no-repeat;
-    width: 40%;
-    background-size: cover;
-}
+.flex-container {
+  .row {
+    .image {
+      width: 100vh-25vh;
+      display: block;
+    }
+    h1 {
+      font-size: 3vw;
+      font-weight: bold;
+      color: #37447e;
+      margin-bottom: 50px;
+    }
+    p {
+      font-size: 1vw;
+      margin-top: 15px;
+      width: 100%;
+    }
+    h5 {
+      width: 80%;
+    }
+    .icon {
+      margin-top: 50px;
+      width: 20%;
+      height: auto;
+      margin-bottom: 25px;
+    }
 
-.screen {
-    height: 100vh - 10vh;
-}
+    h6 {
+      color: #37447e;
+      font-size: 1.5rem;
+      font-weight: bolder;
+    }
 
-.description {
-    margin-left: 720px;
-    height: 100vh;
-    width: 120vh;
-    padding: 100px;
-    line-height: 1.8;
-}
+    //CARTAS
 
-.about {
-    font-weight: bolder;
-    font-size: 40px;
-    color: #37447E;
-}
+    .cardBox {
+      font-size: 1.2em;
+      perspective: 800px;
+      transition: all 0.3s ease 0s;
+      width: 85%;
+      border-radius: 20px;
+    }
 
-.icon {
-    height: 40px;
-    width: 40px;
-    margin-bottom: 25px;
-}
+    .cardBox:hover .card {
+      transform: rotateX(180deg);
+    }
 
-h6 {
-    font-weight: bold;
-    color: #37447E;
-}
+    .card {
+      background: rgba(255, 255, 255, 0.418);
+      cursor: default;
+      height: 250px;
+      transform-style: preserve-3d;
+      transition: transform 0.4s ease 0s;
+      width: 100%;
+      -webkit-animation: giro 1s 1;
+      animation: giro 1s 1;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.493);
+      border-radius: 20px;
+    }
 
-.minText {
-    font-size: 12px;
-}
+    .card .back p {
+      margin-top: 60px;
+      text-align: center;
+    }
 
-.object {
-    padding-top: 40px;
-}
+    .card .front,
+    .card .back {
+      backface-visibility: hidden;
+      box-sizing: border-box;
+      color: white;
+      display: block;
+      font-size: 1.2em;
+      height: 100%;
+      padding: 0.8em;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      border-radius: 20px;
+    }
 
-.actions {
-    width: 40%;
-    display: inline-block;
-    padding-top: 50px;
-    margin-left: 10%;
+    .card .back {
+      transform: rotateX(180deg);
+    }
+
+    .cardBox:nth-child(1) .card .back {
+      background: #37447e;
+    }
+  }
 }

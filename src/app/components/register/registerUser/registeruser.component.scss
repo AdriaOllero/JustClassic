@@ -15,6 +15,7 @@
         flex-direction: column;
         padding: 20px;
         margin-top: 50px;
+        box-shadow: 10px 10px 15px black;
         h1 {
             font-weight: bolder;
             font-size: 3vw;
@@ -34,6 +35,7 @@
         }
         form {
             padding: 20px;
+            width: 90%;
             .form-control {
                 border-radius: 15px;
                 padding: 15px;
@@ -49,10 +51,14 @@
         .btn-primary {
             background-color: #37447E;
             border-radius: 10px;
-            box-shadow: 0 0 5px #37447E;
+            border-style:hidden;
             padding: 10px 40px 10px 40px;
             font-weight: bolder;
-            margin: 15px;
+            margin: 10px;
+            &:hover{
+              background-color: #4a5cac;
+              border-style:solid;
+            }
         }
     }
 }

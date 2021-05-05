@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {}
 
   loginUser() {
-    console.log('entreeee perros');
+    console.log('Estoy entrando al login, pero solo entrando');
     const user: User = new User();
     if (this.password != '' && this.email != '') {
       user.email = this.email;
@@ -50,6 +50,7 @@ export class LoginComponent implements OnInit {
         (data) => {
           localStorage.setItem('token', data.access_token);
           this.router.navigate(['/dashboard']);
+          this.onSubmit
         },
         (error) => {
           console.log('Error:', error);
@@ -73,6 +74,7 @@ export class LoginComponent implements OnInit {
     console.log('Enviar form');
 
     if (this.mForm.invalid) {
+      console.log("Form Invalido")
       return;
     }
 

@@ -1,13 +1,14 @@
 @media (max-width: 800px) {
   .flex-container {
     flex-direction: column;
+    height: 100vh;
   }
 }
 
 .image {
-  margin-top: 50px;
+  margin-top: 30px;
   width: 60%;
-  height: 100%;
+  height: auto;
   border-radius: 100px;
   box-shadow: 15px 15px 20px #000000d0;
   z-index: 9999;
@@ -22,41 +23,68 @@
     flex-direction: row;
     width: 100%;
   }
-  .box-input {
-    width: 50%;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.562);
-    border-radius: 19px;
-    background: rgba(255, 255, 255, 0.897);
-    padding: 15px;
-    input {
-      border: 0px;
-      background: rgba(255, 255, 255, 0);
-      padding: 20px 20px;
-      font-size: 18px;
-      border-radius: 20px;
-      outline: none;
-      width: 80%;
-    }
-    .btn-primary {
-      background-color: #37447e;
-      border-radius: 20px;
-      float: right;
-      text-align: center;
-      box-shadow: 0 0 5px #37447e;
-      padding: 15px 25px 15px 25px;
-      font-weight: bolder;
-      margin-top: 5px;
-      border-style: hidden;
-      &:hover {
-        background-color: #4a5cac;
-        border-style: solid;
-      }
-    }
-    .svg {
-      width: 25px;
-      height: 25px;
-    }
+
+
+  input{
+    border-radius:40%;
+    width:60px;
+    cursor:pointer;
+    height:60px;
+    background-image:url("../../../../assets/images/icons/loupeTrue.png");
+    background-color:rgba(255, 255, 255, 0.76);
+    outline:none;
+    background-size:22px;
+    background-position:50%;
+    font-size:18px;
+    color:rgb(0, 0, 0);
+    background-repeat:no-repeat;
+    border:1px solid rgb(255, 255, 255);
+    transition-property:width, border-radius, background-position, padding/*, transform*/;
+    transition-duration:0.5s;
   }
+  input:focus{
+    // transform:rotate(-360deg);
+    width:630px;
+    border-radius:20px;
+    cursor:text;
+    padding: 30px;
+    background-position:5px;
+  }
+  // .box-input {
+  //   width: 50%;
+  //   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.562);
+  //   border-radius: 19px;
+  //   background: rgba(255, 255, 255, 0.897);
+  //   padding: 15px;
+  //   input {
+  //     border: 0px;
+  //     background: rgba(255, 255, 255, 0);
+  //     padding: 20px 20px;
+  //     font-size: 18px;
+  //     border-radius: 20px;
+  //     outline: none;
+  //     width: 80%;
+  //   }
+  //   .btn-primary {
+  //     background-color: #37447e;
+  //     border-radius: 20px;
+  //     float: right;
+  //     text-align: center;
+  //     box-shadow: 0 0 5px #37447e;
+  //     padding: 15px 25px 15px 25px;
+  //     font-weight: bolder;
+  //     margin-top: 5px;
+  //     border-style: hidden;
+  //     &:hover {
+  //       background-color: #4a5cac;
+  //       border-style: solid;
+  //     }
+  //   }
+  //   .svg {
+  //     width: 25px;
+  //     height: 25px;
+  //   }
+  // }
   .slider-block {
     height: auto;
     display: inline-block;

@@ -1,32 +1,49 @@
 .title {
-    font-weight: bold;
-    font-size: 45px;
-    color: #37447E;
-    align-items: center;
-    text-align: center;
-    width: 60%;
-    padding: auto;
+  font-weight: bold;
+  font-size: 45px;
+  color: #37447e;
+  align-items: center;
+  text-align: center;
+  width: 60%;
+  position: absolute;
+  left: 20%;
+  padding: auto;
+}
+
+.circular--landscape {
+  width: 45px;
+  height: 45px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circular--landscape img {
+  width: auto;
+  height: 100%;
+  margin-left: -12px;
 }
 
 h1 {
-    font-size: 10vw
+  font-size: 10vw;
+}
+p {
+  font-size: 1vw;
 }
 
 .header {
-    z-index: 99999;
-    background-color: adjust-hue($color: #cccccc77, $degrees: 0);
+  z-index: 99999;
+  background-color: adjust-hue($color: #cccccc77, $degrees: 0);
 }
 
 .navbar-dark .navbar-brand:hover {
-    color: #37447E;
+  color: #37447e;
 }
 
 .nav-item a {
-    padding: 20px;
-    font-weight: bolder;
-    color: #4d5faf;
-    font-size: larger;
-
+  padding: 20px;
+  font-weight: bolder;
+  color: #4d5faf;
+  font-size: larger;
 }
 
 // .navbar-brand.abs {
@@ -36,26 +53,26 @@ h1 {
 //     text-align: center;
 // }
 .navbar .nav-item a:hover {
-    color: #2e3a6d;
-    font-size: 20px;
+  color: #2e3a6d;
+  font-size: 20px;
 }
 
 .navbar .nav-item a:focus {
-    color: #2e3a6d;
-    font-size: 20px;
+  color: #2e3a6d;
+  font-size: 20px;
 }
 
 .navbar-dark .navbar-nav .nav-link.active {
-    color: #2e3a6d;
+  color: #2e3a6d;
 }
 
 .nav-link {
-    font-weight: bolder;
-    color: #37447E;
-    // align-items: center;
-    // margin-right: 50px;
-    // margin-left: 50px;
-    // display: inline;
+  font-weight: bolder;
+  color: #37447e;
+  // align-items: center;
+  // margin-right: 50px;
+  // margin-left: 50px;
+  // display: inline;
 }
 
 // .nav-link::marker {
@@ -66,7 +83,7 @@ h1 {
 //     margin-left: 50px;
 // }
 .navbar-toggler {
-    margin: -10px;
+  margin: -10px;
 }
 
 .btn-primary {
@@ -83,15 +100,15 @@ h1 {
 }
 
 .content {
-    padding: 16px;
+  padding: 16px;
 }
 
 .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
-.sticky+.content {
-    padding-top: 102px;
+.sticky + .content {
+  padding-top: 102px;
 }

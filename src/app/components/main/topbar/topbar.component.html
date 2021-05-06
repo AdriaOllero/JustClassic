@@ -1,32 +1,49 @@
 <nav class="navbar navbar-expand-md navbar-dark bg justify-content-center container-fluid header" id="myHeader">
-    <div class="container-fluid">
+  <div class="container-fluid">
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item" style="margin-right: 150px; margin-left: 60px;">
-                    <a class="nav-link" routerLink="/catalogoHome" routerLinkActive="active" data-bs-target="#myModal" data-bs-toggle="collapse">Catalogo</a>
-                </li>
-            </ul>
-        </div>
-
-        <h1 class="title nav-link mx-auto">
-            <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">JustClassic</a>
-        </h1>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/login']" routerLinkActive="router-link-active" data-bs-toggle="collapse" style="margin-left: 60px;">Login</a>
-                </li>
-            </ul>
-            <form class="d-flex">
-                <button class="btn btn-primary" data-bs-toggle="collapse" routerLink="/registerUser" routerLinkActive="active" style="margin-left: 60px;">Registro</button>
-            </form>
-        </div>
-
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" style="margin-right: 150px; margin-left: 60px;">
+          <a class="nav-link" routerLink="/catalogoHome" routerLinkActive="active" data-bs-target="#myModal"
+            data-bs-toggle="collapse">Catalogo</a>
+        </li>
+      </ul>
     </div>
 
-</nav>
+    <h1 class="title nav-link mx-auto">
+      <a class="nav-link" routerLink="" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">JustClassic</a>
+    </h1>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" *ngIf="showLogin">
+      <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/login']" routerLinkActive="router-link-active" data-bs-toggle="collapse"
+            style="margin-left: 1000px;">Login</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <button class="btn btn-primary" data-bs-toggle="collapse" routerLink="/registerUser" routerLinkActive="active"
+          style="margin-left: 60px;">Registro</button>
+      </form>
+    </div>
 
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" *ngIf="showUser">
+      <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/perfilParticular']" routerLinkActive="router-link-active"
+            data-bs-toggle="collapse" style="margin-left: 1250px;margin-bottom: -20px;">
+            <div class="circular--landscape">
+              <img  class="img" src="{{User.img}}" alt="">
+            </div>
+            <p style="float: left;">{{User.name}}</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</nav>

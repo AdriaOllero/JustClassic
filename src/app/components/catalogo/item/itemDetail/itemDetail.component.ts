@@ -9,6 +9,8 @@ import { Car } from '../../../../models/car.model';
 })
 export class ItemDetailComponent implements OnInit {
 
+  showOptions = true;
+  showShare = false;
 
   Car = {
     bio:'Cillum laborum aliquip officia magna do sunt est fugiat id incididunt. Magna laboris officia veniam cillum id exercitation adipisicing consectetur. Id deserunt aute dolor sint esse non esse exercitation aute officia aliqua quis excepteur labore. Incididunt mollit velit labore minim velit ad cupidatat labore adipisicing veniam.\r\n',

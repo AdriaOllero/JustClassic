@@ -6,8 +6,8 @@
             </div>
         </div>
         <div class="box-input position-absolute top-50 start-50 translate-middle">
-            <input #name type="text" placeholder="Encuentra el vehiculo de tus sueños" (keydown.enter)="search(name.value)">
-            <button type="button" class="btn btn-primary" (click)="search(name.value)"><img class="svg" src="../../assets/images/ic_search.svg" alt="buscar"></button>
+            <input #name type="text"  (keydown.enter)="search(name.value)">
+            <!-- <button type="button" class="btn btn-primary" (click)="search(name.value)"><img class="svg" src="../../assets/images/ic_search.svg" alt="buscar"></button> -->
         </div>
     </div>
 </div>

@@ -31,7 +31,7 @@ const routes: Routes = [
   { path: 'perfilParticular', component: PerfilParticularComponent },
   { path: '*', redirectTo: '/404' },
 ];
-
+//EL ---canActivate : [AuthGuardService], ---  Se pone en las rutas que consideremos que necesitan autentificacion
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],

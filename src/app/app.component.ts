@@ -13,7 +13,6 @@ export class AppComponent {
   constructor(private router: Router) {}
 
   ngOnInit() {
-    localStorage.setItem('token', 'weirorjw0eimtw');
     this.router.events.subscribe((route) => {
       if (route instanceof NavigationEnd) {
         if (

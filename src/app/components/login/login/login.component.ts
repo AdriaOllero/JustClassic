@@ -15,9 +15,9 @@ export class LoginComponent implements OnInit {
   isSent = false;
   email = ""
   password = ""
-  contact=""
+  contact = ""
 
-  constructor(private router: Router, private fb: FormBuilder,private usersService: UserService) {
+  constructor(private router: Router, private fb: FormBuilder, private usersService: UserService) {
     this.mForm = this.fb.group({
       email: [
         '',
@@ -38,28 +38,28 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-  loginUser() {
-    console.log('Estoy entrando al login, pero solo entrando');
-    const user: User = new User();
-    if (this.password != '' && this.email != '') {
-      user.email = this.email;
-      user.password = this.password;
-      console.log('user');
-      this.usersService.loginUser(user).subscribe(
-        (data) => {
-          localStorage.setItem('token', data.access_token);
-          this.router.navigate(['/dashboard']);
-          this.onSubmit
-          this.logged
-        },
-        (error) => {
-          console.log('Error:', error);
-        }
-      );
-    }
-  }
+  // loginUser() {
+  //   console.log('Estoy entrando al login, pero solo entrando');
+  //   const user: User = new User();
+  //   if (this.password != '' && this.email != '') {
+  //     user.email = this.email;
+  //     user.password = this.password;
+  //     console.log(user);
+  //     this.usersService.loginUser(user).subscribe(
+  //       (data) => {
+  //         localStorage.setItem('token', data.access_token);
+  //         this.router.navigate(['/dashboard']);
+  //         this.onSubmit
+  //         this.logged
+  //       },
+  //       (error) => {
+  //         console.log('Error:', error);
+  //       }
+  //     );
+  //   }
+  // }
   signup() {
     this.router.navigate(['/register']);
   }
@@ -79,8 +79,25 @@ export class LoginComponent implements OnInit {
       console.log("Form Invalido")
       return;
     }
+    const user: User = new User()
+    user.email = this.f.email.value
+    user.password = this.f.password.value
+    this.usersService.loginUser(user).subscribe(data => {
+      localStorage.setItem("token",data.access_token)
+      this.router.navigate(["/dashboard"])
+      console.log(data)
+    },
+      error => {
+        console.log("Error:", error);
+      }
+    );
 
-    console.log('Login valido', this.mForm.value);
+//   const user: User = new User();
+//   if (this.password != '' && this.email != '') {
+//     user.email = this.email;
+//     user.password = this.password;
+//     console.log(user);
+  console.log('Login valido', this.mForm.value);
     // atacar a api
   }
 }

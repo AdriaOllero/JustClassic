@@ -26,27 +26,25 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptorService } from './services/interceptors/auth-interceptor.service';
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
 
-
 @NgModule({
   declarations: [
     AppComponent,
-      TopbarComponent,
-      FooterComponent,
-      HomeComponent,
-      AboutComponent,
-      CatalogoComponent,
-      LoginComponent,
-      RegisteruserComponent,
-      RegisterEmpresaComponent,
-      RegisterCompleteComponent,
-      CatalogoEleccionComponent,
-      PerfilParticularComponent,
-      UploadItemComponent,
-      CatalogoTopBarComponent,
-      CatalogoHomeComponent,
-      ItemDetailComponent,
-
-   ],
+    TopbarComponent,
+    FooterComponent,
+    HomeComponent,
+    AboutComponent,
+    CatalogoComponent,
+    LoginComponent,
+    RegisteruserComponent,
+    RegisterEmpresaComponent,
+    RegisterCompleteComponent,
+    CatalogoEleccionComponent,
+    PerfilParticularComponent,
+    UploadItemComponent,
+    CatalogoTopBarComponent,
+    CatalogoHomeComponent,
+    ItemDetailComponent,
+  ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
@@ -55,15 +53,19 @@ import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
     MatButtonModule,
     MatDialogModule,
     IvyCarouselModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+
   ],
-  providers: [{
-    provide: HTTP_INTERCEPTORS,
-    useClass: AuthInterceptorService,
-    multi: true
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      multi: true,
     },
     { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
-    JwtHelperService,],
+    JwtHelperService,
+  ],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

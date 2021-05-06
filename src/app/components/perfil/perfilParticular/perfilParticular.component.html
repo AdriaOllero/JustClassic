@@ -1,19 +1,29 @@
 <div class="container">
   <div class="row mt-4">
     <div class="col-sm">
-      <div class="contact ">
+      <div class="contact">
         <p>A108 Adam Street</p>
         <p>NY 535022, USA</p>
-        <p>justclassic@gmail.com</p>
-        <p>+34 685431815</p>
-
+        <p>{{User.email}}</p>
+        <p>{{User.phone}}</p>
+        <button class="btn-share" style="margin-left: 185px;margin-bottom: -30px;margin-top: 20px;">
+          <span class="btn-text"><img class="iconButton"  src="../../../../../assets/images/icons/icon-herramienta.png" alt=""></span>
+          <ul class="social-icons">
+            <li>
+              <a href="" target="_blank"><img class="iconButton" src="../../../../assets/images/icons/edit.png" alt=""></a>
+            </li>
+          </ul>
+        </button>
       </div>
 
     </div>
-    <div class="col-sm">
-      <img class="img" src="{{User.img}}" alt="">
+    <div class="col-sm ">
+      <div class="circular--landscape" style="margin-left: 110px;">
+        <img class="img" src="{{User.img}}" alt="">
+      </div>
       <h1>{{User.name}}</h1>
       <h3>{{User.typeUser}}</h3>
+
     </div>
 
     <div class="col-sm">
@@ -29,7 +39,8 @@
 <div class="items mx-auto">
   <div class="row" style="margin-top: 50px;">
     <div class="card mx-auto ">
-      <a style="margin-top: 12rem;" href="/uploadItem"><img src="../../../../assets/images/add.png" class="img" alt="imagenAñadir">
+      <a style="margin-top: 12rem;" href="/uploadItem"><img src="../../../../assets/images/icons/add.png" class="addImage"
+          alt="imagenAñadir">
         <h3>Añadir Producto</h3>
       </a>
     </div>
@@ -37,14 +48,6 @@
       <div class="card__head">
         <div class="card__image" style="background-image: url({{item.photo}});"> </div>
         <div class="card__author">
-          <div class="author">
-            <img src="{{User.img}}" alt="Author of Tobias Reich"
-              class="author__image">
-            <div class="author__content">
-              <p class="author__header">{{User.name}}</p>
-              <p class="author__subheader">{{User.lastName}}</p>
-            </div>
-          </div>
         </div>
       </div>
       <div class="card__body">

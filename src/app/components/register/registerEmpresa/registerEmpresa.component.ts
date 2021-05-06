@@ -17,7 +17,7 @@ export class RegisterEmpresaComponent implements OnInit {
   constructor(private router: Router, private fb: FormBuilder, private usersService: UserService) {
     this.mForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
-      user: ['', [Validators.required, Validators.minLength(2)]],
+      business: ['', [Validators.required, Validators.minLength(2)]],
       phone: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
       password: ['', [Validators.required, Validators.pattern(/^(?=\D*\d)(?=[^a-z]*[a-z])(?=[^A-Z]*[A-Z]).{4,30}$/)]],
@@ -29,12 +29,15 @@ export class RegisterEmpresaComponent implements OnInit {
 
   ngOnInit() {
   }
-  login() {
-    this.router.navigate(["/login"])
-  }
 
+  signUp() {
+    this.router.navigate(['/register']);
+  }
   get f() {
-    return this.mForm.controls
+    return this.mForm.controls;
+  }
+  logged() {
+    this.router.navigate(['/perfilParticular']);
   }
 
   onSubmit() {
@@ -44,14 +47,20 @@ export class RegisterEmpresaComponent implements OnInit {
     console.log("Enviar form");
 
     if(this.mForm.invalid) {
+      console.log("Form Invalido")
       return
     }
 
     const user: User = new User()
+    user.name = this.f.name.value
+    user.business = this.f.business.value
+    user.phone = this.f.phone.value
     user.email = this.f.email.value
     user.password = this.f.password.value
+    console.log(user)
+
     this.usersService.registerUser(user).subscribe((data: any) => {
-      this.router.navigate(["/login"])
+      this.router.navigate(["/register"])
     },
       error => {
         console.log("Error:", error);

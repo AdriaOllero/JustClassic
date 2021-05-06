@@ -1,6 +1,8 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { User } from 'src/app/models/user.model';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-registeruser',
@@ -14,7 +16,7 @@ export class RegisteruserComponent implements OnInit {
   mForm: FormGroup
   isSent = false
 
-  constructor(private router: Router, private fb: FormBuilder) {
+  constructor(private router: Router, private fb: FormBuilder, private usersService: UserService) {
 
     this.mForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
@@ -47,11 +49,16 @@ export class RegisteruserComponent implements OnInit {
       return
     }
 
-    console.log("Login valido", this.mForm.value);
-    // Atacar a localhost:3001/api/register
-
-    // api dice 200??
-    this.router.navigate(["/dashboard"])
+    const user: User = new User()
+    user.email = this.f.email.value
+    user.password = this.f.password.value
+    this.usersService.registerUser(user).subscribe((data: any) => {
+      this.router.navigate(["/login"])
+    },
+      error => {
+        console.log("Error:", error);
+      }
+    );
 
   }
 }

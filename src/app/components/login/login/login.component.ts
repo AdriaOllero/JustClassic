@@ -61,7 +61,7 @@ export class LoginComponent implements OnInit {
   //     );
   //   }
   // }
-  signup() {
+  signUp() {
     this.router.navigate(['/register']);
   }
   get f() {
@@ -84,7 +84,7 @@ export class LoginComponent implements OnInit {
     user.email = this.f.email.value
     user.password = this.f.password.value
     this.usersService.loginUser(user).subscribe(data => {
-      localStorage.setItem("token",data.access_token)
+      localStorage.setItem("token", data.access_token)
       this.router.navigate(["/dashboard"])
       console.log(data)
     },
@@ -93,12 +93,12 @@ export class LoginComponent implements OnInit {
       }
     );
 
-//   const user: User = new User();
-//   if (this.password != '' && this.email != '') {
-//     user.email = this.email;
-//     user.password = this.password;
-//     console.log(user);
-  console.log('Login valido', this.mForm.value);
+    //   const user: User = new User();
+    //   if (this.password != '' && this.email != '') {
+    //     user.email = this.email;
+    //     user.password = this.password;
+    //     console.log(user);
+    console.log('Login valido', this.mForm.value);
     // atacar a api
   }
 }

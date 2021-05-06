@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   isSent = false;
   email = ""
   password = ""
+  contact=""
 
   constructor(private router: Router, private fb: FormBuilder,private usersService: UserService) {
     this.mForm = this.fb.group({
@@ -45,12 +46,13 @@ export class LoginComponent implements OnInit {
     if (this.password != '' && this.email != '') {
       user.email = this.email;
       user.password = this.password;
-      console.log(user);
+      console.log('user');
       this.usersService.loginUser(user).subscribe(
         (data) => {
           localStorage.setItem('token', data.access_token);
           this.router.navigate(['/dashboard']);
           this.onSubmit
+          this.logged
         },
         (error) => {
           console.log('Error:', error);

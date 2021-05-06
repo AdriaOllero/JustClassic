@@ -1,12 +1,13 @@
 .container {
   width: 100%;
-  height: fit-content;
+  height: 100vh;
   .recuadro-blanco {
-    width: 40%;
+    width: 50%;
     background-color: rgba(180, 180, 180, 0.096);
     padding: 20px;
     border-radius: 20px;
-    margin: 50px;
+    margin: 40px;
+    margin-top: 100px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.651);
     h1 {
       font-weight: bolder;
@@ -17,14 +18,89 @@
   }
   .btn-primary {
     background-color: #37447e;
-    border-radius: 10px;
-    box-shadow: 0 0 5px #37447e;
-    padding: 20px 40px 20px 40px;
+    border-radius: 0.9em;
+    border-style: hidden;
+    padding: 1em 2.2em;
     font-weight: bolder;
-    margin: 50px;
+    margin: 0 0.3em 0.3em 0;
+    display: block;
+    margin-top: 20px;
+    &:hover {
+      background-color: #4a5cac;
+      border-style: solid;
+    }
   }
   .img{
     width: 40%;
-    margin: 20px;
+    margin: 5px;
   }
+}
+
+///BOTON SUBMIT
+
+.loader {
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.car {
+	&__body {
+		animation: shake 0.2s ease-in-out infinite alternate;
+	}
+
+	&__line {
+		transform-origin: center right;
+		stroke-dasharray: 22;
+		animation: line 0.8s ease-in-out infinite;
+		animation-fill-mode: both;
+
+		&--top {
+			animation-delay: 0s;
+		}
+
+		&--middle {
+			animation-delay: 0.2s;
+		}
+
+		&--bottom {
+			animation-delay: 0.4s;
+		}
+	}
+}
+
+@keyframes shake {
+	0% {
+		transform: translateY(-1%);
+	}
+	100% {
+		transform: translateY(3%);
+	}
+}
+
+@keyframes line {
+	0% {
+		stroke-dashoffset: 22;
+	}
+
+	25% {
+		stroke-dashoffset: 22;
+	}
+
+	50% {
+		stroke-dashoffset: 0;
+	}
+
+	51% {
+		stroke-dashoffset: 0;
+	}
+
+	80% {
+		stroke-dashoffset: -22;
+	}
+
+	100% {
+		stroke-dashoffset: -22;
+	}
 }

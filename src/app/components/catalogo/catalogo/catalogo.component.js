@@ -56,3 +56,23 @@ document.querySelectorAll('.card').forEach((elem) => {
 	}
 
 })
+
+///FAV BUTTON
+$(function() {
+  $( "i" ).onClick(function() {
+    $( "i,span" ).toggleClass( "press", 1000 );
+  });
+});
+
+/* when a user clicks, toggle the 'is-animating' class */
+$(".fav").onClick('touchstart', function(){
+  $(this).toggleClass('is-animating');
+});
+
+/*when the animation is over, remove the class*/
+$(".fav").on('animationend', function(){
+  $(this).toggleClass('is-animating');
+});
+
+
+///PAGINATION

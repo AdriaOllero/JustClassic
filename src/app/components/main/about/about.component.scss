@@ -1,5 +1,7 @@
 .flex-container {
   .row {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
     .image {
       width: 100vh-25vh;
       display: block;

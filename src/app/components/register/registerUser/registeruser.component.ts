@@ -16,7 +16,7 @@ export class RegisteruserComponent implements OnInit {
   mForm: FormGroup
   isSent = false
 
-  constructor(private router: Router, private fb: FormBuilder, private usersService: UserService) {
+  constructor(private router: Router, private fb: FormBuilder, private userService: UserService) {
 
     this.mForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
@@ -52,7 +52,7 @@ export class RegisteruserComponent implements OnInit {
     const user: User = new User()
     user.email = this.f.email.value
     user.password = this.f.password.value
-    this.usersService.registerUser(user).subscribe((data: any) => {
+    this.userService.registerUser(user).subscribe((data: any) => {
       this.router.navigate(["/login"])
     },
       error => {

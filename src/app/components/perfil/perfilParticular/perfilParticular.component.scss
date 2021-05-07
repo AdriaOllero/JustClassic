@@ -171,10 +171,16 @@ h3 {
 
 .btn-primary {
   background-color: #37447e;
-  border-radius: 10px;
-  box-shadow: 0 0 5px #37447e;
-  padding: 10px 40px 10px 40px;
+  border-radius: 0.9em;
+  border-style: hidden;
+  padding: 0.8em 1.5em;
   font-weight: bolder;
+  margin: 0 0.3em 0.3em 0;
+  display: block;
+  &:hover {
+    background-color: #4a5cac;
+    border-style: solid;
+  }
 }
 
 ////////////// ITEM CAR
@@ -482,6 +488,12 @@ body {
     }
   }
 }
+h5 {
+  font-weight: bolder;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  color: #37447e;
+}
 
 /// OPTIONS BUTTON
 .iconButton {
@@ -574,7 +586,6 @@ body {
     .btn-icon {
       transform: translateY(-55px);
       border-radius: 50px;
-
     }
 
     .social-icons li {

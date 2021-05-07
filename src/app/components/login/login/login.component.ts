@@ -1,3 +1,4 @@
+import { Login } from './../../../models/login.model';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
   password = ""
   contact = ""
 
-  constructor(private router: Router, private fb: FormBuilder, private usersService: UserService) {
+  constructor(private router: Router, private fb: FormBuilder, private userService: UserService) {
     this.mForm = this.fb.group({
       email: [
         '',
@@ -61,14 +62,9 @@ export class LoginComponent implements OnInit {
   //     );
   //   }
   // }
-  signUp() {
-    this.router.navigate(['/register']);
-  }
+
   get f() {
     return this.mForm.controls;
-  }
-  logged() {
-    this.router.navigate(['/perfilParticular']);
   }
 
   onSubmit() {
@@ -80,13 +76,35 @@ export class LoginComponent implements OnInit {
       console.log("Form Invalido")
       return;
     }
-    const user: User = new User()
-    user.email = this.f.email.value
-    user.password = this.f.password.value
-    this.usersService.loginUser(user).subscribe(data => {
+    // console.log('Estoy entrando al login, pero solo entrando');
+    //   const user: User = new User();
+    //   if (this.password != '' && this.email != '') {
+    //     user.email = this.email;
+    //     user.password = this.password;
+    //     console.log(user);
+    //     this.usersService.loginUser(user).subscribe(
+    //       (data) => {
+    //         localStorage.setItem('token', data.access_token);
+    //         this.router.navigate(['/perfilParticular']);
+    //         console.log("Estoy llegando hasta aqui")
+    //       },
+    //       (error) => {
+    //         console.log('Error:', error);
+    //       }
+    //     );
+    //   }
+    // console.log('Login valido', this.mForm.value);
+
+    const login: Login = new Login()
+    login.email = this.f.email.value
+    login.password = this.f.password.value
+
+    this.userService.loginUser(login).subscribe(data => {
+
       localStorage.setItem("token", data.access_token)
-      this.router.navigate(["/dashboard"])
+      this.router.navigate(["/perfilParticular"])
       console.log(data)
+
     },
       error => {
         console.log("Error:", error);
@@ -98,7 +116,6 @@ export class LoginComponent implements OnInit {
     //     user.email = this.email;
     //     user.password = this.password;
     //     console.log(user);
-    console.log('Login valido', this.mForm.value);
     // atacar a api
   }
 }

@@ -24,31 +24,31 @@
     width: 100%;
   }
 
-
-  input{
-    border-radius:40%;
-    width:60px;
-    cursor:pointer;
-    height:60px;
-    background-image:url("../../../../assets/images/icons/loupeTrue.png");
-    background-color:rgba(255, 255, 255, 0.76);
-    outline:none;
-    background-size:22px;
-    background-position:50%;
-    font-size:18px;
-    color:rgb(0, 0, 0);
-    background-repeat:no-repeat;
-    border:1px solid rgb(255, 255, 255);
-    transition-property:width, border-radius, background-position, padding/*, transform*/;
-    transition-duration:0.5s;
+  input {
+    border-radius: 40%;
+    width: 60px;
+    cursor: pointer;
+    height: 60px;
+    background-image: url("../../../../assets/images/icons/loupeTrue.png");
+    background-color: rgba(255, 255, 255, 0.76);
+    outline: none;
+    background-size: 20px;
+    background-position: 50%;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    background-repeat: no-repeat;
+    border: 1px solid rgb(255, 255, 255);
+    transition-property: width, border-radius, background-position,
+      padding /*, transform*/;
+    transition-duration: 0.5s;
   }
-  input:focus{
+  input:focus {
     // transform:rotate(-360deg);
-    width:630px;
-    border-radius:20px;
-    cursor:text;
+    width: 630px;
+    border-radius: 20px;
+    cursor: text;
     padding: 30px;
-    background-position:5px;
+    background-position: 5px;
   }
   // .box-input {
   //   width: 50%;
@@ -85,6 +85,7 @@
   //     height: 25px;
   //   }
   // }
+
   .slider-block {
     height: auto;
     display: inline-block;

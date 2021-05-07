@@ -7,10 +7,12 @@
         <p>{{User.email}}</p>
         <p>{{User.phone}}</p>
         <button class="btn-share" style="margin-left: 185px;margin-bottom: -30px;margin-top: 20px;">
-          <span class="btn-text"><img class="iconButton"  src="../../../../../assets/images/icons/icon-herramienta.png" alt=""></span>
+          <span class="btn-text"><img class="iconButton" src="../../../../../assets/images/icons/icon-herramienta.png"
+              alt=""></span>
           <ul class="social-icons">
             <li>
-              <a href="" target="_blank"><img class="iconButton" src="../../../../assets/images/icons/edit.png" alt=""></a>
+              <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="iconButton"
+                  src="../../../../assets/images/icons/edit.png" alt=""></a>
             </li>
           </ul>
         </button>
@@ -39,8 +41,8 @@
 <div class="items mx-auto">
   <div class="row" style="margin-top: 50px;">
     <div class="card mx-auto ">
-      <a style="margin-top: 12rem;" href="/uploadItem"><img src="../../../../assets/images/icons/add.png" class="addImage"
-          alt="imagenAñadir">
+      <a style="margin-top: 12rem;" href="/uploadItem"><img src="../../../../assets/images/icons/add.png"
+          class="addImage" alt="imagenAñadir">
         <h3>Añadir Producto</h3>
       </a>
     </div>
@@ -61,4 +63,36 @@
     </a>
 
   </div>
-</div>
+  <!-- MODAL -->
+  <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    style="z-index: 99999;">
+    <div class="modal-dialog position-absolute top-50 start-50 translate-middle" style="width: 100%;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Aplica los cambios</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="RECUADRO-BLANCO">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Domicilio" aria-label="Username"
+                  aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Localidad" aria-label="Username"
+                  aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Telefono" aria-label="Username"
+                  aria-describedby="basic-addon1">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>

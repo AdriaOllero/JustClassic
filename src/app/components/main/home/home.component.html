@@ -1,11 +1,11 @@
 <div class="flex-container">
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
         <div class="carousel-inner">
-            <div class="carousel-item active " *ngFor="let item of cosas;let index = index;let isFirst = first" [ngClass]="{active:isFirst}">
+            <div class="carousel-item active " *ngFor="let item of imagenesFondoCarrusel;let index = index;let isFirst = first" [ngClass]="{active:isFirst}">
                 <img src="{{item}}" class="d-block image mx-auto" alt="Imagen 1">
             </div>
         </div>
-        <div class="box-input position-absolute top-50 start-50 translate-middle">
+        <div class="box-input position-absolute top-0 start-50 translate-middle-x" style="margin-top: 75px;">
             <input #name type="text"  (keydown.enter)="search(name.value)">
             <!-- <button type="button" class="btn btn-primary" (click)="search(name.value)"><img class="svg" src="../../assets/images/ic_search.svg" alt="buscar"></button> -->
         </div>

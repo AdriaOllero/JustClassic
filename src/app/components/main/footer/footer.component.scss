@@ -1,73 +1,67 @@
-.container {
-  background-image: url(../../../../assets/images/pexels-markus-spiske-2101260.jpg);
+.flex-container {
+  background-color: #37447e;
   max-width: 100%;
   background-repeat: no-repeat;
-  height: 100vh- 90vh;
+  height: 45vh;
   width: 100%;
   background-attachment: fixed;
   background-size: cover;
   padding: 50px;
-  .row {
-    margin: 20px;
-    .social {
-      margin-top: 100px;
-      .logo {
-        width: 52%;
-        height: fit-content;
-        margin: 30px;
-        transition: width 0.5s, height 0.5s;
-        &:hover {
-          width: 62%;
-          height: fit-content;
-          margin: 30px;
-        }
-      }
+  .top-footer {
+    margin-bottom: 40px;
+    .list-group-item{
+      background-color: transparent;
     }
-    .title {
-      background-color: rgba(255, 255, 255, 0.534);
-      width: fit-content;
-      padding: 20px;
-      border-radius: 20px;
-      margin-top: 100px;
-      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
-      h1 {
-        font-weight: bolder;
-        font-size: 50px;
-        color: #37447e;
-        text-shadow: 0 0 0.5px black;
-        text-align: center;
+    h1 {
+      font-size: 30px;
+      font-weight: bolder;
+      color: white;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+      margin: 8px;
+      &:hover {
+        color: #bac6fc;
       }
     }
   }
-  .contact {
-    width: 30%;
-    text-align: center;
+  .line {
+    background-color: white;
+    width: 90%;
+    height: 1px;
+  }
+  .primary-footer {
+    float: left;
     margin-top: 50px;
+
+    h1 {
+      font-weight: bolder;
+      color: white;
+    }
     p {
       color: white;
-      font-size: larger;
-      font-weight: bolder;
-      text-shadow: 0 0 15px black;
     }
   }
+  .secondary-footer {
+    float: right;
+    margin-top: 50px;
+    width: 430px;
 
-  .legal {
-    align-items: center;
-    display: inline-flex;
-    a {
-      text-align: center;
-      text-shadow: 0 0 15px black;
-      align-items: center;
+    .social {
+      margin-bottom: 20px;
+      width: 40px;
+      height: 40px;
+      transition: 6ms ease-in-out;
+    }
+    .legal {
       text-decoration: none;
       color: white;
-      font-weight: bolder;
-      bottom: 0;
-      display: block;
-      font-size: 1.2rem;
+      font-size: 12px;
+      font-weight: bold;
+      &:hover {
+        color: #bac6fc;
+      }
     }
   }
 }
-
-
-////SOCIAL LINKS
-

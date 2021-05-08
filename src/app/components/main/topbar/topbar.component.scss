@@ -4,17 +4,18 @@
   color: #37447e;
   align-items: center;
   text-align: center;
-  width: 60%;
   position: absolute;
-  left: 20%;
   padding: auto;
+  margin-left: 80px;
 }
 
+
 .circular--landscape {
-  width: 45px;
-  height: 45px;
+  width: 55px;
+  height: 55px;
   overflow: hidden;
   border-radius: 50%;
+  margin-top: -10px;
 }
 
 .circular--landscape img {
@@ -32,8 +33,14 @@ p {
 
 .header {
   z-index: 99999;
-  background-color: adjust-hue($color: #cccccc77, $degrees: 0);
+  background-color: adjust-hue($color: #cccccc00, $degrees: 0);
 }
+
+.header.scrolled {
+  background-color: rgb(0, 0, 0) !important;
+  transition: background-color 200ms linear;
+}
+
 
 .navbar-dark .navbar-brand:hover {
   color: #37447e;

@@ -1,30 +1,38 @@
-@media (max-width: 800px) {
-  .flex-container {
-    flex-direction: column;
-    height: 100vh;
-  }
-}
 
-.image {
-  margin-top: 30px;
-  width: 60%;
-  height: auto;
-  border-radius: 100px;
-  box-shadow: 15px 15px 20px #000000d0;
-  z-index: 9999;
-}
-
-.flex-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  .flex-container-search {
-    display: flex;
-    flex-direction: row;
+  .background{
+    background-image: url(../../../../assets/images/jorge-zapata-pBs0koIAF3s-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
     width: 100%;
+    height: 110vh;
+    margin-top: -140px;
   }
+  .home{
+    margin-top: -170px;
+  }
+  h2 {
+    font-weight: bolder;
+    font-size: 3vw;
+    color:  #37447e;
+    align-items: center;
+    text-align: center;
+    text-shadow: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  }
+  h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 1vw;
+    color: #5367c2 ;
+    align-items: center;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
 
   input {
+    margin-top: 75px;
     border-radius: 40%;
     width: 60px;
     cursor: pointer;
@@ -50,63 +58,9 @@
     padding: 30px;
     background-position: 5px;
   }
-  // .box-input {
-  //   width: 50%;
-  //   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.562);
-  //   border-radius: 19px;
-  //   background: rgba(255, 255, 255, 0.897);
-  //   padding: 15px;
-  //   input {
-  //     border: 0px;
-  //     background: rgba(255, 255, 255, 0);
-  //     padding: 20px 20px;
-  //     font-size: 18px;
-  //     border-radius: 20px;
-  //     outline: none;
-  //     width: 80%;
-  //   }
-  //   .btn-primary {
-  //     background-color: #37447e;
-  //     border-radius: 20px;
-  //     float: right;
-  //     text-align: center;
-  //     box-shadow: 0 0 5px #37447e;
-  //     padding: 15px 25px 15px 25px;
-  //     font-weight: bolder;
-  //     margin-top: 5px;
-  //     border-style: hidden;
-  //     &:hover {
-  //       background-color: #4a5cac;
-  //       border-style: solid;
-  //     }
-  //   }
-  //   .svg {
-  //     width: 25px;
-  //     height: 25px;
-  //   }
-  // }
-
-  .slider-block {
-    height: auto;
-    display: inline-block;
-  }
-
-  #carousel {
-    height: 100%;
-  }
-
-  #carousel .carousel-inner {
-    height: 100%;
-  }
-
-  #carousel .item {
-    background-size: cover;
-    background-position: center center no-repeat;
-    width: 100%;
-    height: 100%;
-  }
-
-  .carousel-item {
+  .line{
+    width: 80%;
     margin-bottom: 100px;
+    background-color: #37447e;
+    height: 1px;
   }
-}

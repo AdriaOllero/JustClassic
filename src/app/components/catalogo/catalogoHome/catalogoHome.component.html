@@ -1,5 +1,3 @@
-<app-catalogoTopBar></app-catalogoTopBar>
-
 <div class="flex-container">
   <div class="d-flex justify-content-between">
     <carousel class="flex-column mx-auto" style="height: 250px ;">
@@ -18,80 +16,55 @@
             <!-- overlays -->
             <div class="gradient-overlay"></div>
             <div class="color-overlay"></div>
-          </div><!-- /.blog-card --> <!-- <h5 class="centered">{{category.name}}</h5> -->
+          </div>
         </a>
-            <!-- <img src="{{category.photo}}" class="img-fluid" alt="categoryImage"> -->
       </div>
     </carousel>
   </div>
-
-  <!-- <div class="line flex-column mx-auto" style="margin-top: 50px;"></div> -->
-
-
-
-  <div class="flex-column mx-auto">
-
-    <div class="example">
-      <span class="hover hover-3"><h1>Destacado</h1></span>
-    </div>
-  </div>
-  <div class="row mx-auto">
-    <div class="col-sm">
-      <a href=""><img class="imgCatalogoHome" src="../../../../assets/images/jakub-sisulak-a3fOMcZ3mYQ-unsplash.jpg"
-          alt=""></a>
-    </div>
-    <div class="col-sm">
-      <a href=""><img class="imgCatalogoHome" src="../../../../assets/images/pexels-pixabay-163553.jpg" alt=""></a>
-    </div>
-    <div class="col-sm">
-      <a href=""><img class="imgCatalogoHome" src="../../../../assets/images/pexels-markus-spiske-2101260.jpg"
-          alt=""></a>
-    </div>
-  </div>
-
-
-  <!-- <div class="line flex-column mx-auto" style="margin-top: 50px;"></div> -->
-
   <div class="flex-column mx-auto">
     <div class="example">
-      <span class="hover hover-3"><h1>Lo más buscado</h1></span>
+      <span class="hover hover-3">
+        <h1>Destacado</h1>
+      </span>
     </div>
   </div>
-  <div class="row mx-auto">
-    <div class="col-sm">
-      <a href=""><img class="imgCatalogoHome" src="../../../../assets/images/jakub-sisulak-a3fOMcZ3mYQ-unsplash.jpg"
-          alt=""></a>
-    </div>
-    <div class="col-sm">
-      <a href=""><img class="imgCatalogoHome" src="../../../../assets/images/pexels-pixabay-163553.jpg" alt=""></a>
-    </div>
-    <div class="col-sm">
-      <a href=""><img class="imgCatalogoHome" src="../../../../assets/images/pexels-markus-spiske-2101260.jpg"
-          alt=""></a>
+  <div class="best mx-auto">
+    <div class="cards">
+      <article class="card card--1" *ngFor="let item of allBest">
+        <div class="card__info-hover">
+        </div>
+        <div class="card__img"></div>
+        <a href="#" class="card_link">
+          <div class="card__img--hover"></div>
+        </a>
+        <div class="card__info">
+          <span class="card__category"> {{item.name}}</span>
+          <h3 class="card__title">Crisp Spanish tortilla Matzo brei</h3>
+          <span class="card__by">by <a href="#" class="card__author" title="author">Celeste Mills</a></span>
+        </div>
+      </article>
     </div>
   </div>
-
-  <!-- <div class="line flex-column mx-auto" style="margin-top: 50px;"></div> -->
-
   <div class="flex-column mx-auto">
     <div class="example">
-      <span class="hover hover-3"><h1>Lo coches más valorados</h1></span>
+      <span class="hover hover-3">
+        <h1>Lo más buscado</h1>
+      </span>
     </div>
   </div>
-  <div class="row mx-auto">
-    <div class="col-sm">
-      <a href=""><img class="imgCatalogoHome" src="../../../../assets/images/robin-vet-q6LFMQ6wVZ0-unsplash.jpg"
-          alt=""></a>
-    </div>
-    <div class="col-sm">
-      <a href=""><img class="imgCatalogoHome" src="../../../../assets/images/oli-woodman-kA8icki31uo-unsplash.jpg"
-          alt=""></a>
-    </div>
-    <div class="col-sm">
-      <a href=""><img class="imgCatalogoHome" src="../../../../assets/images/pexels-markus-spiske-2101260.jpg"
-          alt=""></a>
+  <div class="best  mx-auto" style="margin-bottom: 100px;">
+    <div class="cards">
+      <article class="card card--1" *ngFor="let item of allBest">
+        <div class="card__img"></div>
+        <a href="#" class="card_link">
+          <div class="card__img--hover"></div>
+        </a>
+        <div class="card__info">
+          <span class="card__category"> Recipe</span>
+          <h3 class="card__title">Crisp Spanish tortilla Matzo brei</h3>
+          <span class="card__by">by <a href="#" class="card__author" title="author">Celeste Mills</a></span>
+        </div>
+      </article>
     </div>
   </div>
-
-
-
+</div>

@@ -1,4 +1,5 @@
 .flex-container {
+  margin: 150px;
   .row {
     --bs-gutter-x: 0;
     --bs-gutter-y: 0;
@@ -11,6 +12,7 @@
       font-weight: bold;
       color: #37447e;
       margin-bottom: 50px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
     p {
       font-size: 1vw;
@@ -19,6 +21,7 @@
     }
     h5 {
       width: 80%;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
     .icon {
       margin-top: 50px;
@@ -34,59 +37,254 @@
       font-weight: bolder;
     }
 
-    //CARTAS
-
-    .cardBox {
-      font-size: 1.2em;
-      perspective: 800px;
-      transition: all 0.3s ease 0s;
-      width: 85%;
-      border-radius: 20px;
-    }
-
-    .cardBox:hover .card {
-      transform: rotateX(180deg);
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.418);
-      cursor: default;
-      height: 250px;
+    .container {
+      width: 100%;
+      height: 80vh;
       transform-style: preserve-3d;
-      transition: transform 0.4s ease 0s;
-      width: 100%;
-      -webkit-animation: giro 1s 1;
-      animation: giro 1s 1;
-      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.493);
-      border-radius: 20px;
-    }
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
 
-    .card .back p {
-      margin-top: 60px;
-      text-align: center;
-    }
+      .cards {
+        position: relative;
+        width: 100%;
+        height: 600px;
+        margin-bottom: 20px;
+      }
+      .card {
+        position: absolute;
+        width: 60%;
+        height: 700px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transition: transform 0.4s ease;
+        cursor: pointer;
+      }
 
-    .card .front,
-    .card .back {
-      backface-visibility: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      #item-1:checked ~ .cards #song-3,
+      #item-2:checked ~ .cards #song-1,
+      #item-3:checked ~ .cards #song-2 {
+        transform: translatex(-40%) scale(0.8);
+        opacity: 0.4;
+        z-index: 0;
+      }
+
+      #item-1:checked ~ .cards #song-2,
+      #item-2:checked ~ .cards #song-3,
+      #item-3:checked ~ .cards #song-1 {
+        transform: translatex(40%) scale(0.8);
+        opacity: 0.4;
+        z-index: 0;
+      }
+
+      #item-1:checked ~ .cards #song-1,
+      #item-2:checked ~ .cards #song-2,
+      #item-3:checked ~ .cards #song-3 {
+        transform: translatex(0) scale(1);
+        opacity: 1;
+        z-index: 1;
+
+        img {
+          box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+        }
+      }
+    }
+  }
+
+  /// ABOUT INFO
+  .info {
+    @import url("https://fonts.googleapis.com/css?family=Lato:300,900");
+
+    $transition-ease-in-out: all 0.25s ease-in-out 0s;
+    $transition-cubic-bezier: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    $animation-offset: 80px;
+
+    *,
+    :after,
+    :before {
       box-sizing: border-box;
-      color: white;
-      display: block;
-      font-size: 1.2em;
+    }
+    html,
+    body {
       height: 100%;
-      padding: 0.8em;
+    }
+    body {
+      font-family: "Lato", sans-serif;
+      background: #eee;
+      padding: 100px 60px;
+      animation: fade-in 3s ease-in-out forwards;
+    }
+    strong {
+      font-weight: 900;
+    }
+    .canvas-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+      height: 400px;
+
+      .canvas + .canvas {
+        margin-left: 40px;
+      }
+    }
+    .canvas {
+      position: relative;
+      display: block;
+      width: 300px;
+      height: 300px;
+      padding: 20px;
+      color: inherit;
+      text-decoration: none;
+    }
+    .canvas_border {
       position: absolute;
-      text-align: center;
+      top: 40px;
+      left: -40px;
+      height: 100%;
       width: 100%;
-      border-radius: 20px;
+      z-index: 0;
+
+      svg {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .rect-gradient {
+      stroke-dasharray: 2000;
+      stroke-dashoffset: 2000;
+      animation: erase-line 1s ease-in-out forwards;
+    }
+    .canvas_img-wrapper {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      transform: rotate(-10deg) skew(-10deg);
+      overflow: hidden;
+      background: white;
+    }
+    .canvas_img {
+      transform: scale3d(0.9, 0.9, 0.9);
+      opacity: 0.3;
+      max-width: 200px;
+      max-height: 200px;
+    }
+    .canvas_copy {
+      position: absolute;
+      bottom: 0;
+      left: 85%;
+      text-transform: uppercase;
+      color: #37447e;
+      z-index: 100;
+    }
+    .canvas_copy--left {
+      left: -25%;
+    }
+    .canvas_copy_title {
+      font-size: 42px;
+      display: block;
+      transform: translateX(-#{$animation-offset});
+      transition: $transition-cubic-bezier 0s;
+      color: #6678c4;
+
+      &:nth-child(1) {
+        transition-delay: 0.1s;
+      }
+      &:nth-child(2) {
+        transition-delay: 0.2s;
+      }
+    }
+    .canvas_copy_subtitle {
+      display: block;
+      transform: rotate(270deg) translateY(-100%)
+        translateX(calc(-100% - #{$animation-offset}));
+      transform-origin: top left;
+      position: absolute;
+      left: 0;
+      top: 8px; //This needs to change with font size. It's an offset for the line-height of the "hellow world"
+      font-size: 24px;
+      font-weight: 900;
+      transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.35s;
+    }
+    .canvas_copy_details {
+      display: block;
+      transition: $transition-cubic-bezier 0.14s;
+      transform: translateX(-#{$animation-offset});
+    }
+    .canvas_border,
+    .canvas_img-wrapper,
+    .canvas_img {
+      transition: $transition-ease-in-out;
+    }
+    .canvas_border,
+    .canvas_img-wrapper {
+      transform: rotate(-10deg) skew(-10deg);
+    }
+    .canvas_copy_title,
+    .canvas_copy_subtitle,
+    .canvas_copy_details {
+      opacity: 0;
+    }
+    .canvas:hover {
+      .canvas_copy_title,
+      .canvas_copy_subtitle,
+      .canvas_copy_details,
+      .canvas_img {
+        opacity: 1;
+      }
+      .canvas_border,
+      .canvas_img-wrapper {
+        transform: rotate(-14deg) skew(-14deg) scale(0.96);
+      }
+      .canvas_img {
+        transform: scale3d(1, 1, 1);
+      }
+      .canvas_copy_title,
+      .canvas_copy_details {
+        transform: translateX(0);
+      }
+      .canvas_copy_subtitle {
+        transform: rotate(270deg) translateY(-100%) translateX(-100%);
+      }
+      .rect-gradient {
+        animation: draw-line 3s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+      }
     }
 
-    .card .back {
-      transform: rotateX(180deg);
+    @keyframes draw-line {
+      from {
+        stroke-dashoffset: 2000;
+      }
+      to {
+        stroke-dashoffset: 0;
+      }
     }
-
-    .cardBox:nth-child(1) .card .back {
-      background: #37447e;
+    @keyframes erase-line {
+      from {
+        stroke-dashoffset: 0;
+      }
+      to {
+        stroke-dashoffset: 2000;
+      }
+    }
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
   }
 }

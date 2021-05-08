@@ -1,3 +1,4 @@
+import { Car } from 'src/app/models/car.model';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
@@ -9,7 +10,7 @@ import { Categoria } from 'src/app/models/categoria.model';
   styleUrls: ['./catalogoHome.component.scss']
 })
 export class CatalogoHomeComponent implements OnInit {
-
+  allBest: Array<Car> = []
   allCategories: Array<Categoria> = []
   nameSearch: string = ""
 
@@ -19,6 +20,23 @@ export class CatalogoHomeComponent implements OnInit {
     this.loadData()
   }
   loadData() {
+    this.allBest=[
+      {
+        "name": "Todos",
+        "photo": "../../../../assets/images/robin-vet-q6LFMQ6wVZ0-unsplash.jpg",
+      },
+      {
+        "name": "Americanos",
+        "photo": "../../../../assets/images/robin-vet-q6LFMQ6wVZ0-unsplash.jpg",
+      },
+      {
+        "name": "Japoneses",
+        "photo": "../../../../assets/images/oli-woodman-kA8icki31uo-unsplash.jpg",
+      },
+      {
+        "name": "Alemanes",
+        "photo": "../../../../assets/images/oli-woodman-kA8icki31uo-unsplash.jpg",
+      }]
     this.allCategories=[
       {
         "name": "Todos",

@@ -3,7 +3,9 @@
     flex-direction: column;
   }
 }
-
+.catalogo {
+  width: 90%;
+}
 .flex-container {
   display: flex;
 
@@ -12,66 +14,16 @@
   .d-flex {
     padding: 50px;
   }
-  .btn-primary {
-    background-color: #37447e;
-    border-radius: 10px;
-    box-shadow: 0 0 5px #37447e;
-    padding: 10px 40px 10px 40px;
-    font-weight: bolder;
-  }
-  .flex-container-search {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-  }
-  .form-control {
-    width: 40%;
-    text-align: center;
-    border-radius: 19px;
-    box-shadow: 2px 2px 5px;
-    background: rgba(255, 255, 255, 0.897);
-    input {
-      border: 0px;
-      background: rgba(255, 255, 255, 0);
-      padding: 20px 20px;
-      font-size: 18px;
-      border-radius: 20px;
-      outline: none;
-      width: 80%;
-    }
-  }
-}
-
-.carousel {
-  width: 60%;
-  height: 200px;
-  .img-fluid {
-    border-radius: 20px;
-  }
-}
-
-.imgCategory {
-  background-image: url(../../../../assets/images/jakub-sisulak-a3fOMcZ3mYQ-unsplash.jpg);
-  width: 60%;
-  margin: 50px;
-  border-radius: 50px;
-  background-size: cover;
-  .background {
-    width: 70%;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.603);
-    border-radius: 50px;
-  }
 }
 
 .line {
   background-color: #37447e;
-  width: 20%;
+  width: 100%;
   height: 1px;
-  margin-top: 25px;
-  margin-bottom: 100px;
+  margin-top: 8px;
+  margin-bottom: 75px;
   transition: 2s ease-in-out;
-  &:active{
+  &:active {
     width: 80%;
   }
 }
@@ -83,13 +35,12 @@ h1 {
   text-align: center;
   margin: 50px;
 }
-h3 {
+h2 {
   font-weight: bolder;
-  font-size: 4vw;
+  font-size: 1.5vw;
   color: #37447e;
-  align-items: center;
-  text-align: center;
 }
+
 
 .row {
   --bs-gutter-x: 0;
@@ -101,10 +52,10 @@ h3 {
   margin-right: calc(var(--bs-gutter-x) / -2);
   margin-left: calc(var(--bs-gutter-x) / -2);
   .card {
-    width: 30%;
+    width: 21%;
     height: auto;
     margin: 25px;
-    border-radius: 20px;
+    border-radius: 15px;
     h5 {
       font-weight: bolder;
       margin-top: 20px;
@@ -159,17 +110,6 @@ body {
   &.hover {
     color: white;
     transition-delay: 0;
-  }
-
-  &,
-  &__image,
-  &__image::after,
-  &__author,
-  &__body,
-  &__foot,
-  &__border {
-    transition-duration: $duration;
-    transition-timing-function: $timing;
   }
 
   &__head {
@@ -326,8 +266,8 @@ body {
 
 /// UNDERLINED TEXT
 
-@import 'https://fonts.googleapis.com/css?family=Montserrat';
-@import 'https://fonts.googleapis.com/css?family=Lato';
+@import "https://fonts.googleapis.com/css?family=Montserrat";
+@import "https://fonts.googleapis.com/css?family=Lato";
 #examples {
   display: flex;
   flex-flow: column;
@@ -345,7 +285,6 @@ body {
   align-items: center;
   margin: 30px;
   .hover {
-
     font-size: 2vh;
     text-align: center;
     padding: 0;
@@ -357,14 +296,12 @@ body {
       position: absolute;
       bottom: 35px;
       width: 0px;
-      height:3px;
+      height: 3px;
       margin: -10px 0 0;
       transition: all 0.2s ease-in-out;
       transition-duration: 0.75s;
       opacity: 0;
       background-color: darken(#37447e, 5%);
-
-
     }
     &.hover-3 {
       &:before {
@@ -393,64 +330,13 @@ body {
     }
   }
 }
-
-/// FAV BUTTON
-
-
-// .heart {
-//   width: 100px;
-//   height: 100px;
-//   position: absolute;
-//   left: 35%;
-//   top: 50%;
-//   transform: translate(-50%, -50%);
-//   background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
-//   background-position: 0 0;
-//   cursor: pointer;
-//   animation: fave-heart 1s steps(28);
-// }
-// .heart:hover {
-//   background-position: -2800px 0;
-//   transition: background 1s steps(28);
-// }
-// @keyframes fave-heart {
-//   0% {
-//     background-position: 0 0;
-//   }
-//   100% {
-//     background-position: -2800px 0;
-//   }
-// }
-
-.fav {
-  background-position: left;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  display: inline-block;
-  z-index: 99999;
-  &:hover {
-    background-position: right;
-  }
+///PAGINATION
+body{
+  margin:0;
+  overflow:hidden;
+  background:#222;
 }
-
-
-
-.fav-heart {
-  background-image: url("https://cssanimation.rocks/images/posts/steps/heart.png");
-  background-size: auto 100px; // scale the image for retina
-  height: 100px;
-  width: 100px; // 2900px / 29 frames
-  z-index: 99999;
-
-  &.is-animating {
-    animation: zoetrope .8s steps(28) 1;
-  }
+svg{
+  width:100%;
+  height:100vh;
 }
-
-@keyframes zoetrope {
-  from { background-position: left;  }
-  to   { background-position: right; }
-}
-
-
-////PAGINATION

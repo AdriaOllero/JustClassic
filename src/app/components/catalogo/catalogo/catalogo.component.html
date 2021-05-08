@@ -1,3 +1,5 @@
+<div class="line mx-auto"></div>
+<app-catalogoTopBar></app-catalogoTopBar>
 <div class="flex-container">
   <div class="example mx-auto">
     <span class="hover hover-3">
@@ -6,29 +8,35 @@
   </div>
 </div>
 <!-- <div class="line mx-auto"></div> -->
-<div class="row mx-auto">
-  <a href="/itemDetail" class="card" *ngFor="let item of allCars">
-    <div class="card__head">
-      <div class="card__image" style="background-image: url({{item.photo}});"></div>
-      <div class="fav fav-heart position-absolute top-0 end-0"></div>
-      <div class="card__author">
-        <div class="author">
-          <!-- <div class="heart "></div> -->
-          <img src="{{User.img}}" alt="Author of Tobias Reich" class="author__image">
-          <div class="author__content">
-            <p class="author__header">{{User.name}}</p>
-            <p class="author__subheader">{{User.lastName}}</p>
+<div class="catalogo mx-auto">
+  <div class="row mx-auto">
+    <a href="/itemDetail" class="card" *ngFor="let item of allCars">
+      <div class="card__head">
+        <div class="card__image" style="background-image: url({{item.photo}});"></div>
+        <div class="card__author">
+          <div class="author">
+            <!-- <div class="heart "></div> -->
+            <img src="{{User.img}}" alt="Author of Tobias Reich" class="author__image">
+            <div class="author__content">
+              <p class="author__header">{{User.name}}</p>
+              <p class="author__subheader">{{User.lastName}}</p>
+            </div>
           </div>
         </div>
       </div>
+      <div class="card__body">
+        <h2 class="card__headline">{{item.name}}</h2>
+        <p>Marca - {{item.brand}}</p>
+        <p>Modelo - {{item.model}}</p>
+        <p>Año - {{item.year}}</p>
+        <!-- <p class="card__text">{{item.bio}}</p> -->
+      </div>
+      <div class="card__foot">
+        <span class="card__link">Read more</span>
+      </div>
+      <div class="card__border"></div>
+    </a>
     </div>
-    <div class="card__body">
-      <h2 class="card__headline">{{item.name}}</h2>
-      <p class="card__text">{{item.bio}}</p>
-    </div>
-    <div class="card__foot">
-      <span class="card__link">Read more</span>
-    </div>
-    <div class="card__border"></div>
-  </a>
-  </div>
+</div>
+
+<script src="catalogo.js"></script>

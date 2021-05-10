@@ -1,6 +1,6 @@
 .title {
   font-weight: bold;
-  font-size: 45px;
+  font-size: 40px;
   color: #37447e;
   align-items: center;
   text-align: center;
@@ -52,6 +52,12 @@ p {
   color: #4d5faf;
   font-size: larger;
 }
+.nav-item{
+  height: 70px;
+  font-weight: bolder;
+  color: #4d5faf;
+  font-size: larger;
+}
 
 // .navbar-brand.abs {
 //     position: absolute;
@@ -66,7 +72,6 @@ p {
 
 .navbar .nav-item a:focus {
   color: #2e3a6d;
-  font-size: 20px;
 }
 
 .navbar-dark .navbar-nav .nav-link.active {
@@ -95,14 +100,15 @@ p {
 
 .btn-primary {
   background-color: #37447e;
-  border-radius: 10px;
+  border-radius: 5px;
   border-style: hidden;
-  padding: 10px 40px 10px 40px;
-  font-weight: bolder;
+  padding: 10px 15px 10px 15px;
+  font-weight: bold;
   margin: 10px;
   &:hover {
     background-color: #4a5cac;
     border-style: solid;
+    padding: 10px 15px 10px 15px;
   }
 }
 

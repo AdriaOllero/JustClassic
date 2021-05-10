@@ -4,10 +4,10 @@
   }
 }
 
-.flex-container {
+.container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 60%;
   .d-flex {
     padding: 50px;
   }
@@ -18,7 +18,7 @@
     padding: 10px 40px 10px 40px;
     font-weight: bolder;
   }
-  .flex-container-search {
+  .container-search {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -42,7 +42,7 @@
 }
 
 .items {
-  width: 70%;
+  width: 60%;
 }
 
 .carousel {
@@ -132,7 +132,7 @@ h3 {
   }
 
   .contact {
-    margin-top: 75px;
+    margin-top: 35px;
     p {
       font-weight: bolder;
       font-size: 1vw;

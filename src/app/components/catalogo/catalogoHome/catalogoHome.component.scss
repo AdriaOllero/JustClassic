@@ -46,13 +46,17 @@ $theColor: #37447e;
 }
 
 .carousel {
-  width: 80%;
-  height: 600px;
+  width: 100%;
+  height: 1000px;
   align-items: center;
-
   margin-bottom: 80px;
+
+
+
   .carousel-cell {
     border-radius: 10px;
+    width: 175px !important;
+
   }
   .carousel-cell img {
     object-fit: cover;
@@ -60,12 +64,21 @@ $theColor: #37447e;
   }
   .carousel-arrows {
     top: 20%;
+
   }
 
   .img-fluid {
     border-radius: 10px;
     width: 100%;
     height: 250px;
+  }
+  h3 {
+    font-size: 2vh;
+    font-weight: bolder;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    box-shadow: #000;
   }
   ///CARTAS CATEGORY
 
@@ -89,20 +102,13 @@ $theColor: #37447e;
       left: 50%;
       transform: translate(-50%, -50%);
     }
-    h5 {
-      font-size: 3vh;
-      font-weight: bolder;
-      margin-top: 20px;
-      margin-bottom: 15px;
-      color: #37447e;
-      box-shadow: #000;
-    }
+
   }
 }
 
 h1 {
   font-weight: bolder;
-  font-size: 3vw;
+  font-size: 2vw;
   color: #37447e;
   align-items: center;
   text-align: center;
@@ -329,7 +335,7 @@ h3 {
       position: absolute;
       bottom: 35px;
       width: 0px;
-      height: 3px;
+      height: 1.5px;
       margin: -10px 0 0;
       transition: all 0.2s ease-in-out;
       transition-duration: 0.75s;

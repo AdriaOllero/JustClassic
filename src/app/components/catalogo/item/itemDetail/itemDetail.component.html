@@ -1,35 +1,51 @@
-
 <div class="background mx-auto">
   <div class="container" style="margin-top: 50px ; width: 100%; height: 350px;">
     <input type="radio" name="slider" id="item-1" checked>
     <input type="radio" name="slider" id="item-2">
     <input type="radio" name="slider" id="item-3">
-    <button class="btn-share" *ngIf="showShare">
-      <span class="btn-text"><img class="iconButton"  src="../../../../../assets/images/icons/icon-herramienta.png" alt=""></span>
-      <ul class="social-icons">
-        <li>
-          <a href="" target="_blank"><img class="iconButton" src="../../../../assets/images/icons/edit.png" alt=""></a>
-        </li>
-        <li>
-          <a href="" target="_blank"><img class="iconButton" src="../../../../assets/images/icons/delete.png" alt=""></a>
-        </li>
-      </ul>
-    </button>
-    <button class="btn-share" *ngIf="showOptions">
-      <span class="btn-text"><img class="iconButton"  src="../../../../../assets/images/icons/menu.png" alt=""></span>
-      <ul class="social-icons">
-        <li>
-          <a href="" target="_blank"><img class="iconButton" src="../../../../assets/images/icons/messenger.png" alt=""></a>
-        </li>
-        <li>
-          <a href="" target="_blank"><img class="iconButton" src="../../../../assets/images/icons/heart(2).png" alt=""></a>
-        </li>
-        <li>
-          <a href="" target="_blank"><img class="iconButton" src="../../../../assets/images/icons/share.png" alt=""></a>
-        </li>
-      </ul>
-    </button>
-    <div class="cards" >
+    <div class="itemTop">
+      <div class="author">
+        <!-- <div class="heart "></div> -->
+        <img src="{{User.img}}" alt="Author of Tobias Reich" class="author__image">
+        <div class="author__content">
+          <p class="author__header">{{User.name}}</p>
+        </div>
+      </div>
+      <button class="btn-share" *ngIf="showShare">
+        <span class="btn-text"><img class="iconButton" src="../../../../../assets/images/icons/icon-herramienta.png"
+            alt=""></span>
+        <ul class="social-icons">
+          <li>
+            <a href="" target="_blank"><img class="iconButton" src="../../../../assets/images/icons/edit.png"
+                alt=""></a>
+          </li>
+          <li>
+            <a href="" target="_blank"><img class="iconButton" src="../../../../assets/images/icons/delete.png"
+                alt=""></a>
+          </li>
+        </ul>
+      </button>
+      <button class="btn-share" *ngIf="showOptions">
+        <span class="btn-text"><img class="iconButton" src="../../../../../assets/images/icons/menu.png" alt=""></span>
+        <ul class="social-icons">
+          <li>
+            <a href="" target="_blank"><img class="iconButton" src="../../../../assets/images/icons/messenger.png"
+                alt=""></a>
+          </li>
+          <li>
+            <a href="" target="_blank"><img class="iconButton" src="../../../../assets/images/icons/heart(2).png"
+                alt=""></a>
+          </li>
+          <li>
+            <a href="" target="_blank"><img class="iconButton" src="../../../../assets/images/icons/share.png"
+                alt=""></a>
+          </li>
+        </ul>
+      </button>
+    </div>
+
+
+    <div class="cards">
       <label class="card" for="item-1" id="song-1">
         <img src="{{Car.photo[0]}}" alt="song">
       </label>
@@ -48,7 +64,7 @@
   </div>
 
   <div class="container" style="margin-top: -125px;">
-    <div class="row mx-auto" >
+    <div class="row mx-auto">
       <div class="col-sm">
         <h4> <img class="icon" src="../../../assets/images/icons/speedometer.png" alt="">{{Car.km}} km</h4>
       </div>
@@ -60,7 +76,7 @@
       </div>
 
     </div>
-    <p >{{Car.bio}}</p>
+    <p>{{Car.bio}}</p>
 
   </div>
 </div>

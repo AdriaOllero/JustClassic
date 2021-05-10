@@ -6,7 +6,7 @@
         <p>NY 535022, USA</p>
         <p>{{User.email}}</p>
         <p>{{User.phone}}</p>
-        <button class="btn-share" style="margin-left: 185px;margin-bottom: -30px;margin-top: 20px;">
+        <button class="btn-share" style="margin-left: 155px;margin-bottom: -30px;margin-top: 20px;">
           <span class="btn-text"><img class="iconButton" src="../../../../../assets/images/icons/icon-herramienta.png"
               alt=""></span>
           <ul class="social-icons">
@@ -20,7 +20,7 @@
 
     </div>
     <div class="col-sm ">
-      <div class="circular--landscape" style="margin-left: 110px;">
+      <div class="circular--landscape" style="margin-left: 90px;">
         <img class="img" src="{{User.img}}" alt="">
       </div>
       <h1>{{User.name}}</h1>
@@ -40,12 +40,6 @@
 
 <div class="items mx-auto">
   <div class="row" style="margin-top: 50px;">
-    <div class="card mx-auto ">
-      <a style="margin-top: 12rem;" href="/uploadItem"><img src="../../../../assets/images/icons/add.png"
-          class="addImage" alt="imagenAñadir">
-        <h3>Añadir Producto</h3>
-      </a>
-    </div>
     <a href="/itemDetail" class="card  mx-auto " *ngFor="let item of allCars">
       <div class="card__head">
         <div class="card__image" style="background-image: url({{item.photo}});"> </div>
@@ -69,7 +63,7 @@
     <div class="modal-dialog position-absolute top-50 start-50 translate-middle" style="width: 100%;">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Aplica los cambios</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Editar Infomación</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
         </div>
         <div class="modal-body">

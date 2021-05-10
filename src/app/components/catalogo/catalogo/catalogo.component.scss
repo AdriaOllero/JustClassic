@@ -16,6 +16,12 @@
   }
 }
 
+.icon{
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
 .line {
   background-color: #37447e;
   width: 100%;
@@ -56,6 +62,7 @@ h2 {
     height: auto;
     margin: 25px;
     border-radius: 15px;
+    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.438);
     h5 {
       font-weight: bolder;
       margin-top: 20px;
@@ -296,7 +303,7 @@ body {
       position: absolute;
       bottom: 35px;
       width: 0px;
-      height: 3px;
+      height: 1.5px;
       margin: -10px 0 0;
       transition: all 0.2s ease-in-out;
       transition-duration: 0.75s;

@@ -1,5 +1,6 @@
 <div class="line mx-auto"></div>
 <app-catalogoTopBar></app-catalogoTopBar>
+<div class="line mx-auto"></div>
 <div class="flex-container">
   <div class="example mx-auto">
     <span class="hover hover-3">
@@ -21,9 +22,9 @@
       </div>
       <div class="card__body">
         <h2 class="card__headline">{{item.name}}</h2>
-        <p>Marca - {{item.brand}}</p>
-        <p>Modelo - {{item.model}}</p>
-        <p>Año - {{item.year}}</p>
+        <p><img class="icon" src="../../../../assets/images/icons/car.png" alt="">{{item.brand}}</p>
+        <p><img class="icon" src="../../../../assets/images/icons/hatchback.png" alt="">{{item.model}}</p>
+        <p><img class="icon" src="../../../../assets/images/icons/new-year.png" alt="">{{item.year}}</p>
         <!-- <p class="card__text">{{item.bio}}</p> -->
       </div>
       <div class="card__foot">

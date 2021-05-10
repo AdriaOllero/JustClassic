@@ -7,4 +7,7 @@ export class Car {
   model?:       string;
   brand?:        string;
   fuel?: string;
+  doors?:string;
+  seats?:string;
+  location?:string;
 }

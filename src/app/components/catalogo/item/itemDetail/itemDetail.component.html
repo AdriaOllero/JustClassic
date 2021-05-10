@@ -4,14 +4,16 @@
     <input type="radio" name="slider" id="item-2">
     <input type="radio" name="slider" id="item-3">
     <div class="itemTop">
-      <div class="author">
-        <!-- <div class="heart "></div> -->
-        <img src="{{User.img}}" alt="Author of Tobias Reich" class="author__image">
-        <div class="author__content">
-          <p class="author__header">{{User.name}}</p>
-        </div>
+      <div class="author position-absolute top-0 start-0">
+        <a href="/perfilParticular" style="text-decoration: none; display: inline-flex;">
+          <!-- <div class="heart "></div> -->
+          <img src="{{User.img}}" alt="Author of Tobias Reich" class="author__image">
+          <div class="author__content">
+            <p class="author__header">{{User.name}}</p>
+          </div>
+        </a>
       </div>
-      <button class="btn-share" *ngIf="showShare">
+      <button class="btn-share position-absolute top-0 end-0" *ngIf="showShare">
         <span class="btn-text"><img class="iconButton" src="../../../../../assets/images/icons/icon-herramienta.png"
             alt=""></span>
         <ul class="social-icons">
@@ -25,7 +27,7 @@
           </li>
         </ul>
       </button>
-      <button class="btn-share" *ngIf="showOptions">
+      <button class="btn-share position-absolute top-0 end-0" *ngIf="showOptions">
         <span class="btn-text"><img class="iconButton" src="../../../../../assets/images/icons/menu.png" alt=""></span>
         <ul class="social-icons">
           <li>
@@ -60,25 +62,48 @@
 
   <div class="col-12" style="margin-top: 25px ;">
     <h1>{{Car.name}}</h1>
-    <h3>{{Car.year}}</h3>
+    <h3>{{Car.price}}€</h3>
   </div>
 
-  <div class="container" style="margin-top: -125px;">
+  <div class="container" style="margin-top: -100px;margin-bottom: 50px;">
     <div class="row mx-auto">
       <div class="col-sm">
-        <h4> <img class="icon" src="../../../assets/images/icons/speedometer.png" alt="">{{Car.km}} km</h4>
+        <img class="icon" src="../../../assets/images/icons/speedometer.png" alt="">
+        <h4>{{Car.km}} km</h4>
       </div>
       <div class="col-sm">
-        <h4><img class="icon" src="../../../assets/images/icons/gasoline-pump.png" alt="">{{Car.fuel}}</h4>
+        <img class="icon" src="../../../assets/images/icons/garaje.png" alt="">
+        <h4>{{Car.brand}}</h4>
       </div>
       <div class="col-sm">
-        <h4><img class="icon" src="../../../assets/images/icons/money.png" alt="">{{Car.price}} €</h4>
+        <img class="icon" src="../../../assets/images/icons/car.png" alt="">
+        <h4>{{Car.model}}</h4>
       </div>
-
+      <div class="col-sm">
+        <img class="icon " src="../../../assets/images/icons/new-year.png" alt="">
+        <h4> {{Car.year}}</h4>
+      </div>
     </div>
-    <p>{{Car.bio}}</p>
+    <div class="line"></div>
+    <div class="row mx-auto" style="width: 500px;">
+      <div class="col-sm">
+        <h3> {{Car.seats}}</h3>
+      </div>
+      <div class="col-sm">
+        <h3> {{Car.doors}}</h3>
+      </div>
+      <div class="col-sm">
+        <h3> {{Car.location}}</h3>
+      </div>
+      <div class="col-sm">
+        <h3> {{Car.fuel}}</h3>
+      </div>
+    </div>
+    <div class="line"></div>
+    <p style="margin-top: 5px;">{{Car.bio}}</p>
 
   </div>
 </div>
 
 <script src="itemDetail.js"></script>
+<app-footer></app-footer>

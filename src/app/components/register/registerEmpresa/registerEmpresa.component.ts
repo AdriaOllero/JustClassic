@@ -18,7 +18,7 @@ export class RegisterEmpresaComponent implements OnInit {
     this.mForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
       business: ['', [Validators.required, Validators.minLength(2)]],
-      phone: ['', [Validators.required, Validators.minLength(2)]],
+      phone: ['', [Validators.required, Validators.minLength(9)]],
       email: ['', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
       password: ['', [Validators.required, Validators.pattern(/^(?=\D*\d)(?=[^a-z]*[a-z])(?=[^A-Z]*[A-Z]).{4,30}$/)]],
       repeat_password: ['', [Validators.required, Validators.pattern(/^(?=\D*\d)(?=[^a-z]*[a-z])(?=[^A-Z]*[A-Z]).{4,30}$/)]]
@@ -37,7 +37,7 @@ export class RegisterEmpresaComponent implements OnInit {
     return this.mForm.controls;
   }
   logged() {
-    this.router.navigate(['/perfilParticular']);
+    this.router.navigate(['/registerComplete']);
   }
 
   onSubmit() {

@@ -31,12 +31,14 @@ export class RegisteruserComponent implements OnInit {
   ngOnInit() {
   }
 
-  login() {
-    this.router.navigate(["/login"])
+  signUp() {
+    this.router.navigate(['/register']);
   }
-
   get f() {
-    return this.mForm.controls
+    return this.mForm.controls;
+  }
+  logged() {
+    this.router.navigate(['/registerComplete']);
   }
 
   onSubmit() {
@@ -46,14 +48,19 @@ export class RegisteruserComponent implements OnInit {
     console.log("Enviar form");
 
     if(this.mForm.invalid) {
+      console.log("Form Invalido")
       return
     }
 
     const user: User = new User()
+    user.name = this.f.name.value
+    user.phone = this.f.phone.value
     user.email = this.f.email.value
     user.password = this.f.password.value
+    console.log(user)
+
     this.userService.registerUser(user).subscribe((data: any) => {
-      this.router.navigate(["/login"])
+      this.router.navigate(["/register"])
     },
       error => {
         console.log("Error:", error);
@@ -62,5 +69,6 @@ export class RegisteruserComponent implements OnInit {
 
   }
 }
+
 
 

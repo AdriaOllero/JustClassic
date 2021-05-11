@@ -39,13 +39,14 @@ export class TopbarComponent implements OnInit {
       }
     }
   }
-  upload() {
-    if(this.authService.isAuthenticated()) {
-       this.router.navigate(["dashboard/uploadItem"])
-    } else {
-      this.router.navigate(["/login"])
-    }
-  }
+  // upload() {
+  //   if(this.authService.isAuthenticated()) {
+  //      this.router.navigate(["dashboard/uploadItem"])
+  //   } else {
+  //     this.router.navigate(["/login"])
+  //   }
+  // }
+
   // onWindowScroll() {
   //   let element = document.querySelector('myHeader') as HTMLElement;
   //   if (window.pageYOffset > element.clientHeight) {

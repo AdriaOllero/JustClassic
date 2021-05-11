@@ -28,16 +28,18 @@ const routes: Routes = [
   { path: 'registerUser', component: RegisteruserComponent },
   { path: 'registerComplete', component: RegisterCompleteComponent },
   { path: 'registerEmpresa', component: RegisterEmpresaComponent },
+  { path: 'uploadItem', component: UploadItemComponent},
 
   { path: 'perfilParticular', component: PerfilParticularComponent },
   {
     path: "dashboard", component: DashboardComponent, children: [
-      { path: 'uploadItem', component: UploadItemComponent },
-    ], canActivate: [AuthGuardService],
+
+    ]
   },
   { path: '*', redirectTo: '/404' },
 ];
 //EL ---canActivate : [AuthGuardService], ---  Se pone en las rutas que consideremos que necesitan autentificacion
+// canActivate: [AuthGuardService],
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],

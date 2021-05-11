@@ -10,4 +10,5 @@ export class Car {
   doors?:string;
   seats?:string;
   location?:string;
+  price?:string;
 }

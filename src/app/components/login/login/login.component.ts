@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit {
     console.log(login)
     this.userService.loginUser(login).subscribe((data: any) => {
       localStorage.setItem("token",data.access_token)
-      this.router.navigate(["/dashboard"])
+      this.router.navigate(["/uploadItem"])
       console.log(data)
     },
       error => {

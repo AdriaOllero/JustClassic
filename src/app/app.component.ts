@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import 'moment/locale/es'
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +12,9 @@ export class AppComponent {
   title = 'JustClassic';
 
   isLogin = false;
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    moment.locale('es')
+  }
 
   ngOnInit() {
     this.router.events.subscribe((route) => {

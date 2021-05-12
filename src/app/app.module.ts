@@ -25,6 +25,7 @@ import { ItemDetailComponent } from './components/catalogo/item/itemDetail/itemD
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptorService } from './services/interceptors/auth-interceptor.service';
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
+import { MAT_DATE_LOCALE, MAT_DATE_LOCALE_FACTORY } from '@angular/material/core';
 
 
 @NgModule({

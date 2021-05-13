@@ -13,8 +13,14 @@ import { UserService } from 'src/app/services/user.service';
 })
 
 export class RegisteruserComponent implements OnInit {
-  mForm: FormGroup
-  isSent = false
+  mForm: FormGroup;
+  isSent = false;
+  name = '';
+  email = '';
+  password = '';
+  phone = '';
+  repeat_password = '';
+
 
   constructor(private router: Router, private fb: FormBuilder, private userService: UserService) {
 
@@ -32,14 +38,14 @@ export class RegisteruserComponent implements OnInit {
   }
 
   signUp() {
-    this.router.navigate(['/register']);
+    this.router.navigate(['/login']);
   }
   get f() {
     return this.mForm.controls;
   }
-  logged() {
-    this.router.navigate(['/registerComplete']);
-  }
+  // logged() {
+  //   this.router.navigate(['/registerComplete']);
+  // }
 
   onSubmit() {
 
@@ -60,7 +66,9 @@ export class RegisteruserComponent implements OnInit {
     console.log(user)
 
     this.userService.registerUser(user).subscribe((data: any) => {
-      this.router.navigate(["/register"])
+      localStorage.setItem("token",data.access_token)
+      this.router.navigate(["/registerComplete"])
+      console.log("hola")
     },
       error => {
         console.log("Error:", error);

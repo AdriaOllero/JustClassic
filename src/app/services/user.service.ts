@@ -37,18 +37,18 @@ export class UserService {
         })
       );
   }
-  saveUser(user: User): Observable<any> {
-    return this.httpClient.post(`${environment.apiUrl}/login`, user).pipe(
-      catchError((error) => {
-        return error;
-      })
-    );
-  }
-  saveCar(car: Car): Observable<any> {
-    return this.httpClient.post(`${environment.apiUrl}/login`, car).pipe(
-      catchError((error) => {
-        return error;
-      })
-    );
-  }
+  // saveUser(user: User): Observable<any> {
+  //   return this.httpClient.post(`${environment.apiUrl}/login`, user).pipe(
+  //     catchError((error) => {
+  //       return error;
+  //     })
+  //   );
+  // }
+  // saveCar(car: Car): Observable<any> {
+  //   return this.httpClient.post(`${environment.apiUrl}/login`, car).pipe(
+  //     catchError((error) => {
+  //       return error;
+  //     })
+  //   );
+  // }
 }

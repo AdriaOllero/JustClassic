@@ -29,6 +29,8 @@ export class PerfilParticularComponent implements OnInit {
         model: 'C 63',
         year: '2018',
         brand: 'Mercedez-Benz',
+        price:'60.000',
+        location:'Madrid'
       },
       {
         bio:
@@ -40,6 +42,8 @@ export class PerfilParticularComponent implements OnInit {
         model: 'C 63',
         year: '2018',
         brand: 'Mercedez-Benz',
+        price:'60.000',
+        location:'Madrid'
       },
       {
         bio:
@@ -51,6 +55,8 @@ export class PerfilParticularComponent implements OnInit {
         model: 'C 63',
         year: '2018',
         brand: 'Mercedez-Benz',
+        price:'60.000',
+        location:'Madrid'
       },
     ];
   }

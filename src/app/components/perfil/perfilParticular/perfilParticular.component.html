@@ -38,58 +38,85 @@
 
 </div>
 
-<div class="items mx-auto">
-  <div class="row" style="margin-top: 50px;">
-    <a href="/itemDetail" class="card  mx-auto " *ngFor="let item of allCars">
-      <div class="card__head">
-        <div class="card__image" style="background-image: url({{item.photo}});"> </div>
-        <div class="card__author">
-        </div>
-      </div>
-      <div class="card__body">
-        <h2 class="card__headline">{{item.name}}</h2>
-        <p class="card__text">{{item.bio}}</p>
-      </div>
-      <div class="card__foot">
-        <span class="card__link">Read more</span>
-      </div>
-      <div class="card__border"></div>
-    </a>
 
-  </div>
-  <!-- MODAL -->
-  <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
-    style="z-index: 99999;">
-    <div class="modal-dialog position-absolute top-50 start-50 translate-middle" style="width: 100%;">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Editar Infomación</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="RECUADRO-BLANCO">
-              <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Domicilio" aria-label="Username"
-                  aria-describedby="basic-addon1">
-              </div>
-              <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Localidad" aria-label="Username"
-                  aria-describedby="basic-addon1">
-              </div>
-              <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Telefono" aria-label="Username"
-                  aria-describedby="basic-addon1">
-              </div>
+<!-- CATALOGO -->
+<ul class="list-group mx-auto">
+  <li class="list-group-item" *ngFor="let item of allCars">
+    <div class="row">
+      <div class="col">
+        <img class="image" src="{{item.photo}}" alt="">
+      </div>
+      <div class="col" style="margin-top: 60px;margin-left: -70px;">
+        <h2>{{item.name}}</h2>
+        <h5>{{item.brand}}</h5>
+        <h5>{{item.model}}</h5>
+        <button class="btn btn-primary">Ver Detalle</button>
+      </div>
+      <div class="col">
+        <div class="row row-cols-2">
+          <div class="col">
+            <div class="info">
+              <img class="icon" src="../../../../assets/images/icons/price-tag.png" alt="">
+              <p>{{item.price}} €</p>
             </div>
-          </form>
+
+          </div>
+          <div class="col">
+            <div class="info">
+              <img class="icon" src="../../../../assets/images/icons/speedometer.png" alt="">
+              <p> {{item.km}}</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="info">
+              <img class="icon" src="../../../../assets/images/icons/icon-mundo.png" alt="">
+              <p>{{item.location}}</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="info">
+              <img class="icon" src="../../../../assets/images/icons/new-year.png" alt="">
+              <p>{{item.year}}</p>
+            </div>
+          </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Guardar</button>
-        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+<!-- MODAL -->
+<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+  style="z-index: 99999;">
+  <div class="modal-dialog position-absolute top-50 start-50 translate-middle" style="width: 100%;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar Infomación</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="RECUADRO-BLANCO">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Domicilio" aria-label="Username"
+                aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Localidad" aria-label="Username"
+                aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Telefono" aria-label="Username"
+                aria-describedby="basic-addon1">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
       </div>
     </div>
   </div>
 </div>
+
 <app-footer></app-footer>

@@ -6,7 +6,7 @@
           <h1 class="title">Just</h1>
           <h1 class="secondTitle">Classic</h1>
           <div class="form-floating mb-3">
-            <input name="email" type="email" class="form-control" id="floatingInput" placeholder="Correo electrónico"
+            <input name="email" type="email" [(ngModel)]="email" class="form-control" id="floatingInput" placeholder="Correo electrónico"
               formControlName="email" [ngClass]="{'is-invalid': isSent && f.email.errors}">
             <label for="floatingInput">Correo Electronico</label>
             <div class="form-floating">
@@ -14,7 +14,7 @@
             </div>
           </div>
           <div class="form-floating">
-            <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password"
+            <input name="password" type="password" [(ngModel)]="password"class="form-control" id="floatingPassword" placeholder="Password"
               formControlName="password" [ngClass]="{'is-invalid': isSent && f.password.errors}">
             <label for="floatingPassword">Contraseña</label>
           </div>

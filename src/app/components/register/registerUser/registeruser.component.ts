@@ -20,7 +20,11 @@ export class RegisteruserComponent implements OnInit {
   email = ""
   password = ""
   phone =""
-  constructor(private router: Router, private fb: FormBuilder, private userService: UserService,private authService: SharedService) {
+
+  repeat_password = '';
+
+
+  constructor(private router: Router, private fb: FormBuilder, private userService: UserService) {
 
     this.mForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
@@ -36,15 +40,15 @@ export class RegisteruserComponent implements OnInit {
 
   }
 
-  login() {
-    this.router.navigate(["/login"])
+  signUp() {
+    this.router.navigate(['/login']);
   }
   get f() {
     return this.mForm.controls;
   }
-  logged() {
-    this.router.navigate(['/registerComplete']);
-  }
+  // logged() {
+  //   this.router.navigate(['/registerComplete']);
+  // }
 
   onSubmit() {
 
@@ -76,6 +80,7 @@ export class RegisteruserComponent implements OnInit {
         }
       );
     }
+
 
   }
 }

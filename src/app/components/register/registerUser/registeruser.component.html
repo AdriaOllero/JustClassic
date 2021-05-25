@@ -16,7 +16,7 @@
             </div>
           </div>
           <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="email"
+            <input type="email" [(ngModel)]="email" class="form-control" id="floatingInput" placeholder="name@example.com"
               formControlName="email" [ngClass]="{'is-invalid': isSent && f.email.errors}">
             <label for="floatingInput">Correo Electronico</label>
             <div class="form-floating">
@@ -33,7 +33,7 @@
             </div>
           </div>
           <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password"[(ngModel)]="password"
+            <input type="password" [(ngModel)]="password" class="form-control" id="floatingPassword" placeholder="Password"
               formControlName="password" [ngClass]="{'is-invalid': isSent && f.password.errors}">
             <label for="floatingPassword">Contraseña</label>
             <div class="form-floating">

@@ -21,7 +21,7 @@ export class AppComponent {
       if (route instanceof NavigationEnd) {
         if (
           route.url == '/login' ||
-          route.url == '/registerParticular' ||
+          route.url == '/registerUser' ||
           route.url.includes('dashboard')
         ) {
           this.isLogin = true;

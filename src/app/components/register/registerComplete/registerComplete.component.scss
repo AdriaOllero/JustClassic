@@ -1,11 +1,11 @@
-.padd {
-    margin-top: 100px;
-}
+
 
 .background {
-    background-color: white;
+    background-image:url(../../../../assets/images/josh-rinard-H9mp1P1VUj4-unsplash.jpg);
+    background-size: cover;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
+    margin-top: -86px;
 }
 
 .title {
@@ -23,11 +23,6 @@
     text-align: center;
 }
 
-.icon {
-    width: 600px;
-    height: 600px;
-    margin: -100px;
-}
 
 .btn-primary {
     background-color: #37447E;
@@ -37,6 +32,10 @@
     font-weight: bolder;
     font-size: 20px;
     margin-top: 50px;
+    border-style: none;
+    &:hover{
+      background-color:#566bc9 ;
+    }
 }
 
 .center {

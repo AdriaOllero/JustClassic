@@ -1,65 +1,64 @@
 .background {
-    background-image: url(../../../../assets/images/denis-marosan-2zB2rIZAnFU-unsplash.jpg);
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-    background-size: cover;
+  background-image: url(../../../../assets/images/denis-marosan-2zB2rIZAnFU-unsplash.jpg);
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  margin-top: -86px;
+  .register {
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.897);
+    width: 25%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
-    margin-top: -103px;
-    .register {
-        border-radius: 50px;
-        background-color: rgba(255, 255, 255, 0.897);
-        width: 25%;
-        height: fit-content;
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
-        margin-top: 15px;
-        box-shadow: 0 0 15px black;
-        h1 {
-            font-weight: bolder;
-            font-size: 3vw;
-            color: #37447E;
-            align-items: center;
-            text-align: center;
-            margin-top: -25px;
-        }
-        h5 {
-            font-weight: bolder;
-            font-size: 1vw;
-            color: #37447E;
-            align-items: center;
-            text-align: center;
-            margin-top: -10px;
-            margin-bottom: 20px;
-        }
-        form {
-            padding: 20px;
-            width: 90%;
-            .form-control {
-                border-radius: 15px;
-                padding: 15px;
-            }
-        }
-        .line {
-            background-color: #37447E;
-            width: 100%;
-            height: 1px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-        .btn-primary {
-            background-color: #37447E;
-            border-radius: 10px;
-            border-style:hidden;
-            padding: 10px 40px 10px 40px;
-            font-weight: bolder;
-            margin: 10px;
-            &:hover{
-              background-color: #4a5cac;
-              border-style:solid;
-            }
-        }
+    padding: 20px;
+    margin-top: 15px;
+    box-shadow: 0 0 15px black;
+    h1 {
+      font-weight: bolder;
+      font-size: 3vw;
+      color: #37447e;
+      align-items: center;
+      text-align: center;
+      margin-top: -25px;
     }
+    h5 {
+      font-weight: bolder;
+      font-size: 1vw;
+      color: #37447e;
+      align-items: center;
+      text-align: center;
+      margin-top: -10px;
+      margin-bottom: 20px;
+    }
+    form {
+      padding: 20px;
+      width: 90%;
+      .form-control {
+        border-radius: 15px;
+        padding: 15px;
+      }
+    }
+    .line {
+      background-color: #37447e;
+      width: 100%;
+      height: 1px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .btn-primary {
+      background-color: #37447e;
+      border-radius: 10px;
+      border-style: hidden;
+      padding: 10px 40px 10px 40px;
+      font-weight: bolder;
+      margin: 10px;
+      &:hover {
+        background-color: #4a5cac;
+      }
+    }
+  }
 }

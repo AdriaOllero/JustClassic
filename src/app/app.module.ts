@@ -19,7 +19,6 @@ import { HomeComponent } from './components/main/home/home.component';
 import { FooterComponent } from './components/main/footer/footer.component';
 import { TopbarComponent } from './components/main/topbar/topbar.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
-import { CatalogoTopBarComponent } from './components/catalogo/catalogoTopBar/catalogoTopBar.component';
 import { CatalogoHomeComponent } from './components/catalogo/catalogoHome/catalogoHome.component';
 import { ItemDetailComponent } from './components/catalogo/item/itemDetail/itemDetail.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -43,7 +42,6 @@ import { MAT_DATE_LOCALE, MAT_DATE_LOCALE_FACTORY } from '@angular/material/core
     CatalogoEleccionComponent,
     PerfilParticularComponent,
     UploadItemComponent,
-    CatalogoTopBarComponent,
     CatalogoHomeComponent,
     ItemDetailComponent,
   ],

@@ -1,15 +1,15 @@
 <div class="container">
   <div class="recuadro-blanco mx-auto">
-    <div class="secondary-blanco">
+    <div class="secondary-blanco" [formGroup]="mForm" (ngSubmit)="onSubmit()">
       <h1>Información Básica</h1>
       <!-- <img class="img mx-auto" src="../../../../../assets/images/alex-zabavsky-WCQKaC2ffjs-unsplash.jpg" alt="uploadedImage"> -->
       <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="Nombre Vehiculo" aria-label="Username"
-          aria-describedby="basic-addon1">
+          aria-describedby="basic-addon1" #carName>
       </div>
       <div class="input-group mb-3">
-        <select class="form-select" id="inputGroupSelect01">
-          <option selected>Marca</option>
+        <select class="form-select" id="inputGroupSelect01"  #carBrand>
+          <option selected >Marca</option>
           <option value="1">Mercedez-Benz</option>
           <option value="2">BMW</option>
           <option value="3">Seat</option>
@@ -19,7 +19,7 @@
       </div>
 
       <div class="input-group mb-3">
-        <select class="form-select" id="inputGroupSelect01">
+        <select class="form-select" id="inputGroupSelect01"  #carModel>
           <option selected>Modelo</option>
           <option value="1">Mercedez-Benz</option>
           <option value="2">BMW</option>
@@ -29,11 +29,11 @@
         </select>
       </div>
       <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Año" aria-label="Username" aria-describedby="basic-addon1">
+        <input type="text" class="form-control" placeholder="Año" aria-label="Username" aria-describedby="basic-addon1"  #carYear>
       </div>
       <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="Precio - €" aria-label="Username"
-          aria-describedby="basic-addon1">
+          aria-describedby="basic-addon1"  #carPrice>
       </div>
     </div>
     <div class="line mx-auto"></div>
@@ -43,25 +43,25 @@
       <!-- <img class="img mx-auto" src="../../../../../assets/images/alex-zabavsky-WCQKaC2ffjs-unsplash.jpg" alt="uploadedImage"> -->
 
       <div class="input-group mb-3">
-        <input type="file" class="form-control" id="inputGroupFile01">
+        <input type="file" class="form-control" id="inputGroupFile01"  #carPhoto>
       </div>
       <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="Numero de Plazas" aria-label="Username"
-          aria-describedby="basic-addon1">
+          aria-describedby="basic-addon1"  #carSeats>
       </div>
       <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="Numero de Puertas" aria-label="Username"
-          aria-describedby="basic-addon1">
+          aria-describedby="basic-addon1"  #carDoors>
       </div>
       <div class="input-group mb-3">
-        <select class="form-select" id="inputGroupSelect01">
+        <select class="form-select" id="inputGroupSelect01" #carFuel>
           <option selected>Combustible</option>
           <option value="1">Gasolina</option>
           <option value="2">Diesel</option>
         </select>
       </div>
-      <div class="input-group mb-3">
-        <select class="form-select" id="inputGroupSelect01">
+      <!-- <div class="input-group mb-3">
+        <select class="form-select" id="inputGroupSelect01" #location>
           <option selected>Tipo de Coche</option>
           <option value="1">Sedan</option>
           <option value="2">Coupé</option>
@@ -69,9 +69,9 @@
           <option value="3">Furgoneta</option>
           <option value="3">Pequeño</option>
         </select>
-      </div>
+      </div> -->
       <div class="input-group mb-3">
-        <select class="form-select" id="inputGroupSelect01">
+        <select class="form-select" id="inputGroupSelect01" #carLocation>
           <option selected>Toda España</option>
           <option value="1">Madrid</option>
           <option value="2">Barcelona</option>
@@ -82,13 +82,13 @@
       </div>
       <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="Kilómetros" aria-label="Username"
-          aria-describedby="basic-addon1">
+          aria-describedby="basic-addon1" #carKm>
       </div>
       <div class="input-group">
-        <textarea class="form-control" aria-label="With textarea" placeholder="Descripción"></textarea>
+        <textarea class="form-control" aria-label="With textarea" placeholder="Descripción" #carBio></textarea>
       </div>
     </div>
-    <button class="btn btn-primary mx-auto">Subir</button>
+    <button class="btn btn-primary mx-auto" (click)="addNewCar(carName.value,carBio.value,carYear.value,carKm.value,carModel.value,carBrand.value,carFuel.value,carDoors.value,carSeats.value,carLocation.value,carPrice.value)">Subir</button>
     <div class="cancelar">
       <a href="">Cancelar</a>
     </div>

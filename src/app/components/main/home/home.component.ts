@@ -1,5 +1,7 @@
+import { Car } from 'src/app/models/car.model';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-home',
@@ -9,17 +11,23 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
 
-  constructor(private router: Router) { }
+
+  constructor(private router: Router, private sharedService:SharedService) { }
 
   ngOnInit() {
 
   }
 
-  search(searchValue: string){
-    if(searchValue == "") {
-      this.router.navigate(["/catalogoHome"])
+  search(searchValue: HTMLInputElement) {
+    console.log(searchValue.value);
+    searchValue.value;
+    if (searchValue.value !== '') {
+      this.sharedService.allCars = this.sharedService.allCars.filter((car: Car) => {
+        return car.name?.toLowerCase().includes(searchValue.value.toLowerCase());
+      });
+      console.log('patata');
     } else {
-      this.router.navigate(["/catalogoHome"], { queryParams: { name: searchValue}})
+      this.sharedService.allCars = this.sharedService.getCarList();
     }
   }
 

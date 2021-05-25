@@ -7,7 +7,7 @@
           <h1 class="secondTitle">Classic</h1>
           <h5 class="thirdTitle">Usuario</h5>
           <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="name"
               formControlName="name" [ngClass]="{'is-invalid': isSent && f.name.errors}">
             <label for="floatingInput">Usuario</label>
             <div class="form-floating">
@@ -16,7 +16,7 @@
             </div>
           </div>
           <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="email"
               formControlName="email" [ngClass]="{'is-invalid': isSent && f.email.errors}">
             <label for="floatingInput">Correo Electronico</label>
             <div class="form-floating">
@@ -25,15 +25,15 @@
             </div>
           </div>
           <div class="form-floating mb-3">
-            <input name="phone" type="phone" class="form-control" id="floatingInput" placeholder="Nº Telefono"
-              formControlName="phone" [ngClass]="{'is-invalid': isSent && f.email.errors}">
+            <input name="phone" type="phone" class="form-control" id="floatingInput" placeholder="Nº Telefono" [(ngModel)]="phone"
+              formControlName="phone" [ngClass]="{'is-invalid': isSent && f.phone.errors}">
             <label for="floatingInput">Nº Telefono</label>
             <div class="form-floating">
               <div role="alert" *ngIf="isSent && f.phone.errors"></div>
             </div>
           </div>
           <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password"[(ngModel)]="password"
               formControlName="password" [ngClass]="{'is-invalid': isSent && f.password.errors}">
             <label for="floatingPassword">Contraseña</label>
             <div class="form-floating">

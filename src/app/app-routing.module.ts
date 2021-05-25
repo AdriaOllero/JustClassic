@@ -11,7 +11,6 @@ import { CatalogoComponent } from './components/catalogo/catalogo/catalogo.compo
 import { AboutComponent } from './components/main/about/about.component';
 import { HomeComponent } from './components/main/home/home.component';
 import { CatalogoHomeComponent } from './components/catalogo/catalogoHome/catalogoHome.component';
-import { CatalogoTopBarComponent } from './components/catalogo/catalogoTopBar/catalogoTopBar.component';
 import { ItemDetailComponent } from './components/catalogo/item/itemDetail/itemDetail.component';
 import { AuthGuardService } from './services/auth/auth-guard.service';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -23,7 +22,6 @@ const routes: Routes = [
   { path: 'itemDetail', component: ItemDetailComponent },
   { path: 'catalogoEleccion', component: CatalogoEleccionComponent },
   { path: 'login', component: LoginComponent},
-  { path: 'catalogoTopBar', component: CatalogoTopBarComponent },
   { path: 'catalogoHome', component: CatalogoHomeComponent },
   { path: 'registerUser', component: RegisteruserComponent },
   { path: 'registerComplete', component: RegisterCompleteComponent },

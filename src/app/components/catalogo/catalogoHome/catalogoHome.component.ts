@@ -42,37 +42,37 @@ export class CatalogoHomeComponent implements OnInit {
     this.allCategories=[
       {
         "name": "Todos",
-        "photo": "../../../../assets/images/robin-vet-q6LFMQ6wVZ0-unsplash.jpg",
+        "photo": "../../../../assets/images/alex-suprun-A53o1drQS2k-unsplash.jpg",
         "description":"Todos los coches de la colección",
       },
       {
         "name": "Americanos",
-        "photo": "../../../../assets/images/robin-vet-q6LFMQ6wVZ0-unsplash.jpg",
+        "photo": "../../../../assets/images/Americanos (2).jpg",
         "description":"  Aqui podras encontrar coches de los años 20",
       },
       {
         "name": "Japoneses",
-        "photo": "../../../../assets/images/oli-woodman-kA8icki31uo-unsplash.jpg",
+        "photo": "../../../../assets/images/Japoneses.jpg",
         "description":"  Aqui podras encontrar coches de los años 20",
       },
       {
         "name": "Alemanes",
-        "photo": "../../../../assets/images/oli-woodman-kA8icki31uo-unsplash.jpg",
+        "photo": "../../../../assets/images/Aleman (2).jpg",
         "description":"  Aqui podras encontrar coches de los años 20",
       },
       {
         "name": "Ingleses",
-        "photo": "../../../../assets/images/oli-woodman-kA8icki31uo-unsplash.jpg",
+        "photo": "../../../../assets/images/Reino Unido.jpg",
         "description":"  Aqui podras encontrar coches de los años 20",
       },
       {
         "name": "Franceses",
-        "photo": "../../../../assets/images/oli-woodman-kA8icki31uo-unsplash.jpg",
+        "photo": "../../../../assets/images/Frances.jpg",
         "description":"  Aqui podras encontrar coches de los años 20",
       },
       {
         "name": "Italianos",
-        "photo": "../../../../assets/images/wahyu-setiawan-qWjfWJLlnQc-unsplash.jpg",
+        "photo": "../../../../assets/images/Italiano.jpg",
         "description":"  Aqui podras encontrar coches de los años 20",
       },
 

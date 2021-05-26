@@ -10,22 +10,58 @@
       <div class="input-group mb-3">
         <select class="form-select" id="inputGroupSelect01"  #carBrand>
           <option selected >Marca</option>
-          <option value="1">Mercedez-Benz</option>
-          <option value="2">BMW</option>
-          <option value="3">Seat</option>
-          <option value="3">Audi</option>
-          <option value="3">Ferrari</option>
+          <option value="Mercedez-Benz">Mercedez-Benz</option>
+          <option value="BMW">BMW</option>
+          <option value="Seat">Seat</option>
+          <option value="Audi">Audi</option>
+          <option value="Ferrari">Ferrari</option>
+          <option value="Porsche">Porsche</option>
+          <option value="Lamborghini">Lamborghini</option>
+          <option value="Fiat">Fiat</option>
+          <option value="Renault">Renault</option>
+          <option value="Citroën">Citroën</option>
+          <option value="Jeep">Jeep</option>
+          <option value="Cadillac ">Cadillac </option>
+          <option value="Chevrolet ">Chevrolet </option>
+          <option value="Ford">Ford</option>
+          <option value="Jaguar">Jaguar</option>
+          <option value="Aston Martin">Aston Martin</option>
+          <option value="Nissan">Nissan</option>
+          <option value="Toyota">Toyota</option>
+          <option value="Honda">Honda</option>
         </select>
       </div>
 
       <div class="input-group mb-3">
         <select class="form-select" id="inputGroupSelect01"  #carModel>
           <option selected>Modelo</option>
-          <option value="1">Mercedez-Benz</option>
-          <option value="2">BMW</option>
-          <option value="3">Seat</option>
+          <option value="560 SL">560 SL</option>
+          <option value="911">911</option>
+          <option value="100">100</option>
           <option value="3">Audi</option>
           <option value="3">Ferrari</option>
+          <option value="Coupé 2.3">Coupé 2.3</option>
+          <option value="Countach 5.2 V12">Countach 5.2 V12</option>
+          <option value="500L">500L</option>
+          <option value="330 GT">330 GT</option>
+          <option value="Testarossa">Testarossa</option>
+          <option value="12TS">12TS</option>
+          <option value="R5 GTL">R5 GTL</option>
+          <option value="2CV">2CV</option>
+          <option value="DS 21">DS 21</option>
+          <option value="4x4 CJ 4.2">4x4 CJ 4.2</option>
+          <option value="Deville 6 CD">Deville 6 CD</option>
+          <option value="Impala 348">Impala 348</option>
+          <option value="Mustang Coupé 5,0 V8">Mustang Coupé 5,0 V8</option>
+          <option value="E-Type SIII">E-Type SIII</option>
+          <option value="DB 6">DB 6</option>
+          <option value="Volante V8 Series 2">Volante V8 Series 2</option>
+          <option value="XJ6">XJ6</option>
+          <option value="Impala 348">Impala 348</option>
+          <option value="300ZX">300ZX</option>
+          <option value="Celica 2.0 GTI">Celica 2.0 GTI</option>
+          <option value="NSX 3.0 V6">NSX 3.0 V6</option>
+          <option value="Supra mk4">Supra mk4</option>
         </select>
       </div>
       <div class="input-group mb-3">
@@ -43,7 +79,19 @@
       <!-- <img class="img mx-auto" src="../../../../../assets/images/alex-zabavsky-WCQKaC2ffjs-unsplash.jpg" alt="uploadedImage"> -->
 
       <div class="input-group mb-3">
-        <input type="file" class="form-control" id="inputGroupFile01"  #carPhoto>
+        <div class="file-upload">
+          <div class="image-upload-wrap" *ngIf="!customDisplay">
+            <input class="file-upload-input" [(ngModel)]="photo" type='file' (change)="handleFileImage($event);"
+              accept="image/*" />
+            <div class="drag-text">
+            </div>
+          </div>
+          <div class="file-upload-content" *ngIf="customDisplay">
+            <img class="file-upload-image" [src]="photo" alt="your image" />
+
+          </div>
+        </div>
+        <input class="form-control  d-none" (change)="handleFileImage($event)" type="file" id="formFile" #formfiles>
       </div>
       <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="Numero de Plazas" aria-label="Username"
@@ -56,8 +104,8 @@
       <div class="input-group mb-3">
         <select class="form-select" id="inputGroupSelect01" #carFuel>
           <option selected>Combustible</option>
-          <option value="1">Gasolina</option>
-          <option value="2">Diesel</option>
+          <option value="Gasolina">Gasolina</option>
+          <option value="Diesel">Diesel</option>
         </select>
       </div>
       <!-- <div class="input-group mb-3">
@@ -73,11 +121,11 @@
       <div class="input-group mb-3">
         <select class="form-select" id="inputGroupSelect01" #carLocation>
           <option selected>Toda España</option>
-          <option value="1">Madrid</option>
-          <option value="2">Barcelona</option>
-          <option value="3">Valencia</option>
-          <option value="3">Castilla-La-Mancha</option>
-          <option value="3">Extremadura</option>
+          <option value="Madrid">Madrid</option>
+          <option value="Barcelona">Barcelona</option>
+          <option value="Valencia">Valencia</option>
+          <option value="Castilla-La-Mancha">Castilla-La-Mancha</option>
+          <option value="Extremadura">Extremadura</option>
         </select>
       </div>
       <div class="input-group mb-3">

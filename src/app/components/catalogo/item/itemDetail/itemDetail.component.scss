@@ -135,12 +135,12 @@ img {
   box-shadow: 0 0 55px #00000067;
   margin-bottom: 100px;
 }
-.line{
+.line {
   width: 90%;
   height: 1px;
-background-color: #37447e;
-margin-top: 20px;
-margin-bottom: 20px;
+  background-color: #37447e;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .icon {
   width: 20%;
@@ -289,5 +289,17 @@ p {
         }
       }
     }
+  }
+}
+.btn-primary {
+  background-color: #37447e;
+  border-radius: 0.9em;
+  border-style: hidden;
+  padding: 0.8em 1.2em;
+  font-weight: bolder;
+  margin: 0 0.3em 0.3em 0;
+  display: block;
+  &:hover {
+    background-color: #4a5cac;
   }
 }

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PerfilParticularComponent } from './components/perfil/perfilParticular/perfilParticular.component';
 import { UploadItemComponent } from './components/catalogo/item/uploadItem/uploadItem.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,6 +25,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptorService } from './services/interceptors/auth-interceptor.service';
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
 import { MAT_DATE_LOCALE, MAT_DATE_LOCALE_FACTORY } from '@angular/material/core';
+import { NgpImagePickerModule } from 'ngp-image-picker';
 
 
 @NgModule({
@@ -54,8 +55,8 @@ import { MAT_DATE_LOCALE, MAT_DATE_LOCALE_FACTORY } from '@angular/material/core
     MatDialogModule,
     IvyCarouselModule,
     HttpClientModule,
-    ReactiveFormsModule,
-
+    NgpImagePickerModule,
+    FormsModule
   ],
   providers: [
     {

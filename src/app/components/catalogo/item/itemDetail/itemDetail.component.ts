@@ -1,6 +1,8 @@
+import { UserService } from './../../../../services/user.service';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Car } from '../../../../models/car.model';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-itemDetail',
@@ -8,8 +10,13 @@ import { Car } from '../../../../models/car.model';
   styleUrls: ['./itemDetail.component.scss'],
 })
 export class ItemDetailComponent implements OnInit {
-  showOptions = true;
-  showShare = false;
+  showShare = true;
+  photo = ""
+  customDisplay = false
+  mForm = FormGroup
+
+
+
   User = {
     name: 'Pepe',
     lastName: 'Garcia',
@@ -20,8 +27,7 @@ export class ItemDetailComponent implements OnInit {
   };
 
   Car = {
-    bio:
-      'Cillum laborum aliquip officia magna do sunt est fugiat id incididunt. Magna laboris officia veniam cillum id exercitation adipisicing consectetur. Id deserunt aute dolor sint esse non esse exercitation aute officia aliqua quis excepteur labore. Incididunt mollit velit labore minim velit ad cupidatat labore adipisicing veniam.\r\n',
+    bio: 'Cillum laborum aliquip officia magna do sunt est fugiat id incididunt. Magna laboris officia veniam cillum id exercitation adipisicing consectetur. Id deserunt aute dolor sint esse non esse exercitation aute officia aliqua quis excepteur labore. Incididunt mollit velit labore minim velit ad cupidatat labore adipisicing veniam.\r\n',
     name: 'Mercedes Benz Coupe',
     photo: [
       '../../../assets/images/oli-woodman-kA8icki31uo-unsplash.jpg',
@@ -38,8 +44,36 @@ export class ItemDetailComponent implements OnInit {
     seats: '5 Plazas',
     location: 'Madrid',
   };
+  allCars: Array<Car> = []
 
-  constructor(public router: Router) {}
+  constructor(public router: Router, private userService: UserService,private activeRoute: ActivatedRoute) {
 
-  ngOnInit() {}
+    this.activeRoute.params.subscribe( parm => {
+      console.log(parm.id)
+
+    })
+  }
+
+
+
+  ngOnInit() {
+
+    // this.loadCar()
+  }
+
+
+
+
+
+  deleteCar() {
+    this.userService.deleteCar('60a64f0666eda0327c544707');
+  }
+  handleFileImage(file: any) {
+    const reader = new FileReader();
+    reader.readAsDataURL(file.target.files.item(0));
+    reader.onload = () => {
+      this.photo = reader.result as string;
+      console.log(this.photo);
+    };
+  }
 }

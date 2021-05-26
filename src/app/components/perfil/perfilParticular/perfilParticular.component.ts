@@ -1,3 +1,4 @@
+import { UserService } from 'src/app/services/user.service';
 import { Car } from './../../../models/car.model';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -7,14 +8,43 @@ import { Router } from '@angular/router';
   templateUrl: './perfilParticular.component.html',
   styleUrls: ['./perfilParticular.component.scss'],
 })
+
+
 export class PerfilParticularComponent implements OnInit {
   allCars: Array<Car> = [];
-  User = { name: 'Pepe', lastName:'Garcia',email:'pepeelmasguay@gmail.com',phone:'671494235',typeUser: 'Particular', img:'../../../../assets/images/perfil-pepe.jpg',location:'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8920877215446!2d-78.61526208464393!3d-1.2346091990994936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d381a86c8c8dff%3A0x9fc9691652c2ff32!2sLas%20Bahamas%2C%20Ambato%20180104%2C%20Ecuador!5e0!3m2!1ses!2ses!4v1619474341655!5m2!1ses!2ses' };
 
-  constructor(public router: Router) {}
+  name =""
+  User = { name:this.name, lastName:'',email:'',phone:'',typeUser: '', img:'../../../../assets/images/perfil-pepe.jpg',location:'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8920877215446!2d-78.61526208464393!3d-1.2346091990994936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d381a86c8c8dff%3A0x9fc9691652c2ff32!2sLas%20Bahamas%2C%20Ambato%20180104%2C%20Ecuador!5e0!3m2!1ses!2ses!4v1619474341655!5m2!1ses!2ses' };
+
+  constructor(public router: Router,private userService: UserService) {}
 
   ngOnInit() {
     this.loadData();
+    this.loadUser()
+  }
+
+  logout(){
+    //PEDIR CONFIRMACION DEL LOGOUT
+    localStorage.removeItem("token")
+    localStorage.removeItem("id")
+    this.router.navigate(["/"])
+  }
+
+  loadUser(id?:string){
+    this.userService.getUser(`${id}`).subscribe(
+      (data) => {
+
+        this.allCars = data;
+        console.log(data);
+      },
+      (error) => {
+        console.log('Error:', error);
+      }
+    );
+  }
+
+  detail(id?:string) {
+    this.router.navigate([`itemDetail/${id}`]);
   }
 
   loadData() {

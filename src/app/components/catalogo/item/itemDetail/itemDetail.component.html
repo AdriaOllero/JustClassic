@@ -18,16 +18,16 @@
             alt=""></span>
         <ul class="social-icons">
           <li>
-            <a href="" target="_blank"><img class="iconButton" src="../../../../assets/images/icons/edit.png"
-                alt=""></a>
+            <a href="" target="_blank" data-bs-toggle="modal" data-bs-target="#editModal"><img class="iconButton"
+                src="../../../../assets/images/icons/edit.png" alt=""></a>
           </li>
           <li>
-            <a href="" target="_blank"><img class="iconButton" src="../../../../assets/images/icons/delete.png"
-                alt=""></a>
+            <a href="" target="_blank" (click)="deleteCar()" data-bs-toggle="modal" data-bs-target="#deleteModal"><img class="iconButton"
+                src="../../../../assets/images/icons/delete.png" alt=""></a>
           </li>
         </ul>
       </button>
-      <button class="btn-share position-absolute top-0 end-0" *ngIf="showOptions">
+      <button class="btn-share position-absolute top-0 end-0" *ngIf="!showShare">
         <span class="btn-text"><img class="iconButton" src="../../../../../assets/images/icons/menu.png" alt=""></span>
         <ul class="social-icons">
           <li>
@@ -59,7 +59,72 @@
       </label>
     </div>
   </div>
+  <!-- MODAL -->
+  <div class="modal fade " id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    style="z-index: 99999;">
+    <div class="modal-dialog position-absolute top-50 start-50 translate-middle" style="width: 100%;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel">Eliminar Coche</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <h5>Estas seguro de que quieres borrar este coche?</h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-danger" (click)="deleteCar()">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL -->
+  <div class="modal fade " id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    style="z-index: 99999;">
+    <div class="modal-dialog position-absolute top-50 start-50 translate-middle" style="width: 100%;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Editar Infomación</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="input-group mb-3">
+              <div class="file-upload">
+                <div class="image-upload-wrap" *ngIf="!customDisplay">
+                  <input class="file-upload-input" [(ngModel)]="photo" type='file' (change)="handleFileImage($event);"
+                    accept="image/*" />
+                  <div class="drag-text">
+                  </div>
+                </div>
+                <div class="file-upload-content" *ngIf="customDisplay">
+                  <img class="file-upload-image" [src]="photo" alt="your image" />
 
+                </div>
+              </div>
+              <input class="form-control  d-none" (change)="handleFileImage($event)" type="file" id="formFile"
+                #formfiles>
+            </div>
+            <div class="RECUADRO-BLANCO">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Nombre del Anuncio" aria-label="Username"
+                  aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Descripción" aria-label="Username"
+                  aria-describedby="basic-addon1">
+              </div>
+
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="col-12" style="margin-top: 25px ;">
     <h1>{{Car.name}}</h1>
     <h3>{{Car.price}}€</h3>

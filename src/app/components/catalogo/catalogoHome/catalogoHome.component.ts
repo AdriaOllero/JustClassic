@@ -19,6 +19,8 @@ export class CatalogoHomeComponent implements OnInit {
   ngOnInit() {
     this.loadData()
   }
+
+
   loadData() {
     this.allBest=[
       {
@@ -64,44 +66,15 @@ export class CatalogoHomeComponent implements OnInit {
         "description":"  Aqui podras encontrar coches de los años 20",
       },
       {
-        "name": "1970´s",
+        "name": "Franceses",
         "photo": "../../../../assets/images/oli-woodman-kA8icki31uo-unsplash.jpg",
         "description":"  Aqui podras encontrar coches de los años 20",
       },
       {
-        "name": "1970´s",
+        "name": "Italianos",
         "photo": "../../../../assets/images/wahyu-setiawan-qWjfWJLlnQc-unsplash.jpg",
         "description":"  Aqui podras encontrar coches de los años 20",
       },
-      {
-        "name": "1970´s",
-        "photo": "../../../../assets/images/wahyu-setiawan-qWjfWJLlnQc-unsplash.jpg",
-        "description":"  Aqui podras encontrar coches de los años 20",
-      },
-      {
-        "name": "1970´s",
-        "photo": "../../../../assets/images/wahyu-setiawan-qWjfWJLlnQc-unsplash.jpg",
-        "description":"  Aqui podras encontrar coches de los años 20",
-      },
-      {
-        "name": "1970´s",
-        "photo": "../../../../assets/images/wahyu-setiawan-qWjfWJLlnQc-unsplash.jpg",
-        "description":"  Aqui podras encontrar coches de los años 20",
-      },
-      {
-        "name": "1970´s",
-        "photo": "../../../../assets/images/wahyu-setiawan-qWjfWJLlnQc-unsplash.jpg",
-        "description":"  Aqui podras encontrar coches de los años 20",
-      },
-      {
-        "name": "1970´s",
-        "photo": "../../../../assets/images/wahyu-setiawan-qWjfWJLlnQc-unsplash.jpg",
-        "description":"  Aqui podras encontrar coches de los años 20",
-      },
-      {
-        "name": "1970´s",
-        "photo": "../../../../assets/images/wahyu-setiawan-qWjfWJLlnQc-unsplash.jpg",
-        "description":"  Aqui podras encontrar coches de los años 20",
-      },
+
     ]}
 }

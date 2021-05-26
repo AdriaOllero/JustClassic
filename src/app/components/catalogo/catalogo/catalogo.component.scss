@@ -9,7 +9,8 @@
 }
 .flex-container {
   display: flex;
-  background-image: url(../../../../assets/images/dino-reichmuth-A5rCN8626Ck-unsplash.png);
+  background-image: url(../../../../assets/images/wallpaper1.png);
+  // background-color: #ebeeff;
   background-repeat: no-repeat;
   background-size: cover;
   flex-direction: column;
@@ -49,10 +50,11 @@
     padding: 20px;
     height: 250px;
     .image {
-      width: 75%;
+      width: 80%;
       border-radius: 15px;
       height: fit-content;
       margin-left: 5px;
+      min-height: 200px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.452);
       max-height: 200px;
     }
@@ -72,7 +74,7 @@
       }
     }
 
-    h2 {
+    h3 {
       color: #37447e;
       font-weight: bolder;
     }

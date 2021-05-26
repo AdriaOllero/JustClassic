@@ -30,10 +30,9 @@ export class UserService {
   }
 
 
-  getUser(filter: string): Observable<any> {
-    const params = { filter: filter };
+  getUser(id:string): Observable<any> {
     return this.httpClient
-      .get(`${environment.apiUrl}/user`, { params: params })
+      .get(`${environment.apiUrl}/user/${id}`)
       .pipe(
         catchError((error) => {
           return error;
@@ -51,7 +50,10 @@ export class UserService {
         })
       );
   }
-  getCars():  Observable<any> {
+
+
+
+  getCarsCompany(): Observable<any> {
     return this.httpClient.get(`${environment.apiUrl}/cars`)
       .pipe(
         catchError(error => {
@@ -60,8 +62,7 @@ export class UserService {
       );
   }
 
-
-  getCarsCompany(): Observable<any> {
+  getCars():  Observable<any> {
     return this.httpClient.get(`${environment.apiUrl}/cars`)
       .pipe(
         catchError(error => {
@@ -85,7 +86,7 @@ export class UserService {
   }
 
   updateCar(car: Car): Observable<any> {
-    return this.httpClient.put(`${environment.apiUrl}/car/${car.id}`, car).pipe(
+    return this.httpClient.put(`${environment.apiUrl}/car/${car._id}`, car).pipe(
       catchError(error => {
         return error;
       })

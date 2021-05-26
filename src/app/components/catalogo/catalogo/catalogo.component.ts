@@ -1,8 +1,8 @@
+import { Car } from './../../../models/car.model';
 import { UserService } from 'src/app/services/user.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { Car } from 'src/app/models/car.model';
 import { Categoria } from 'src/app/models/categoria.model';
 import { SharedService } from 'src/app/services/shared.service';
 import { filter } from 'rxjs/operators';
@@ -33,41 +33,41 @@ export class CatalogoComponent implements OnInit {
     private userService: UserService
   ) {}
 
-  allCars = this.sharedService.getCarList();
+  allCars: Array<Car> = []
   allCategories = this.sharedService.getCategoryList();
 
   ngOnInit(): void {
 
-    // this.loadCars()
+    this.loadCars()
 
   }
-  detail() {
-    this.router.navigate(['/itemDetail/:id']);
+  detail(id?:string) {
+    this.router.navigate([`itemDetail/${id}`]);
   }
 
-  // loadCars() {
-  //   const params = 'an'
-  //   this.userService.getCars().subscribe(
-  //     (data) => {
-  //       this.allCars = data;
-  //       console.log(data);
-  //     },
-  //     (error) => {
-  //       console.log('Error:', error);
-  //     }
-  //   );
+  loadCars() {
+    const params = 'an'
+    this.userService.getCars().subscribe(
+      (data) => {
+        this.allCars = data;
+        console.log(data);
+      },
+      (error) => {
+        console.log('Error:', error);
+      }
+    );
+  }
+
+  // search(searchValue: HTMLInputElement) {
+  //   console.log(searchValue.value);
+  //   searchValue.value;
+  //   if (searchValue.value !== '') {
+  //     this.loadCars().filter((car: Car) => {
+  //       return car.name?.includes(searchValue.value);
+  //     });
+  //     console.log('patata');
+  //   } else {
+  //     this.loadCars()
+  //   }
   // }
-
-  search(searchValue: HTMLInputElement) {
-    console.log(searchValue.value);
-    searchValue.value;
-    if (searchValue.value !== '') {
-      this.allCars = this.allCars.filter((car: Car) => {
-        return car.name?.includes(searchValue.value);
-      });
-      console.log('patata');
-    } else {
-      this.allCars = this.sharedService.getCarList();
-    }
-  }
 }

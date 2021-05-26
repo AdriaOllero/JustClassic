@@ -14,7 +14,7 @@
       </ul>
     </div>
     <input type="text" class="form-control" placeholder="Buscar" aria-label="Username" aria-describedby="basic-addon1"
-      (input)="search(car)" #car>
+       #car>
     <button class="btn btn-primary shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal"
       data-bs-whatever="@getbootstrap">FILTRAR</button>
   </div>
@@ -112,11 +112,11 @@
         <div class="col">
           <img class="image" src="{{item.photo}}" alt="">
         </div>
-        <div class="col" style="margin-left: -60px;">
-          <h2>{{item.name}}</h2>
+        <div class="col" style="margin-left: -45px;">
+          <h3>{{item.name}}</h3>
           <h5>{{item.brand}}</h5>
           <h5>{{item.model}}</h5>
-          <button (click)="detail()" class="button">Ver Detalle</button>
+          <button (click)="detail(item._id)" class="button">Ver Detalle</button>
         </div>
         <div class="col">
           <div class="row row-cols-2">

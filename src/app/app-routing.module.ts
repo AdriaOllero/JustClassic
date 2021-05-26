@@ -13,13 +13,12 @@ import { HomeComponent } from './components/main/home/home.component';
 import { CatalogoHomeComponent } from './components/catalogo/catalogoHome/catalogoHome.component';
 import { ItemDetailComponent } from './components/catalogo/item/itemDetail/itemDetail.component';
 import { AuthGuardService } from './services/auth/auth-guard.service';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'about', component: AboutComponent },
   { path: 'catalogo', component: CatalogoComponent },
-  { path: 'itemDetail', component: ItemDetailComponent },
+  { path: 'itemDetail/:id', component: ItemDetailComponent },
   { path: 'catalogoEleccion', component: CatalogoEleccionComponent },
   { path: 'login', component: LoginComponent},
   { path: 'catalogoHome', component: CatalogoHomeComponent },
@@ -27,13 +26,7 @@ const routes: Routes = [
   { path: 'registerComplete', component: RegisterCompleteComponent },
   { path: 'registerEmpresa', component: RegisterEmpresaComponent },
   { path: 'uploadItem', component: UploadItemComponent},
-
-  { path: 'perfilParticular', component: PerfilParticularComponent },
-  {
-    path: "dashboard", component: DashboardComponent, children: [
-
-    ]
-  },
+  { path: 'perfilParticular/:id', component: PerfilParticularComponent },
   { path: '*', redirectTo: '/404' },
 ];
 //EL ---canActivate : [AuthGuardService], ---  Se pone en las rutas que consideremos que necesitan autentificacion

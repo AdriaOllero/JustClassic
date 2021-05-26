@@ -72,8 +72,10 @@ export class LoginComponent implements OnInit {
       this.userService.loginUser(user).subscribe(
         (data) => {
           console.log('hombree');
+          console.log(data)
           localStorage.setItem('token', data.access_token);
-          this.router.navigate(['/perfilParticular']);
+          localStorage.setItem('id', data.id);
+          this.router.navigate([`perfilParticular/${data.id}`]);
         },
         (error) => {
           console.log('Error:', error);
@@ -89,6 +91,7 @@ export class LoginComponent implements OnInit {
     this.userService.loginUser(login).subscribe(
       (data: any) => {
         localStorage.setItem('token', data.access_token);
+        localStorage.setItem('id', data.id);
         console.log(data);
       },
       (error) => {

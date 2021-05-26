@@ -14,13 +14,17 @@
               <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="iconButton"
                   src="../../../../assets/images/icons/edit.png" alt=""></a>
             </li>
+            <li>
+              <a href="" ><img class="iconButton"
+                  src="../../../../assets/images/icons/logout-white.png" alt="" (click)="logout()"></a>
+            </li>
           </ul>
         </button>
       </div>
 
     </div>
     <div class="col-sm ">
-      <div class="circular--landscape" style="margin-left: 90px;">
+      <div class="circular--landscape" style="margin-left: 80px;">
         <img class="img" src="{{User.img}}" alt="">
       </div>
       <h1>{{User.name}}</h1>
@@ -50,7 +54,7 @@
         <h2>{{item.name}}</h2>
         <h5>{{item.brand}}</h5>
         <h5>{{item.model}}</h5>
-        <button class="button">Ver Detalle</button>
+        <button class="button" (click)="detail(item._id)">Ver Detalle</button>
       </div>
       <div class="col">
         <div class="row row-cols-2">

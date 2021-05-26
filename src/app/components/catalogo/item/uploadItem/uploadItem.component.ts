@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ImagePickerConf } from 'ngp-image-picker';
 import { Car } from 'src/app/models/car.model';
 import { UserService } from 'src/app/services/user.service';
 
@@ -27,6 +28,7 @@ export class UploadItemComponent implements OnInit {
   location = '';
   price = '';
   isSent = false;
+  customDisplay = false;
 
   constructor(
     private httpClient: HttpClient,
@@ -58,36 +60,63 @@ export class UploadItemComponent implements OnInit {
 
   ngOnInit() {}
 
-  addNewCar(carName:string,carBio:string,carYear:string,carKm:string,carModel:string,carBrand:string,carFuel:string,carDoors:string,carSeats:string,carLocation:string,carPrice:string) {
+  addNewCar(
+    carName: string,
+    carBio: string,
+    carYear: string,
+    carKm: string,
+    carModel: string,
+    carBrand: string,
+    carFuel: string,
+    carDoors: string,
+    carSeats: string,
+    carLocation: string,
+    carPrice: string
+  ) {
     console.log('Estamos intentando añadir un nuevo vehiculo');
 
     const car: Car = new Car();
-    car.name = carName
-    car.bio = carBio
-    car.year = carYear
-    car.photo = this.photo
-    car.km = carKm
-    car.fuel = carFuel
-    car.model = carModel
-    car.brand = carBrand
-    car.doors = carDoors
-    car.seats = carSeats
-    car.location = carLocation
-    car.price = carPrice
+    car.name = carName;
+    car.bio = carBio;
+    car.year = carYear;
+    car.photo = this.photo;
+    car.km = carKm;
+    car.fuel = carFuel;
+    car.model = carModel;
+    car.brand = carBrand;
+    car.doors = carDoors;
+    car.seats = carSeats;
+    car.location = carLocation;
+    car.price = carPrice;
 
     console.log(car);
-    console.log("HOla gente");
-
+    console.log('HOla gente');
 
     this.userService.postCar(car).subscribe(
-
       (data) => {
         console.log(data);
+        this.router.navigate(['/catalogo']);
       },
       (error) => {
         console.log('Error:', error);
       }
     );
+  }
+
+  imagePickerConf: ImagePickerConf = {
+    borderRadius: '4px',
+    language: 'en',
+    width: '220px',
+    height: '140px',
+  };
+
+  handleFileImage(file: any) {
+    const reader = new FileReader();
+    reader.readAsDataURL(file.target.files.item(0));
+    reader.onload = () => {
+      this.photo = reader.result as string;
+      console.log(this.photo);
+    };
   }
 
   onSubmit() {
@@ -104,7 +133,7 @@ export class UploadItemComponent implements OnInit {
       this.bio != '' &&
       this.location != '' &&
       this.year != '' &&
-      // this.photo != '' &&
+      this.photo != '' &&
       this.km != '' &&
       this.model != '' &&
       this.brand != '' &&
@@ -117,7 +146,7 @@ export class UploadItemComponent implements OnInit {
       car.name = this.name;
       car.bio = this.bio;
       car.year = this.year;
-      // car.photo = this.photo;
+      car.photo = this.photo;
       car.km = this.km;
       car.model = this.model;
       car.brand = this.brand;
@@ -127,16 +156,6 @@ export class UploadItemComponent implements OnInit {
       car.location = this.location;
       car.price = this.price;
 
-      // console.log(car)
-      // this.userService.loginUser(car).subscribe(
-      //   (data) => {
-      //     localStorage.setItem('token',data.access_token)
-      //     this.router.navigate(["/perfilParticular"])
-      //   },
-      //   (error) => {
-      //     console.log("Error:", error);
-      //   }
-      // );
     }
     console.log('Car Valido', this.mForm.value);
     this.router.navigate(['/home']);

@@ -32,6 +32,18 @@ export class ItemDetailComponent implements OnInit {
 
   ngOnInit() {
     this.loadUser();
+    this.loadCar();
+  }
+
+  loadCar() {
+    this.activeRoute.params.subscribe((params) => {
+      this.userService.getCar(params.id).subscribe(
+        (data) => {
+          this.Car = data;
+        console.log(data);
+        //this.jobOffer = data
+      });
+    });
   }
 
   loadUser() {

@@ -24,20 +24,20 @@ export class CatalogoHomeComponent implements OnInit {
   loadData() {
     this.allBest=[
       {
-        "name": "Todos",
-        "photo": "../../../../assets/images/robin-vet-q6LFMQ6wVZ0-unsplash.jpg",
+        "name": "Audi 100",
+        "photo": "../../../../assets/imgCategories/Audi 100 (1)-min.jpg",
       },
       {
-        "name": "Americanos",
-        "photo": "../../../../assets/images/robin-vet-q6LFMQ6wVZ0-unsplash.jpg",
+        "name": "Audi Coupe 2.3",
+        "photo": "../../../../assets/imgCategories/Audi Coupe 2.3 (1)-min.jpg",
       },
       {
-        "name": "Japoneses",
-        "photo": "../../../../assets/images/oli-woodman-kA8icki31uo-unsplash.jpg",
+        "name": "Mercedes Benz 560SL",
+        "photo": "../../../../assets/imgCategories/Mercedes Benz 560SL (1)-min.jpg",
       },
       {
-        "name": "Alemanes",
-        "photo": "../../../../assets/images/oli-woodman-kA8icki31uo-unsplash.jpg",
+        "name": "Porche 911",
+        "photo": "../../../../assets/imgCategories/Porche 911 (1)-min.jpg",
       }]
     this.allCategories=[
       {

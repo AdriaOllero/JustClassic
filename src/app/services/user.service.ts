@@ -12,7 +12,7 @@ import { User } from '../models/user.model';
   providedIn: 'root',
 })
 export class UserService {
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
   loginUser(login: Login): Observable<any> {
     return this.httpClient.post(`${environment.apiUrl}/login`, login).pipe(
@@ -22,17 +22,8 @@ export class UserService {
     );
   }
   registerUser(user: User): Observable<any> {
-    return this.httpClient.post(`${environment.apiUrl}/registerUser`, user).pipe(
-      catchError((error) => {
-        return error;
-      })
-    );
-  }
-
-
-  getUser(id:string): Observable<any> {
     return this.httpClient
-      .get(`${environment.apiUrl}/user/${id}`)
+      .post(`${environment.apiUrl}/registerUser`, user)
       .pipe(
         catchError((error) => {
           return error;
@@ -40,62 +31,70 @@ export class UserService {
       );
   }
 
-
-  getCarWithQuery(filter: string): Observable<any> {
-    const params = { filter: filter }
-    return this.httpClient.get(`${environment.apiUrl}/cars/query`, { params: params })
-      .pipe(
-        catchError(error => {
-          return error;
-        })
-      );
-  }
-
-
-
-  getCarsCompany(): Observable<any> {
-    return this.httpClient.get(`${environment.apiUrl}/cars`)
-      .pipe(
-        catchError(error => {
-          return error;
-        })
-      );
-  }
-
-  getCars():  Observable<any> {
-    return this.httpClient.get(`${environment.apiUrl}/cars`)
-      .pipe(
-        catchError(error => {
-          return error;
-        })
-      );
-  }
-  postCar(car: Car): Observable<any> {
-    return this.httpClient.post(`${environment.apiUrl}/car`, car).pipe(
-      catchError(error => {
+  getUser(id: string): Observable<any> {
+    return this.httpClient.get(`${environment.apiUrl}/user/${id}`).pipe(
+      catchError((error) => {
         return error;
       })
     );
   }
+
+  getCarWithQuery(filter: string): Observable<any> {
+    const params = { filter: filter };
+    return this.httpClient
+      .get(`${environment.apiUrl}/cars/query`, { params: params })
+      .pipe(
+        catchError((error) => {
+          return error;
+        })
+      );
+  }
+
+  getCarsCompany(): Observable<any> {
+    return this.httpClient.get(`${environment.apiUrl}/cars`).pipe(
+      catchError((error) => {
+        return error;
+      })
+    );
+  }
+
+  getCars(): Observable<any> {
+    return this.httpClient.get(`${environment.apiUrl}/cars`).pipe(
+      catchError((error) => {
+        return error;
+      })
+    );
+  }
+
+  postCar(car: Car): Observable<any> {
+    return this.httpClient.post(`${environment.apiUrl}/car`, car).pipe(
+      catchError((error) => {
+        return error;
+      })
+    );
+  }
+
   getCar(id: string): Observable<any> {
     return this.httpClient.get(`${environment.apiUrl}/car/${id}`).pipe(
-      catchError(error => {
+      catchError((error) => {
         return error;
       })
     );
   }
 
   updateCar(car: Car): Observable<any> {
-    return this.httpClient.put(`${environment.apiUrl}/car/${car._id}`, car).pipe(
-      catchError(error => {
-        return error;
-      })
-    );
+    return this.httpClient
+      .put(`${environment.apiUrl}/car/${car._id}`, car)
+      .pipe(
+        catchError((error) => {
+          return error;
+        })
+      );
   }
 
   deleteCar(id: string): Observable<any> {
     return this.httpClient.delete(`${environment.apiUrl}/car/${id}`).pipe(
-      catchError(error => {
+      catchError((error) => {
         return error;
       })
     );
@@ -125,5 +124,4 @@ export class UserService {
   //     })
   //   );
   // }
-
 }

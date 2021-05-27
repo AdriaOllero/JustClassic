@@ -17,19 +17,25 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
 
   }
-
-  search(searchValue: HTMLInputElement) {
-    console.log(searchValue.value);
-    searchValue.value;
-    if (searchValue.value !== '') {
-      this.sharedService.allCars = this.sharedService.allCars.filter((car: Car) => {
-        return car.name?.toLowerCase().includes(searchValue.value.toLowerCase());
-      });
-      console.log('patata');
+  search(searchValue: string){
+    if(searchValue == "") {
+      this.router.navigate(["/"])
     } else {
-      this.sharedService.allCars = this.sharedService.getCarList();
+      this.router.navigate(["/catalogo"], { queryParams: { name: searchValue}})
     }
   }
+  // search(searchValue: HTMLInputElement) {
+  //   console.log(searchValue.value);
+  //   searchValue.value;
+  //   if (searchValue.value !== '') {
+  //     this.sharedService.allCars = this.sharedService.allCars.filter((car: Car) => {
+  //       return car.name?.toLowerCase().includes(searchValue.value.toLowerCase());
+  //     });
+  //     console.log('patata');
+  //   } else {
+  //     this.sharedService.allCars = this.sharedService.getCarList();
+  //   }
+  // }
 
   imagenesFondoCarrusel = [
     "../../../../assets/images/JustClassicFondo.png",

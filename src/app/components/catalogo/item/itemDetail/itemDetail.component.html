@@ -5,9 +5,9 @@
     <input type="radio" name="slider" id="item-3">
     <div class="itemTop">
       <div class="author position-absolute top-0 start-0">
-        <a href="/perfilParticular" style="text-decoration: none; display: inline-flex;">
+        <a (click)="perfilUser()" style="text-decoration: none; display: inline-flex;">
           <!-- <div class="heart "></div> -->
-          <img src="{{User.img}}" alt="Author of Tobias Reich" class="author__image">
+          <img src="{{User.photo}}" alt="Author of Tobias Reich" class="author__image">
           <div class="author__content">
             <p class="author__header">{{User.name}}</p>
           </div>
@@ -22,7 +22,7 @@
                 src="../../../../assets/images/icons/edit.png" alt=""></a>
           </li>
           <li>
-            <a href="" target="_blank" (click)="deleteCar()" data-bs-toggle="modal" data-bs-target="#deleteModal"><img class="iconButton"
+            <a href="" target="_blank" data-bs-toggle="modal" data-bs-target="#deleteModal"><img class="iconButton"
                 src="../../../../assets/images/icons/delete.png" alt=""></a>
           </li>
         </ul>
@@ -49,17 +49,17 @@
 
     <div class="cards">
       <label class="card" for="item-1" id="song-1">
-        <img src="{{Car.photo[0]}}" alt="song">
+        <img src="{{Car.photo}}" alt="song">
       </label>
-      <label class="card" for="item-2" id="song-2">
+      <!-- <label class="card" for="item-2" id="song-2">
         <img src="{{Car.photo[1]}}" alt="song">
       </label>
       <label class="card" for="item-3" id="song-3">
         <img src="{{Car.photo[2]}}" alt="song">
-      </label>
+      </label> -->
     </div>
   </div>
-  <!-- MODAL -->
+  <!-- MODAL (click)="deleteCar()" -->
   <div class="modal fade " id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
     style="z-index: 99999;">
     <div class="modal-dialog position-absolute top-50 start-50 translate-middle" style="width: 100%;">
@@ -73,7 +73,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-danger" (click)="deleteCar()">Eliminar</button>
+          <button type="button" class="btn btn-danger">Eliminar</button>
         </div>
       </div>
     </div>

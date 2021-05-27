@@ -1,3 +1,4 @@
+import { User } from './../../../models/user.model';
 import { UserService } from 'src/app/services/user.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
@@ -18,15 +19,8 @@ export class TopbarComponent implements OnInit {
   color = true;
   user = false;
   profile = '';
-
-  User = {
-    name: 'Pepe',
-    lastName: 'Garcia',
-    typeUser: 'Particular',
-    img: '../../../../assets/images/Img Perfil Particular.jpg',
-    location:
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8920877215446!2d-78.61526208464393!3d-1.2346091990994936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d381a86c8c8dff%3A0x9fc9691652c2ff32!2sLas%20Bahamas%2C%20Ambato%20180104%2C%20Ecuador!5e0!3m2!1ses!2ses!4v1619474341655!5m2!1ses!2ses',
-  };
+  id = '';
+  User: User = {};
 
   constructor(
     private router: Router,
@@ -46,9 +40,26 @@ export class TopbarComponent implements OnInit {
         }
       }
     });
+
+    this.loadUser();
   }
 
-  perfilUser(id?: string) {
+  loadUser() {
+    let id = localStorage.getItem('id') as string;
+    this.userService.getUser(id).subscribe(
+      (data) => {
+        this.User = data;
+        console.log(this.User);
+        console.log('hola');
+        console.log(data);
+      },
+      (error) => {
+        console.log('Error:', error);
+      }
+    );
+  }
+  perfilUser() {
+    let id = localStorage.getItem('id');
     this.router.navigate([`perfilParticular/${id}`]);
   }
 

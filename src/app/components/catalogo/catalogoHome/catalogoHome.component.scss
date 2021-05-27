@@ -374,7 +374,8 @@ h3 {
 //// BEST ITEMS
 
 .best {
-  width: 80%;
+  width: 100%;
+  display: flex;
   @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
   @import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 
@@ -417,12 +418,36 @@ h3 {
 
   .card--1 .card__img,
   .card--1 .card__img--hover {
-    background-image: url("../../../../assets/images/joris-visser--jRDL2az1zk-unsplash.jpg");
+    background-image: url("../../../../assets/imgCategories/Audi 100 (1)-min.jpg");
   }
 
   .card--2 .card__img,
   .card--2 .card__img--hover {
-    background-image: url("https://images.pexels.com/photos/307008/pexels-photo-307008.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+    background-image: url("../../../../assets/imgCategories/Mercedes Benz 560SL (1)-min.jpg");
+  }
+  .card--3 .card__img,
+  .card--3 .card__img--hover {
+    background-image: url("../../../../assets/imgCategories/Porche 911 (1)-min.jpg");
+  }
+  .card--4 .card__img,
+  .card--4 .card__img--hover {
+    background-image: url("../../../../assets/imgCategories/Audi Coupe 2.3 (1)-min.jpg");
+  }
+  .card--5 .card__img,
+  .card--5 .card__img--hover {
+    background-image: url("../../../../assets/imgCategories/Citroen 2CV (1).jpg");
+  }
+  .card--6 .card__img,
+  .card--6 .card__img--hover {
+    background-image: url("../../../../assets/imgCategories/Citroen DS 21 (1).jpg");
+  }
+  .card--7 .card__img,
+  .card--7 .card__img--hover {
+    background-image: url("../../../../assets/imgCategories/Ferrari Testarossa (1).jpg");
+  }
+  .card--8 .card__img,
+  .card--8 .card__img--hover {
+    background-image: url("../../../../assets/imgCategories/Chevrolet Impala 348 (1).jpg");
   }
 
   .card__like {
@@ -472,7 +497,7 @@ h3 {
     margin-right: 25px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
     background-color: #fff;
-    width: 33.3%;
+    width: 100%;
     position: relative;
     border-radius: 20px;
     overflow: hidden;

@@ -73,7 +73,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-danger">Eliminar</button>
+          <button type="button" class="btn btn-danger"  (click)="deleteCar()" data-bs-dismiss="modal">Eliminar</button>
         </div>
       </div>
     </div>
@@ -84,7 +84,7 @@
     <div class="modal-dialog position-absolute top-50 start-50 translate-middle" style="width: 100%;">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Editar Infomación</h5>
+          <h5 class="modal-title" id="exampleModalLabel" >Editar Infomación</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
         </div>
         <div class="modal-body">
@@ -107,12 +107,12 @@
             </div>
             <div class="RECUADRO-BLANCO">
               <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Nombre del Anuncio" aria-label="Username"
-                  aria-describedby="basic-addon1">
+                <input type="text" class="form-control" [(ngModel)]="name" placeholder="Nombre del Anuncio" aria-label="Username"
+                  aria-describedby="basic-addon1" #carName>
               </div>
               <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Descripción" aria-label="Username"
-                  aria-describedby="basic-addon1">
+                <input type="text" class="form-control" [(ngModel)]="bio" placeholder="Descripción" aria-label="Username"
+                  aria-describedby="basic-addon1" #carBio>
               </div>
 
             </div>
@@ -120,7 +120,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Guardar</button>
+          <button type="button" class="btn btn-primary" (click)="updateCar(carName.value,carBio.value)" data-bs-dismiss="modal">Guardar</button>
         </div>
       </div>
     </div>
@@ -152,10 +152,10 @@
     <div class="line"></div>
     <div class="row mx-auto" style="width: 500px;">
       <div class="col-sm">
-        <h3> {{Car.seats}}</h3>
+        <h3> {{Car.seats}} Asientos</h3>
       </div>
       <div class="col-sm">
-        <h3> {{Car.doors}}</h3>
+        <h3> {{Car.doors}} Puertas</h3>
       </div>
       <div class="col-sm">
         <h3> {{Car.location}}</h3>

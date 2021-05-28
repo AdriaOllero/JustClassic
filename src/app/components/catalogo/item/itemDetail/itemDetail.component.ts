@@ -12,9 +12,12 @@ import { FormGroup } from '@angular/forms';
 })
 export class ItemDetailComponent implements OnInit {
   showShare = true;
-  photo = '';
   customDisplay = false;
   mForm = FormGroup;
+
+  photo = '';
+  name = '';
+  bio = '';
 
   User: User = {};
   Car: Car = {};
@@ -37,9 +40,8 @@ export class ItemDetailComponent implements OnInit {
 
   loadCar() {
     this.activeRoute.params.subscribe((params) => {
-      this.userService.getCar(params.id).subscribe(
-        (data) => {
-          this.Car = data;
+      this.userService.getCar(params.id).subscribe((data) => {
+        this.Car = data;
         console.log(data);
         //this.jobOffer = data
       });
@@ -62,18 +64,38 @@ export class ItemDetailComponent implements OnInit {
     let id = localStorage.getItem('id');
     this.router.navigate([`perfilParticular/${id}`]);
   }
-  // deleteCar() {
-  //   let id = localStorage.getItem('id');
-  //   this.userService.deleteCar().subscribe(
-  //     (data) => {
-  //       console.log(data);
-  //     },
-  //     (error) => {
-  //       console.log('Error:', error);
-  //     }
-  //   );
-  //   this.router.navigate([`perfilParticular/${id}`]);
-  // }
+
+  updateCar(carName: string, carBio: string) {
+    const car: Car = new Car();
+    car.name = carName;
+    car.bio = carBio;
+
+    console.log(carName);
+    console.log(carBio);
+    this.activeRoute.params.subscribe((params) => {
+      this.userService.updateCar(params.id,car).subscribe(
+        (data) => {
+          carName = this.name
+          carBio = this.bio
+          console.log("estoy entrando");
+          console.log(data);
+        },
+        (error) => {
+          console.log('Error:', error);
+        }
+      );
+    });
+  }
+  deleteCar() {
+    this.activeRoute.params.subscribe((params) => {
+      this.userService.deleteCar(params.id).subscribe((data) => {
+        this.Car = data;
+        console.log(data);
+        //this.jobOffer = data
+      });
+    });
+    this.router.navigate([`/catalogo`]);
+  }
 
   handleFileImage(file: any) {
     const reader = new FileReader();

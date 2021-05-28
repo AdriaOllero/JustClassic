@@ -1,3 +1,4 @@
+import { User } from './../models/user.model';
 import { async } from '@angular/core/testing';
 import { Car } from './../models/car.model';
 import { Login } from './../models/login.model';
@@ -6,7 +7,6 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { map, catchError } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
-import { User } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root',
@@ -50,14 +50,6 @@ export class UserService {
       );
   }
 
-  getCarsCompany(): Observable<any> {
-    return this.httpClient.get(`${environment.apiUrl}/cars`).pipe(
-      catchError((error) => {
-        return error;
-      })
-    );
-  }
-
   getCars(): Observable<any> {
     return this.httpClient.get(`${environment.apiUrl}/cars`).pipe(
       catchError((error) => {
@@ -82,14 +74,19 @@ export class UserService {
     );
   }
 
-  updateCar(car: Car): Observable<any> {
-    return this.httpClient
-      .put(`${environment.apiUrl}/car/${car._id}`, car)
-      .pipe(
-        catchError((error) => {
-          return error;
-        })
-      );
+  updateUser(id: string, user: User): Observable<any> {
+    return this.httpClient.put(`${environment.apiUrl}/user/${id}`, user).pipe(
+      catchError((error) => {
+        return error;
+      })
+    );
+  }
+  updateCar(id: string, car: Car): Observable<any> {
+    return this.httpClient.put(`${environment.apiUrl}/car/${id}`, car).pipe(
+      catchError((error) => {
+        return error;
+      })
+    );
   }
 
   deleteCar(id: string): Observable<any> {

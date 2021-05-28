@@ -102,7 +102,7 @@
           <div class="RECUADRO-BLANCO">
             <div class="input-group mb-3">
               <input type="text" class="form-control" placeholder="Domicilio" aria-label="Username"
-                aria-describedby="basic-addon1">
+                aria-describedby="basic-addon1" #name>
             </div>
             <div class="input-group mb-3">
               <input type="text" class="form-control" placeholder="Localidad" aria-label="Username"
@@ -117,7 +117,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="updateUser(name.value)">Guardar</button>
       </div>
     </div>
   </div>
